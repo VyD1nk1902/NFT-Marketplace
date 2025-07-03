@@ -89,7 +89,7 @@ const TopArtists = () => {
           <Buttons
             size="secondary"
             background="transparent"
-            className="px-[50px] flex gap-3 text-base"
+            className="px-[50px] text-base"
             link="#"
           >
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
