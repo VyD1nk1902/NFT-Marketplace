@@ -14,7 +14,7 @@ const Buttons = ({
 
   const colorOptions = {
     color: "bg-action",
-    transparent: "border-action",
+    transparent: " border border-action ",
   };
 
   const buttonSize = sizeOptions[size] || sizeOptions.secondary;
