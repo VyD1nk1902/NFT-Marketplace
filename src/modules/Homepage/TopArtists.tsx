@@ -96,11 +96,11 @@ const TopArtists = () => {
           </Buttons>
         </div>
 
-        <div className="pt-[60px] grid grid-cols-[240px_240px_240px_240px] gap-[30px] place-content-center">
+        <div className="pt-[60px] grid grid-cols-[240px_240px_240px_240px] gap-[30px] place-content-center ">
           {artistsData.map((item, index) => (
             <div
               key={index}
-              className="relative p-5 rounded-[20px] bg-bg-secondary flex flex-col items-center justify-center gap-5"
+              className="relative p-5 rounded-[20px] bg-bg-secondary flex flex-col items-center justify-center gap-5 scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer"
             >
               <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-bg-primary text-caption-label font-space-mono rounded-full flex items-center justify-center">
                 {index + 1}

@@ -87,6 +87,7 @@ const TrendingCollection = () => {
               <div key={index} className="flex flex-col gap-3.5">
                 {/* Render main image */}
                 <img
+                  className="scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer"
                   src={`${item.primaryImage1x}`}
                   srcSet={`${item.primaryImage1x} 1x, ${item.primaryImage2x} 2x`}
                   alt=""
@@ -98,16 +99,17 @@ const TrendingCollection = () => {
                       key={index}
                       src={image.small}
                       srcSet={`${image.small} 1x, ${image.large} 2x`}
+                      className="scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer"
                       alt=""
                     />
                   ))}
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
-                    <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono text-center rounded-[20px] ">
+                    <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono text-center rounded-[20px] scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer">
                       {countSecondaryImages}+
                     </h5>
                   ) : (
-                    <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono flex justify-center items-center rounded-[20px]">
+                    <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono flex justify-center items-center rounded-[20px] scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer">
                       Bonus Img
                     </h5>
                   )}
