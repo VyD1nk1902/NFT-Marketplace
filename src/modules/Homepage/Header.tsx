@@ -53,6 +53,7 @@ const Header = () => {
             size="secondary"
             background="color"
             className="w-[152px] px-[30px] font-[600]"
+            link="#"
           >
             <img src={User} className="w-[20px] h-[20px]" alt="" />
             Sign up

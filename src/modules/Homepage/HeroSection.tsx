@@ -37,6 +37,7 @@ const HeroSection = () => {
             className="px-[50px] w-[224px] font-[600]"
             size="tertiary"
             background="color"
+            link="#"
           >
             <img src={Rocket} className="w-[20px] h-[20px]" alt="" />
             Get Started

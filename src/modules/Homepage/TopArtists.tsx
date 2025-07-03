@@ -90,6 +90,7 @@ const TopArtists = () => {
             size="secondary"
             background="transparent"
             className="px-[50px] flex gap-3 text-base font-[600]"
+            link="#"
           >
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
             View Rankings
@@ -98,9 +99,10 @@ const TopArtists = () => {
 
         <div className="pt-[60px] grid grid-cols-[240px_240px_240px_240px] gap-[30px] place-content-center ">
           {artistsData.map((item, index) => (
-            <div
+            <a
               key={index}
-              className="relative p-5 rounded-[20px] bg-bg-secondary flex flex-col items-center justify-center gap-5 scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer"
+              href="#"
+              className="relative p-5 rounded-[20px] bg-bg-secondary flex flex-col items-center justify-center gap-5 hover-scale"
             >
               <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-bg-primary text-caption-label font-space-mono rounded-full flex items-center justify-center">
                 {index + 1}
@@ -115,7 +117,7 @@ const TopArtists = () => {
                 <span className="text-caption-label">Total Sales:</span>{" "}
                 <span className="font-space-mono">{item.balance} ETH</span>
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -86,32 +86,41 @@ const TrendingCollection = () => {
             return (
               <div key={index} className="flex flex-col gap-3.5">
                 {/* Render main image */}
-                <img
-                  className="scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer"
-                  src={`${item.primaryImage1x}`}
-                  srcSet={`${item.primaryImage1x} 1x, ${item.primaryImage2x} 2x`}
-                  alt=""
-                />
+                <a href="#">
+                  <img
+                    className="hover-scale"
+                    src={`${item.primaryImage1x}`}
+                    srcSet={`${item.primaryImage1x} 1x, ${item.primaryImage2x} 2x`}
+                    alt=""
+                  />
+                </a>
+
                 {/* Render sub images */}
                 <div className="flex gap-3.5 items-center justify-between">
                   {item.secondaryImages.slice(0, 2).map((image, index) => (
-                    <img
-                      key={index}
-                      src={image.small}
-                      srcSet={`${image.small} 1x, ${image.large} 2x`}
-                      className="scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer"
-                      alt=""
-                    />
+                    <a href="#">
+                      <img
+                        key={index}
+                        src={image.small}
+                        srcSet={`${image.small} 1x, ${image.large} 2x`}
+                        className="hover-scale"
+                        alt=""
+                      />
+                    </a>
                   ))}
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
-                    <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono text-center rounded-[20px] scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer">
-                      {countSecondaryImages}+
-                    </h5>
+                    <a href="#">
+                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono text-center rounded-[20px] hover-scale">
+                        {countSecondaryImages}+
+                      </h5>
+                    </a>
                   ) : (
-                    <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono flex justify-center items-center rounded-[20px] scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer">
-                      Bonus Img
-                    </h5>
+                    <a href="">
+                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono flex justify-center items-center rounded-[20px] hover-scale">
+                        Bonus Img
+                      </h5>
+                    </a>
                   )}
                 </div>
                 {/* Cards footer */}
