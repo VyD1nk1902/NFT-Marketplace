@@ -21,24 +21,26 @@ const Buttons = ({
   const buttonSize = sizeOptions[size] || sizeOptions.secondary;
   const buttonColor = colorOptions[background] || colorOptions.color;
 
-  const buttonOptionClass = `flex gap-[12px] text-text rounded-[20px] cursor-pointer justify-center items-center scale-105 transition-all ease-in-out duration-300 hover:scale-100 ${buttonSize} ${buttonColor} `;
+  const buttonOptionClass = `flex gap-3 text-text rounded-[20px] cursor-pointer justify-center items-center scale-105 transition-all ease-in-out duration-300 hover:scale-100 ${buttonSize} ${buttonColor} `;
 
-  if (link.length > 0)
+  if (link === "")
     return (
-      <a
-        href={link}
+      <button
         onClick={onClick}
         className={`${buttonOptionClass}, ${className}`}
       >
         {children}
-      </a>
+      </button>
     );
 
   return (
-    <button
+    <a
+      href={link}
       onClick={onClick}
       className={`${buttonOptionClass}, ${className}`}
-    ></button>
+    >
+      {children}
+    </a>
   );
 };
 
