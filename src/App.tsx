@@ -1,14 +1,10 @@
 import "@styles/index.css";
-
+import Homepage from "@pages/Homepage";
 function App() {
   return (
     <>
       <div>
-        <h1 className="text-5xl text-red">HELLO</h1>
-        <h1 className="text-5xl text-red">HELLO</h1>
-        <h1 className="text-5xl text-red">HELLO</h1>
-        <h1 className="text-5xl text-red">HELLO</h1>
-        <h1 className="text-5xl text-red">HELLO</h1>
+        <Homepage />
       </div>
     </>
   );
