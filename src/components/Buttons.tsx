@@ -20,7 +20,7 @@ const Buttons = ({
   const buttonSize = sizeOptions[size] || sizeOptions.secondary;
   const buttonColor = colorOptions[background] || colorOptions.color;
 
-  const buttonOptionClass = `flex gap-[12px] text-text rounded-[20px] cursor-pointer justify-center items-center ${buttonSize} ${buttonColor} `;
+  const buttonOptionClass = `flex gap-[12px] text-text rounded-[20px] cursor-pointer justify-center items-center scale-105 transition-all ease-in-out duration-300 hover:scale-100 ${buttonSize} ${buttonColor} `;
 
   return (
     <button onClick={onClick} className={`${buttonOptionClass}, ${className}`}>
