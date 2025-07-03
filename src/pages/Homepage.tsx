@@ -1,5 +1,6 @@
 import Header from "@modules/Homepage/Header";
 import HeroSection from "@modules/Homepage/HeroSection";
+import TopArtists from "@modules/Homepage/TopArtists";
 import TrendingCollection from "@modules/Homepage/TrendingCollection";
 
 const Homepage = () => {
@@ -9,6 +10,7 @@ const Homepage = () => {
         <Header />
         <HeroSection />
         <TrendingCollection />
+        <TopArtists />
       </div>
     </>
   );
