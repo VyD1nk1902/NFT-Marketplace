@@ -5,6 +5,7 @@ const Buttons = ({
   className,
   children,
   onClick,
+  link,
 }: ButtonProps) => {
   const sizeOptions = {
     primary: " h-[72px] text-[22px] ",
@@ -22,10 +23,22 @@ const Buttons = ({
 
   const buttonOptionClass = `flex gap-[12px] text-text rounded-[20px] cursor-pointer justify-center items-center scale-105 transition-all ease-in-out duration-300 hover:scale-100 ${buttonSize} ${buttonColor} `;
 
+  if (link.length > 0)
+    return (
+      <a
+        href={link}
+        onClick={onClick}
+        className={`${buttonOptionClass}, ${className}`}
+      >
+        {children}
+      </a>
+    );
+
   return (
-    <button onClick={onClick} className={`${buttonOptionClass}, ${className}`}>
-      {children}
-    </button>
+    <button
+      onClick={onClick}
+      className={`${buttonOptionClass}, ${className}`}
+    ></button>
   );
 };
 
