@@ -61,12 +61,13 @@ const BrowseCategories = () => {
 
   return (
     <section className="content-wrapper">
-      <a href="#">
+      <div>
         <h3 className="pb-[60px]">Browse Categories</h3>
         <div className="grid grid-cols-4 gap-[30px]">
           {categoryCardsData.map((item) => (
-            <div
+            <a
               key={item.name}
+              href="#"
               className="w-[240px] h-[316px] rounded-[20px] bg-bg-secondary hover-scale"
             >
               <div className="relative overflow-hidden rounded-t-[20px]">
@@ -80,10 +81,10 @@ const BrowseCategories = () => {
               <div className="pt-5 pb-6 px-[30px]">
                 <h5 className="font-[600]">{item.name}</h5>
               </div>
-            </div>
+            </a>
           ))}
         </div>
-      </a>
+      </div>
     </section>
   );
 };
