@@ -22,7 +22,7 @@ const HeroSection = () => {
 
   return (
     <section className="pt-[100px]">
-      <div className="content-wrapper grid grid-cols-2 gap-[30px] py-20">
+      <div className="content-wrapper grid grid-cols-2 gap-[30px] ">
         <div className="flex flex-col gap-[30px]">
           <div>
             <h1 className="font-[600]">

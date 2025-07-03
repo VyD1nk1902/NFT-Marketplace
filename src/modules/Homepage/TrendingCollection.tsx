@@ -70,7 +70,7 @@ const TrendingCollection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section>
       <div className="content-wrapper">
         {/* Title */}
         <div className="flex flex-col gap-2.5">
