@@ -81,7 +81,7 @@ const TopArtists = () => {
       <div className="content-wrapper">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2.5">
-            <h3 className="font-[600]">Top Creators</h3>
+            <h3>Top Creators</h3>
             <p className="text-[22px] font-[400] capitalize">
               Checkout Top Rated Creators on the NFT Marketplace
             </p>
@@ -89,7 +89,7 @@ const TopArtists = () => {
           <Buttons
             size="secondary"
             background="transparent"
-            className="px-[50px] flex gap-3 text-base font-[600]"
+            className="px-[50px] flex gap-3 text-base"
             link="#"
           >
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
@@ -112,7 +112,7 @@ const TopArtists = () => {
                 className=" w-[120px] h-[120px]"
                 alt=""
               />
-              <h5 className="font-[600]">{item.name}</h5>
+              <h5>{item.name}</h5>
               <p className="">
                 <span className="text-caption-label">Total Sales:</span>{" "}
                 <span className="font-space-mono">{item.balance} ETH</span>

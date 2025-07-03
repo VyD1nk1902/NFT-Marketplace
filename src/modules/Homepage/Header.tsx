@@ -52,7 +52,7 @@ const Header = () => {
           <Buttons
             size="secondary"
             background="color"
-            className="w-[152px] px-[30px] font-[600]"
+            className="w-[152px] px-[30px]"
             link="#"
           >
             <img src={User} className="w-[20px] h-[20px]" alt="" />

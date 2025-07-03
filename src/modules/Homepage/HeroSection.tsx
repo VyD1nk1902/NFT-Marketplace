@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="content-wrapper grid grid-cols-2 gap-[30px] ">
         <div className="flex flex-col gap-[30px]">
           <div>
-            <h1 className="font-[600]">
+            <h1>
               Discover <br /> Digital Art & <br /> Collect NFTs
             </h1>
             <p className="text-[22px] font-light capitalize">
@@ -34,7 +34,7 @@ const HeroSection = () => {
             </p>
           </div>
           <Buttons
-            className="px-[50px] w-[224px] font-[600]"
+            className="px-[50px] w-[224px]"
             size="tertiary"
             background="color"
             link="#"

@@ -8,9 +8,9 @@ const Buttons = ({
   link,
 }: ButtonProps) => {
   const sizeOptions = {
-    primary: " h-[72px] text-[22px] ",
-    secondary: " h-[60px] text-[16px] ",
-    tertiary: " h-[46px] text-[16px] ",
+    primary: " h-[72px] text-[22px] font-[600]",
+    secondary: " h-[60px] text-[16px] font-[600]",
+    tertiary: " h-[46px] text-[16px] font-[600]",
   };
 
   const colorOptions = {

@@ -74,7 +74,7 @@ const TrendingCollection = () => {
       <div className="content-wrapper">
         {/* Title */}
         <div className="flex flex-col gap-2.5">
-          <h3 className="font-[600]">Trending Collection</h3>
+          <h3>Trending Collection</h3>
           <p className="text-[22px] capitalize">
             Checkout our weekly updated trending collection.
           </p>
@@ -125,7 +125,7 @@ const TrendingCollection = () => {
                 </div>
                 {/* Cards footer */}
                 <div className="flex flex-col gap-2.5">
-                  <h5 className="font-[600]">{item.title}</h5>
+                  <h5>{item.title}</h5>
                   <div className="flex gap-[12px]">
                     <img
                       src={item.imgUser}

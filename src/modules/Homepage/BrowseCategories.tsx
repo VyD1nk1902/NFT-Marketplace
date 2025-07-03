@@ -79,7 +79,7 @@ const BrowseCategories = () => {
                 />
               </div>
               <div className="pt-5 pb-6 px-[30px]">
-                <h5 className="font-[600]">{item.name}</h5>
+                <h5>{item.name}</h5>
               </div>
             </a>
           ))}
