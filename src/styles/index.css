@@ -1,5 +1,75 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 @theme {
-  --color-red: #ff0000;
+  --color-bg-primary: #2b2b2b;
+  --color-bg-secondary: #3b3b3b;
+  --color-caption-label: #858584;
+  --color-text: #fff;
+  --color-action: #a259ff;
+  --color-bg-gradient1: linear-gradient(101deg, #a259ff 13.57%, #ff6250 97.65%);
+  --color-bg-gradient2: linear-gradient(
+    128deg,
+    #a259ff 49.75%,
+    #377df7 136.56%
+  );
+  --font-work-sans: "Work Sans", sans-serif;
+  --font-space-mono: "Space Mono", monospace;
+}
+
+.space-mono-regular {
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body,
+html {
+  @apply bg-bg-primary text-text font-work-sans m-0;
+}
+
+h1 {
+  @apply text-[67px];
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+h3 {
+  @apply text-4xl;
+}
+
+h4 {
+  @apply text-3xl;
+}
+
+h5 {
+  @apply text-2xl;
+}
+
+span {
+  @apply inline-block;
+}
+
+.content-wrapper {
+  @apply max-w-[1050px] w-screen mx-auto;
 }
