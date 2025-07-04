@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "@assets/Font/font.css";
 
 @theme {
   --color-bg-primary: #2b2b2b;
@@ -7,38 +8,16 @@
   --color-caption-label: #858584;
   --color-text: #fff;
   --color-action: #a259ff;
-  --color-bg-gradient1: linear-gradient(101deg, #a259ff 13.57%, #ff6250 97.65%);
-  --color-bg-gradient2: linear-gradient(
-    128deg,
-    #a259ff 49.75%,
-    #377df7 136.56%
+  --background-image-gradient1: linear-gradient(101deg, #a259ff 13.57%, #ff6250 97.65%);
+  --background-image-gradient2: linear-gradient(128deg, #a259ff 49.75%, #377df7 136.56%);
+  --background-image-gradient3: linear-gradient(
+    180deg,
+    rgba(162.00005114078522, 89.00000989437103, 255, 0) 0%,
+    rgb(162.00000554323196, 89.00000229477882, 255) 100%
   );
+
   --font-work-sans: "Work Sans", sans-serif;
-  --font-space-mono: "Space Mono", monospace;
-}
-
-.space-mono-regular {
-  font-family: var(--font-space-mono), monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.space-mono-bold {
-  font-family: var(--font-space-mono), monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.space-mono-regular-italic {
-  font-family: var(--font-space-mono), monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.space-mono-bold-italic {
-  font-family: var(--font-space-mono), monospace;
-  font-weight: 700;
-  font-style: italic;
+  --font-space-mono: "Space Mono", spacemono;
 }
 
 body,
