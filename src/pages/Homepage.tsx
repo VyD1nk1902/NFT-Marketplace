@@ -6,6 +6,7 @@ import BrowseCategories from "@modules/Homepage/BrowseCategories";
 import DiscoveryMore from "@modules/Homepage/Discovery";
 import Highlight from "@modules/Homepage/Highlight";
 import HowItWorks from "@modules/Homepage/HowItWorks";
+import Subcribe from "@modules/Homepage/Subcribe";
 
 const Homepage = () => {
   return (
@@ -19,6 +20,7 @@ const Homepage = () => {
         <DiscoveryMore />
         <Highlight />
         <HowItWorks />
+        <Subcribe />
       </div>
     </>
   );
