@@ -3,12 +3,12 @@ import { Eye } from "@assets/Svg/SvgExport";
 import NFTavatar from "@assets/Avatars/Avatar Placeholder (15).png";
 import NFTavatar1 from "@assets/Avatars/Avatar Placeholder (9).png";
 import NFTavatar2 from "@assets/Avatars/Avatar Placeholder (14).png";
-import DiscoveryNFT1small from "@assets/Discovery/DiscoveryNFT(1).png";
-import DiscoveryNFT1large from "@assets/Discovery/DiscoveryNFT(1)@2x.png";
-import DiscoveryNFT2small from "@assets/Discovery/DiscoveryNFT(2).png";
-import DiscoveryNFT2large from "@assets/Discovery/DiscoveryNFT(2)@2x.png";
-import DiscoveryNFT3small from "@assets/Discovery/DiscoveryNFT(3).png";
-import DiscoveryNFT3large from "@assets/Discovery/DiscoveryNFT(3)@2x.png";
+import DiscoveryNFT1small from "@assets/Homepage/Discovery/DiscoveryNFT(1).png";
+import DiscoveryNFT1large from "@assets/Homepage/Discovery/DiscoveryNFT(1)@2x.png";
+import DiscoveryNFT2small from "@assets/Homepage/Discovery/DiscoveryNFT(2).png";
+import DiscoveryNFT2large from "@assets/Homepage/Discovery/DiscoveryNFT(2)@2x.png";
+import DiscoveryNFT3small from "@assets/Homepage/Discovery/DiscoveryNFT(3).png";
+import DiscoveryNFT3large from "@assets/Homepage/Discovery/DiscoveryNFT(3)@2x.png";
 
 const DiscoveryMore = () => {
   const discoveryCardContents = [

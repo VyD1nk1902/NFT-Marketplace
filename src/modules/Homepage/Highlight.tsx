@@ -1,4 +1,4 @@
-import HighlightBg from "@assets/Highlight/NFT Highlight.png";
+import HighlightBg from "@assets/Homepage/Highlight/NFT Highlight.png";
 import Buttons from "@components/Buttons";
 import { Eye } from "@assets/Svg/SvgExport";
 import Avatar from "@assets/Avatars/Avatar Placeholder (6).png";

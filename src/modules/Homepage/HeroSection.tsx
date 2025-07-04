@@ -1,7 +1,7 @@
 import Buttons from "@components/Buttons";
 import Rocket from "@assets/Icons/RocketLaunch.svg";
-import HeroImgx1 from "@assets/Hero/hero-x1.png";
-import HeroImgx2 from "@assets/Hero/hero-x2.png";
+import HeroImgx1 from "@assets/Homepage/Hero/hero-x1.png";
+import HeroImgx2 from "@assets/Homepage/Hero/hero-x2.png";
 import AvatarSpace from "@assets/Avatars/Avatar Placeholder (13).png";
 
 const HeroSection = () => {

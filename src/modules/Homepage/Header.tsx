@@ -1,7 +1,7 @@
 import Buttons from "@components/Buttons";
 
-import headerLogox1 from "@assets/Header/NFT Marketplace.png";
-import headerLogox2 from "@assets/Header/NFT Marketplace-2x.png";
+import headerLogox1 from "@assets/Homepage/Header/NFT Marketplace.png";
+import headerLogox2 from "@assets/Homepage/Header/NFT Marketplace-2x.png";
 import User from "@assets/Icons/User.svg";
 import { StoreFront } from "@assets/Svg/SvgExport";
 
@@ -29,11 +29,7 @@ const Header = () => {
               <StoreFront className="text-action mb-1 " />
             </span>
             <span>
-              <img
-                src={headerLogox1}
-                srcSet={`${headerLogox1} 1x, ${headerLogox2} 2x`}
-                alt="main logo"
-              />
+              <img src={headerLogox1} srcSet={`${headerLogox1} 1x, ${headerLogox2} 2x`} alt="main logo" />
             </span>
           </a>
         </div>
@@ -49,12 +45,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <Buttons
-            size="secondary"
-            background="color"
-            className="w-[152px] px-[30px]"
-            link="#"
-          >
+          <Buttons size="secondary" background="color" className="w-[152px] px-[30px]" link="#">
             <img src={User} className="w-[20px] h-[20px]" alt="" />
             Sign up
           </Buttons>

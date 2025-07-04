@@ -1,11 +1,11 @@
-import backgroundCard from "@assets/BrowseCategories/Image Placeholder.png";
-import backgroundCard1 from "@assets/BrowseCategories/Image Placeholder (1).png";
-import backgroundCard2 from "@assets/BrowseCategories/Image Placeholder (2).png";
-import backgroundCard3 from "@assets/BrowseCategories/Image Placeholder (3).png";
-import backgroundCard4 from "@assets/BrowseCategories/Image Placeholder (4).png";
-import backgroundCard5 from "@assets/BrowseCategories/Image Placeholder (5).png";
-import backgroundCard6 from "@assets/BrowseCategories/Image Placeholder (6).png";
-import backgroundCard7 from "@assets/BrowseCategories/Image Placeholder (7).png";
+import backgroundCard from "@assets/Homepage/BrowseCategories/Image Placeholder.png";
+import backgroundCard1 from "@assets/Homepage/BrowseCategories/Image Placeholder (1).png";
+import backgroundCard2 from "@assets/Homepage/BrowseCategories/Image Placeholder (2).png";
+import backgroundCard3 from "@assets/Homepage/BrowseCategories/Image Placeholder (3).png";
+import backgroundCard4 from "@assets/Homepage/BrowseCategories/Image Placeholder (4).png";
+import backgroundCard5 from "@assets/Homepage/BrowseCategories/Image Placeholder (5).png";
+import backgroundCard6 from "@assets/Homepage/BrowseCategories/Image Placeholder (6).png";
+import backgroundCard7 from "@assets/Homepage/BrowseCategories/Image Placeholder (7).png";
 import iconCard from "@assets/Icons/PaintBrush.svg";
 import iconCard1 from "@assets/Icons/Swatches.svg";
 import iconCard2 from "@assets/Icons/MusicNotes.svg";
@@ -65,18 +65,10 @@ const BrowseCategories = () => {
         <h3 className="pb-[60px]">Browse Categories</h3>
         <div className="grid grid-cols-4 gap-[30px]">
           {categoryCardsData.map((item) => (
-            <a
-              key={item.name}
-              href="#"
-              className="w-[240px] h-[316px] rounded-[20px] bg-bg-secondary hover-scale"
-            >
+            <a key={item.name} href="#" className="w-[240px] h-[316px] rounded-[20px] bg-bg-secondary hover-scale">
               <div className="relative overflow-hidden rounded-t-[20px]">
                 <img src={item.background} className="blur-[7.5px] " alt="" />
-                <img
-                  src={item.icon}
-                  className="absolute top-17 left-17"
-                  alt=""
-                />
+                <img src={item.icon} className="absolute top-17 left-17" alt="" />
               </div>
               <div className="pt-5 pb-6 px-[30px]">
                 <h5>{item.name}</h5>
