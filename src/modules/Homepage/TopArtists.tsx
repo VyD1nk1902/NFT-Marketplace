@@ -82,16 +82,9 @@ const TopArtists = () => {
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2.5">
             <h3>Top Creators</h3>
-            <p className="text-[22px] font-[400] capitalize">
-              Checkout Top Rated Creators on the NFT Marketplace
-            </p>
+            <p className="text-[22px] font-[400] capitalize">Checkout Top Rated Creators on the NFT Marketplace</p>
           </div>
-          <Buttons
-            size="secondary"
-            background="transparent"
-            className="px-[50px] text-base"
-            link="#"
-          >
+          <Buttons size="secondary" background="transparent" className="px-[50px] text-base" link="#">
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
             View Rankings
           </Buttons>
@@ -107,11 +100,7 @@ const TopArtists = () => {
               <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-bg-primary text-caption-label font-space-mono rounded-full flex items-center justify-center">
                 {index + 1}
               </div>
-              <img
-                src={item.profileImg}
-                className=" w-[120px] h-[120px]"
-                alt=""
-              />
+              <img src={item.profileImg} className=" w-[120px] h-[120px]" alt="" />
               <h5>{item.name}</h5>
               <p className="">
                 <span className="text-caption-label">Total Sales:</span>{" "}

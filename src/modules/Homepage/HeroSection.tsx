@@ -29,16 +29,10 @@ const HeroSection = () => {
               Discover <br /> Digital Art & <br /> Collect NFTs
             </h1>
             <p className="text-[22px] font-light capitalize">
-              NFT Marketplace UI created with Anima for Figma. Collect, buy and
-              sell art from more than 20k NFT artists.
+              NFT Marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
             </p>
           </div>
-          <Buttons
-            className="px-[50px] w-[224px]"
-            size="tertiary"
-            background="color"
-            link="#"
-          >
+          <Buttons className="px-[50px] w-[224px]" size="tertiary" background="color" link="#">
             <img src={Rocket} className="w-[20px] h-[20px]" alt="" />
             Get Started
           </Buttons>
@@ -46,7 +40,7 @@ const HeroSection = () => {
             <ul className="flex gap-[30px]">
               {heroData.map((item) => (
                 <li key={item.title}>
-                  <h4 className="space-mono-bold">{item.number}k+</h4>
+                  <h4 className="font-space-mono font-bold">{item.number}k+</h4>
                   <h5>{item.title}</h5>
                 </li>
               ))}
@@ -54,11 +48,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="w-lg h-[512px]">
-          <img
-            src={HeroImgx1}
-            srcSet={`${HeroImgx1} 1x, ${HeroImgx2} 2x`}
-            alt=""
-          />
+          <img src={HeroImgx1} srcSet={`${HeroImgx1} 1x, ${HeroImgx2} 2x`} alt="" />
           <div className="p-5 flex flex-col gap-2.5 bg-bg-secondary rounded-b-[20px]">
             <h5>Space Walking</h5>
             <div className="flex gap-3">

@@ -47,12 +47,7 @@ const DiscoveryMore = () => {
           <h3>Discover More NFTs</h3>
           <p className="text-[22px] capitalize">Explore new trending NFTs</p>
         </div>
-        <Buttons
-          className="px-[50px] mt-4.5 mr-1"
-          size="secondary"
-          background="transparent"
-          link="#"
-        >
+        <Buttons className="px-[50px] mt-4.5 mr-1" size="secondary" background="transparent" link="#">
           <Eye className="fill-action w-[20px] h-[20px]" />
           See All
         </Buttons>
@@ -68,13 +63,13 @@ const DiscoveryMore = () => {
             />
             <div className="p-5 flex flex-col gap-2.5 bg-bg-secondary rounded-b-[20px]">
               <h5>{item.nftName}</h5>
-              <div className="flex gap-3 space-mono-regular">
+              <div className="flex gap-3 font-space-mono">
                 <span>
                   <img src={item.userImg} className="w-6 h-6" alt="" />{" "}
                 </span>
                 {item.userName}
               </div>
-              <div className="flex justify-between items-center space-mono-regular">
+              <div className="flex justify-between items-center font-space-mono">
                 <div>
                   <p className="text-xs text-caption-label">Price</p>
                   <p className="text-base">{item.price} ETH</p>

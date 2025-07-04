@@ -75,9 +75,7 @@ const TrendingCollection = () => {
         {/* Title */}
         <div className="flex flex-col gap-2.5">
           <h3>Trending Collection</h3>
-          <p className="text-[22px] capitalize">
-            Checkout our weekly updated trending collection.
-          </p>
+          <p className="text-[22px] capitalize">Checkout our weekly updated trending collection.</p>
         </div>
         {/* Cards */}
         <div className="mt-[60px] grid grid-cols-3 gap-[30px]">
@@ -111,13 +109,13 @@ const TrendingCollection = () => {
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
                     <a href="#">
-                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono text-center rounded-[20px] hover-scale">
+                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono font-bold text-center rounded-[20px] hover-scale">
                         {countSecondaryImages}+
                       </h5>
                     </a>
                   ) : (
                     <a href="">
-                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono flex justify-center items-center rounded-[20px] hover-scale">
+                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono font-bold flex justify-center items-center rounded-[20px] hover-scale">
                         Bonus Img
                       </h5>
                     </a>
@@ -127,11 +125,7 @@ const TrendingCollection = () => {
                 <div className="flex flex-col gap-2.5">
                   <h5>{item.title}</h5>
                   <div className="flex gap-[12px]">
-                    <img
-                      src={item.imgUser}
-                      alt="imgUser"
-                      className="w-[24px] h-[24px]"
-                    />
+                    <img src={item.imgUser} alt="imgUser" className="w-[24px] h-[24px]" />
                     <p className="text-base">{item.nameUser}</p>
                   </div>
                 </div>
