@@ -96,9 +96,8 @@ const TrendingCollection = () => {
                 {/* Render sub images */}
                 <div className="flex gap-3.5 items-center justify-between">
                   {item.secondaryImages.slice(0, 2).map((image, index) => (
-                    <a href="#">
+                    <a href="#" key={index}>
                       <img
-                        key={index}
                         src={image.small}
                         srcSet={`${image.small} 1x, ${image.large} 2x`}
                         className="hover-scale"
