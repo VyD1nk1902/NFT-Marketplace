@@ -5,8 +5,11 @@ import headerLogox2 from "@assets/Homepage/Header/NFT Marketplace-2x.png";
 import User from "@assets/Icons/User.svg";
 import { StoreFront } from "@assets/Svg/SvgExport";
 import { v4 as uuidv4 } from "uuid";
+import { useShowModal } from "@stores/ShowModal";
+import { BurgerMenu } from "@assets/Svg/SvgExport";
 
 const Header = () => {
+  const showModal = useShowModal((state) => state.open);
   const navHeaderMenu = [
     {
       id: uuidv4(),
@@ -25,8 +28,8 @@ const Header = () => {
     },
   ];
   return (
-    <header className="fixed top-0 left-0 right-0 h-[100px] bg-bg-primary w-full z-50 shadow">
-      <div className="flex justify-between items-center px-12 py-5">
+    <header className="fixed top-0 left-0 right-0 h-[100px] bg-bg-primary w-full z-40 shadow">
+      <div className="flex justify-between items-center sm:px-12 px-2 py-5">
         <div>
           <a href="#" className="flex items-center justify-center gap-3">
             <span>
@@ -38,7 +41,7 @@ const Header = () => {
           </a>
         </div>
 
-        <div className="flex justify-center items-center gap-2.5">
+        <div className="hidden lg:flex justify-center items-center gap-2.5 ">
           <ul className="flex gap-2.5">
             {navHeaderMenu.map((item) => (
               <li
@@ -54,6 +57,9 @@ const Header = () => {
             Sign up
           </Buttons>
         </div>
+        <Buttons size="none" background="none" link="" className="fill-white lg:hidden " onClick={showModal}>
+          <BurgerMenu className="" />
+        </Buttons>
       </div>
     </header>
   );
