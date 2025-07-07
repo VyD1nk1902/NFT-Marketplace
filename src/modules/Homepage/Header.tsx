@@ -4,18 +4,22 @@ import headerLogox1 from "@assets/Homepage/Header/NFT Marketplace.png";
 import headerLogox2 from "@assets/Homepage/Header/NFT Marketplace-2x.png";
 import User from "@assets/Icons/User.svg";
 import { StoreFront } from "@assets/Svg/SvgExport";
+import { v4 as uuidv4 } from "uuid";
 
 const Header = () => {
   const navHeaderMenu = [
     {
+      id: uuidv4(),
       title: "Marketplace",
       link: "#",
     },
     {
+      id: uuidv4(),
       title: "Rankings",
       link: "#",
     },
     {
+      id: uuidv4(),
       title: "Connect a wallet",
       link: "#",
     },
@@ -38,7 +42,7 @@ const Header = () => {
           <ul className="flex gap-2.5">
             {navHeaderMenu.map((item) => (
               <li
-                key={item.title}
+                key={item.id}
                 className="p-5 font-[600] scale-105 transition-all ease-in-out duration-300 hover:scale-100 hover:text-action"
               >
                 <a href={item.link}>{item.title}</a>

@@ -3,18 +3,22 @@ import Rocket from "@assets/Icons/RocketLaunch.svg";
 import HeroImgx1 from "@assets/Homepage/Hero/hero-x1.png";
 import HeroImgx2 from "@assets/Homepage/Hero/hero-x2.png";
 import AvatarSpace from "@assets/Avatars/Avatar Placeholder (13).png";
+import { v4 as uuidv4 } from "uuid";
 
 const HeroSection = () => {
   const heroData = [
     {
+      id: uuidv4(),
       number: "240",
       title: "Total Sale",
     },
     {
+      id: uuidv4(),
       number: "100",
       title: "Auctions",
     },
     {
+      id: uuidv4(),
       number: "240",
       title: "Artists",
     },
@@ -39,7 +43,7 @@ const HeroSection = () => {
           <div>
             <ul className="flex gap-[30px]">
               {heroData.map((item) => (
-                <li key={item.title}>
+                <li key={item.id}>
                   <h4 className="font-space-mono font-bold">{item.number}k+</h4>
                   <h5>{item.title}</h5>
                 </li>

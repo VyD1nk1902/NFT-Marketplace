@@ -9,10 +9,12 @@ import DiscoveryNFT2small from "@assets/Homepage/Discovery/DiscoveryNFT(2).png";
 import DiscoveryNFT2large from "@assets/Homepage/Discovery/DiscoveryNFT(2)@2x.png";
 import DiscoveryNFT3small from "@assets/Homepage/Discovery/DiscoveryNFT(3).png";
 import DiscoveryNFT3large from "@assets/Homepage/Discovery/DiscoveryNFT(3)@2x.png";
+import { v4 as uuidv4 } from "uuid";
 
 const DiscoveryMore = () => {
   const discoveryCardContents = [
     {
+      id: uuidv4(),
       background1x: DiscoveryNFT1small,
       background2x: DiscoveryNFT1large,
       userImg: NFTavatar,
@@ -22,6 +24,7 @@ const DiscoveryMore = () => {
       bid: 0.33,
     },
     {
+      id: uuidv4(),
       background1x: DiscoveryNFT2small,
       background2x: DiscoveryNFT2large,
       userImg: NFTavatar1,
@@ -31,6 +34,7 @@ const DiscoveryMore = () => {
       bid: 0.33,
     },
     {
+      id: uuidv4(),
       background1x: DiscoveryNFT3small,
       background2x: DiscoveryNFT3large,
       userImg: NFTavatar2,
@@ -54,7 +58,7 @@ const DiscoveryMore = () => {
       </div>
       <div className="grid grid-cols-3 gap-[30px] h-[469px]">
         {discoveryCardContents.map((item) => (
-          <a href="#" key={item.userName} className="hover-scale ">
+          <a href="#" key={item.id} className="hover-scale ">
             <img
               src={item.background1x}
               srcSet={`${item.background1x} 1x, ${item.background2x} 2x`}

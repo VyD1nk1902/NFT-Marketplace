@@ -12,65 +12,78 @@ import UserImg9 from "@assets/Avatars/Avatar Placeholder (8).png";
 import UserImg10 from "@assets/Avatars/Avatar Placeholder (13).png";
 import UserImg11 from "@assets/Avatars/Avatar Placeholder (14).png";
 import UserImg12 from "@assets/Avatars/Avatar Placeholder (16).png";
+import { v4 as uuidv4 } from "uuid";
 
 const TopArtists = () => {
   const artistsData = [
     {
+      id: uuidv4(),
       profileImg: UserImg1,
       name: "Keepitreal",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg2,
       name: "DigiLab",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg3,
       name: "GravityOne",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg4,
       name: "Juanie",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg5,
       name: "BlueWhale",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg6,
       name: "Mr Fox",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg7,
       name: "Shroomie",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg8,
       name: "Robotica",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg9,
       name: "RustyRobot",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg10,
       name: "Animakid",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg11,
       name: "Dotgu",
       balance: 34.53,
     },
     {
+      id: uuidv4(),
       profileImg: UserImg12,
       name: "Ghiblier",
       balance: 34.53,
@@ -93,7 +106,7 @@ const TopArtists = () => {
         <div className="pt-[60px] grid grid-cols-[240px_240px_240px_240px] gap-[30px] place-content-center ">
           {artistsData.map((item, index) => (
             <a
-              key={index}
+              key={item.id}
               href="#"
               className="relative p-5 rounded-[20px] bg-bg-secondary flex flex-col items-center justify-center gap-5 hover-scale"
             >

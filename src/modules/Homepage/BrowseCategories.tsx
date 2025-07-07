@@ -14,45 +14,54 @@ import iconCard4 from "@assets/Icons/VideoCamera.svg";
 import iconCard5 from "@assets/Icons/MagicWand.svg";
 import iconCard6 from "@assets/Icons/Basketball.svg";
 import iconCard7 from "@assets/Icons/Planet.svg";
+import { v4 as uuidv4 } from "uuid";
 
 const BrowseCategories = () => {
   const categoryCardsData = [
     {
+      id: uuidv4(),
       name: "Art",
       background: backgroundCard,
       icon: iconCard,
     },
     {
+      id: uuidv4(),
       name: "Collectibles",
       background: backgroundCard1,
       icon: iconCard1,
     },
     {
+      id: uuidv4(),
       name: "Music",
       background: backgroundCard2,
       icon: iconCard2,
     },
     {
+      id: uuidv4(),
       name: "Photography",
       background: backgroundCard3,
       icon: iconCard3,
     },
     {
+      id: uuidv4(),
       name: "Video",
       background: backgroundCard4,
       icon: iconCard4,
     },
     {
+      id: uuidv4(),
       name: "Utility",
       background: backgroundCard5,
       icon: iconCard5,
     },
     {
+      id: uuidv4(),
       name: "Sport",
       background: backgroundCard6,
       icon: iconCard6,
     },
     {
+      id: uuidv4(),
       name: "Virtual Worlds",
       background: backgroundCard7,
       icon: iconCard7,
@@ -65,7 +74,7 @@ const BrowseCategories = () => {
         <h3 className="pb-[60px]">Browse Categories</h3>
         <div className="grid grid-cols-4 gap-[30px]">
           {categoryCardsData.map((item) => (
-            <a key={item.name} href="#" className="w-[240px] h-[316px] rounded-[20px] bg-bg-secondary hover-scale">
+            <a key={item.id} href="#" className="w-[240px] h-[316px] rounded-[20px] bg-bg-secondary hover-scale">
               <div className="relative overflow-hidden rounded-t-[20px]">
                 <img src={item.background} className="blur-[7.5px] " alt="" />
                 <img src={item.icon} className="absolute top-17 left-17" alt="" />

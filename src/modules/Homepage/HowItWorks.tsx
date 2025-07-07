@@ -4,25 +4,26 @@ import Collection from "@assets/Homepage/HowItWorks/Create Collection Icon.png";
 import Collection2x from "@assets/Homepage/HowItWorks/Create Collection Icon@2x.png";
 import Earning from "@assets/Homepage/HowItWorks/Start Earning Icon.png";
 import Earning2x from "@assets/Homepage/HowItWorks/Start Earning Icon@2x.png";
+import { v4 as uuidv4 } from "uuid";
 
 const HowItWorks = () => {
   const HIWCarData = [
     {
-      id: 1,
+      id: uuidv4(),
       img: Wallet,
       img2x: Wallet2x,
       title: "Setup Your wallet",
       desc: "Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.",
     },
     {
-      id: 2,
+      id: uuidv4(),
       img: Collection,
       img2x: Collection2x,
       title: "Create Collection",
       desc: "Upload your work and setup your collection. Add a description, social links and floor price.",
     },
     {
-      id: 3,
+      id: uuidv4(),
       img: Earning,
       img2x: Earning2x,
       title: "Start Earning",

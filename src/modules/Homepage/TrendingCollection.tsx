@@ -19,10 +19,12 @@ import secondaryR2x from "@assets/Homepage/TrendingCollection/SecondaryRobot2@2x
 import avatarFox from "@assets/Avatars/Avatar Placeholder (5).png";
 import avatarHuman from "@assets/Avatars/Avatar Placeholder (6).png";
 import avatarRobot from "@assets/Avatars/Avatar Placeholder (11).png";
+import { v4 as uuidv4 } from "uuid";
 
 const TrendingCollection = () => {
   const collectionData = [
     {
+      id: uuidv4(),
       title: "DSGN Animals",
       imgUser: avatarFox,
       nameUser: "MrFox",
@@ -36,6 +38,7 @@ const TrendingCollection = () => {
       ],
     },
     {
+      id: uuidv4(),
       title: "Magic Mushrooms",
       imgUser: avatarHuman,
       nameUser: "Shroomie",
@@ -51,6 +54,7 @@ const TrendingCollection = () => {
       ],
     },
     {
+      id: uuidv4(),
       title: "Disco Machines",
       imgUser: avatarRobot,
       nameUser: "BeKind2Robots",
@@ -79,10 +83,10 @@ const TrendingCollection = () => {
         </div>
         {/* Cards */}
         <div className="mt-[60px] grid grid-cols-3 gap-[30px]">
-          {collectionData.map((item, index) => {
+          {collectionData.map((item) => {
             const countSecondaryImages = item.secondaryImages.length - 2;
             return (
-              <div key={index} className="flex flex-col gap-3.5">
+              <div key={item.id} className="flex flex-col gap-3.5">
                 {/* Render main image */}
                 <a href="#">
                   <img
