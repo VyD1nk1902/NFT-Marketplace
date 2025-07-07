@@ -8,12 +8,14 @@ import Highlight from "@modules/Homepage/Highlight";
 import HowItWorks from "@modules/Homepage/HowItWorks";
 import Subcribe from "@modules/Homepage/Subcribe";
 import Footer from "@modules/Homepage/Footer";
+import ModalHeader from "@modules/Homepage/ModalHeader";
 
 const Homepage = () => {
   return (
     <>
-      <div className="">
+      <div className="overflow-hidden">
         <Header />
+        <ModalHeader />
         <HeroSection />
         <TrendingCollection />
         <TopArtists />
