@@ -7,6 +7,7 @@ import DiscoveryMore from "@modules/Homepage/Discovery";
 import Highlight from "@modules/Homepage/Highlight";
 import HowItWorks from "@modules/Homepage/HowItWorks";
 import Subcribe from "@modules/Homepage/Subcribe";
+import Footer from "@modules/Homepage/Footer";
 
 const Homepage = () => {
   return (
@@ -21,6 +22,7 @@ const Homepage = () => {
         <Highlight />
         <HowItWorks />
         <Subcribe />
+        <Footer />
       </div>
     </>
   );
