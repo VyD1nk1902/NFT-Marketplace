@@ -1,4 +1,4 @@
-import type { HeroCardProps } from "@myTypes/HeroCardTypes.ts/HeroCardProps";
+import type { HeroCardProps } from "@myTypes/HeroCardTypes/HeroCardProps";
 const HeroCard = ({ url1, url2, url3, className }: HeroCardProps) => {
   return (
     <div className={`${className} w-[315px] h-[315px] `}>
