@@ -26,7 +26,7 @@ html {
 }
 
 h1 {
-  @apply text-[67px] font-[600];
+  @apply lg:text-6xl sm:text-5xl text-3xl font-[600];
 }
 
 h2 {
@@ -38,11 +38,11 @@ h3 {
 }
 
 h4 {
-  @apply text-3xl font-[600];
+  @apply sm:text-3xl text-[28px]  font-[600];
 }
 
 h5 {
-  @apply text-2xl font-[600];
+  @apply sm:text-2xl text-[22px] font-[600];
 }
 
 span {
@@ -56,7 +56,7 @@ input:-webkit-autofill {
 }
 
 .content-wrapper {
-  @apply max-w-[1050px] w-screen py-20 mx-auto;
+  @apply lg:max-w-[1050px] sm:max-w-[690px] max-w-[315px]  sm:w-screen sm:py-20 py-10 mx-auto;
 }
 
 .hover-scale {
