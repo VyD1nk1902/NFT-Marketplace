@@ -4,20 +4,12 @@ import { Eye } from "@assets/Svg/SvgExport";
 import Avatar from "@assets/Avatars/Avatar Placeholder (6).png";
 
 import { useMemo } from "react";
-import { useMediaQuery } from "react-responsive";
+import { useReponsive } from "@hooks/useReponsive";
 
 import Clock from "@components/Clock";
 
 const Highlight = () => {
-  // Mobile: < 640px
-  const isMobile = useMediaQuery({ maxWidth: 639 });
-
-  // Tablet: >= 640px và < 1024px
-  const isTablet = useMediaQuery({ minWidth: 640, maxWidth: 1023 });
-
-  // Desktop: >= 1024px
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
-
+  const { isTablet: Tablet, isMobile: Mobile, isDesktop: PC } = useReponsive();
   // Make sure time not reset after render
   const timeEnd = useMemo(() => {
     return new Date().getTime() + 24 * 3600 * 1000 * 2.5;
@@ -48,7 +40,7 @@ const Highlight = () => {
               </a>
               <h2>Magic Mashrooms</h2>
               {/* Clock-mobile */}
-              {isMobile && <Clock time={timeEnd} className="flip-clock-mobile" day={isTablet || isDesktop} />}
+              {Mobile && <Clock time={timeEnd} className="flip-clock-mobile" day={Tablet || PC} />}
               <Buttons
                 className="sm:w-[198px] w-full px-[50px] py-[22px] text-black bg-text"
                 link="#"
@@ -60,8 +52,8 @@ const Highlight = () => {
               </Buttons>
             </div>
             {/* Clock */}
-            {isTablet && <Clock time={timeEnd} className="flip-clock-tablet" day={isTablet || isDesktop} />}
-            {isDesktop && <Clock time={timeEnd} className="" day={isTablet || isDesktop} />}
+            {Tablet && <Clock time={timeEnd} className="flip-clock-tablet" day={Tablet || PC} />}
+            {PC && <Clock time={timeEnd} className="" day={Tablet || PC} />}
           </div>
         </div>
       </div>
