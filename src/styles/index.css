@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  @apply text-5xl font-[600];
+  @apply sm:text-5xl text-[38px] font-[600];
 }
 
 h3 {
@@ -61,4 +61,40 @@ input:-webkit-autofill {
 
 .hover-scale {
   @apply scale-100 transition-all ease-in-out duration-300 hover:scale-95 cursor-pointer;
+}
+
+.flip-clock-mobile {
+  --fcc-flip-duration: 0; /* transition duration when flip card */
+  --fcc-spacing: 8px; /* space between unit times and separators */
+  --fcc-digit-block-width: 35px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-radius: 5px; /* border radius of digit card */
+  --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
+  --fcc-digit-font-size: 25px; /* font size of digit */
+  --fcc-digit-color: white; /* color of digit */
+  --fcc-label-font-size: 10px; /* font size of label */
+  --fcc-label-color: #ffffff; /* color of label */
+  --fcc-background: black; /* background of digit card */
+  --fcc-divider-color: white; /* color of divider */
+  --fcc-divider-height: 0px; /* height of divider */
+  --fcc-separator-size: 5px; /* size of colon */
+  --fcc-separator-color: white; /* color of colon */
+}
+
+.flip-clock-tablet {
+  --fcc-flip-duration: 0; /* transition duration when flip card */
+  --fcc-spacing: 8px; /* space between unit times and separators */
+  --fcc-digit-block-width: 30px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-radius: 5px; /* border radius of digit card */
+  --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
+  --fcc-digit-font-size: 30px; /* font size of digit */
+  --fcc-digit-color: white; /* color of digit */
+  --fcc-label-font-size: 10px; /* font size of label */
+  --fcc-label-color: #ffffff; /* color of label */
+  --fcc-background: black; /* background of digit card */
+  --fcc-divider-color: white; /* color of divider */
+  --fcc-divider-height: 0; /* height of divider */
+  --fcc-separator-size: 6px; /* size of colon */
+  --fcc-separator-color: white; /* color of colon */
 }
