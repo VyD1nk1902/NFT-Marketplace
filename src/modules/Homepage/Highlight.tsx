@@ -22,6 +22,7 @@ const Highlight = () => {
   const timeEnd = useMemo(() => {
     return new Date().getTime() + 24 * 3600 * 1000 * 2.5;
   }, []);
+  //getTime -> current time
 
   // The clock positions is different depending on the responsive layout.
   // React will re-render (unmount/mount) the Clock component when the layout changes,
@@ -32,7 +33,7 @@ const Highlight = () => {
 
   return (
     <section>
-      <div className="relative w-full  overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         {/* Background img */}
         <img src={HighlightBg} className="w-full h-full object-cover object-center absolute inset-0" alt="Background" />
         {/* Background filter */}
