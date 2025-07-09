@@ -38,7 +38,8 @@ const Highlight = () => {
                 <img src={Avatar} className="w-6 h-6" alt="" />
                 <span>Schroomie</span>
               </a>
-              <h2>Magic Mashrooms</h2>
+              {PC ? <h2>Magic Mashrooms</h2> : <h3>Magic Mashrooms</h3>}
+
               {/* Clock-mobile */}
               {Mobile && <Clock time={timeEnd} className="flip-clock-mobile" day={Tablet || PC} />}
               <Buttons
