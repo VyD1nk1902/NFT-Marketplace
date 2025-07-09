@@ -4,6 +4,7 @@ import HeroImgx1 from "@assets/Homepage/Hero/hero-x1.png";
 import HeroImgx2 from "@assets/Homepage/Hero/hero-x2.png";
 import AvatarSpace from "@assets/Avatars/Avatar Placeholder (13).png";
 import { v4 as uuidv4 } from "uuid";
+import HeroCard from "@components/HeroCarrd";
 
 const HeroSection = () => {
   const heroData = [
@@ -26,32 +27,35 @@ const HeroSection = () => {
 
   return (
     <section className="pt-[100px]">
-      <div className="content-wrapper grid grid-cols-2 gap-[30px] ">
+      <div className="content-wrapper grid grid-cols-1 sm:grid-cols-2 gap-[30px] ">
+        {/* Nội dung */}
         <div className="flex flex-col gap-[30px]">
-          <div>
-            <h1>
-              Discover <br /> Digital Art & <br /> Collect NFTs
-            </h1>
-            <p className="text-[22px] font-light capitalize">
+          <div className="flex flex-col gap-5">
+            <h1>Discover Digital Art & Collect NFTs</h1>
+            <p className="lg:text-xl text-base  font-light capitalize">
               NFT Marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
             </p>
           </div>
-          <Buttons className="px-[50px] w-[224px]" size="tertiary" background="color" link="#">
+          <div className="sm:hidden block">
+            <HeroCard url1={HeroImgx1} url2={HeroImgx2} url3={AvatarSpace} className="mb-10" />
+          </div>
+          <Buttons className="px-[50px] sm:w-[224px] w-full" size="tertiary" background="color" link="#">
             <img src={Rocket} className="w-[20px] h-[20px]" alt="" />
             Get Started
           </Buttons>
           <div>
-            <ul className="flex gap-[30px]">
+            <ul className="flex justify-between sm:gap-[30px] lg:gap-[50px] sm:justify-start">
               {heroData.map((item) => (
                 <li key={item.id}>
                   <h4 className="font-space-mono font-bold">{item.number}k+</h4>
-                  <h5>{item.title}</h5>
+                  <p className="lg:text-[24px]">{item.title}</p>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="w-lg h-[512px]">
+        {/* Card ảnh */}
+        <div className="hidden sm:block">
           <img src={HeroImgx1} srcSet={`${HeroImgx1} 1x, ${HeroImgx2} 2x`} alt="" />
           <div className="p-5 flex flex-col gap-2.5 bg-bg-secondary rounded-b-[20px]">
             <h5>Space Walking</h5>

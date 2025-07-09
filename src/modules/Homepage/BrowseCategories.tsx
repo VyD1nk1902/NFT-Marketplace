@@ -71,16 +71,28 @@ const BrowseCategories = () => {
   return (
     <section className="content-wrapper">
       <div>
-        <h3 className="pb-[60px]">Browse Categories</h3>
-        <div className="grid grid-cols-4 gap-[30px]">
+        <h3 className="pb-[60px] hidden lg:block">Browse Categories</h3>
+        <h4 className="pb-[60px] block lg:hidden">Browse Categories</h4>
+        <div className="grid sm:grid-cols-4 grid-cols-2 gap-[30px]">
           {categoryCardsData.map((item) => (
-            <a key={item.id} href="#" className="w-[240px] h-[316px] rounded-[20px] bg-bg-secondary hover-scale">
+            <a
+              key={item.id}
+              href="#"
+              className="lg:w-[240px] lg:h-[316px] sm:w-[150px] sm:h-[209px] rounded-[20px] bg-bg-secondary hover-scale"
+            >
               <div className="relative overflow-hidden rounded-t-[20px]">
                 <img src={item.background} className="blur-[7.5px] " alt="" />
-                <img src={item.icon} className="absolute top-17 left-17" alt="" />
+                <img
+                  src={item.icon}
+                  className="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] absolute lg:top-17 lg:left-17 top-8 left-8 "
+                  alt=""
+                />
               </div>
-              <div className="pt-5 pb-6 px-[30px]">
+              <div className="pt-5 pb-6 px-[30px] lg:block hidden">
                 <h5>{item.name}</h5>
+              </div>
+              <div className="pt-5 pb-6 px-[20px] lg:hidden block">
+                <p>{item.name}</p>
               </div>
             </a>
           ))}

@@ -94,34 +94,43 @@ const TopArtists = () => {
       <div className="content-wrapper">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2.5">
-            <h3>Top Creators</h3>
-            <p className="text-[22px] font-[400] capitalize">Checkout Top Rated Creators on the NFT Marketplace</p>
+            <h3 className="hidden sm:block">Top Creators</h3>
+            <h4 className="sm:hidden block">Top Creators</h4>
+            <p className="text-[16px] lg:text-[22px] font-[400] capitalize">
+              Checkout Top Rated Creators on the NFT Marketplace
+            </p>
           </div>
-          <Buttons size="secondary" background="transparent" className="px-[50px] text-base" link="#">
+          <Buttons size="secondary" background="transparent" className="px-[50px]  text-base hidden sm:flex" link="#">
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
             View Rankings
           </Buttons>
         </div>
 
-        <div className="pt-[60px] grid grid-cols-[240px_240px_240px_240px] gap-[30px] place-content-center ">
+        <div className="pt-[60px] grid lg:grid-cols-[240px_240px_240px_240px] sm:grid-cols-[330px_330px] grid-cols-[315px] gap-[30px] place-content-center ">
           {artistsData.map((item, index) => (
             <a
               key={item.id}
               href="#"
-              className="relative p-5 rounded-[20px] bg-bg-secondary flex flex-col items-center justify-center gap-5 hover-scale"
+              className="relative p-5 rounded-[20px] bg-bg-secondary flex lg:flex-col items-center justify-center gap-5 hover-scale"
             >
               <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-bg-primary text-caption-label font-space-mono rounded-full flex items-center justify-center">
                 {index + 1}
               </div>
-              <img src={item.profileImg} className=" w-[120px] h-[120px]" alt="" />
-              <h5>{item.name}</h5>
-              <p className="">
-                <span className="text-caption-label">Total Sales:</span>{" "}
-                <span className="font-space-mono">{item.balance} ETH</span>
-              </p>
+              <img src={item.profileImg} className=" lg:w-[120px] lg:h-[120px] w-[60px] h-[60px]" alt="" />
+              <div className="flex flex-col">
+                <h5 className="lg:text-center">{item.name}</h5>
+                <p>
+                  <span className="text-caption-label">Total Sales:</span>{" "}
+                  <span className="font-space-mono">{item.balance} ETH</span>
+                </p>
+              </div>
             </a>
           ))}
         </div>
+        <Buttons size="secondary" background="transparent" className="mt-[40px] px-[50px] text-base sm:hidden" link="#">
+          <RocketLaunch className="fill-action w-[20px] h-[20px]" />
+          View Rankings
+        </Buttons>
       </div>
     </section>
   );

@@ -78,11 +78,12 @@ const TrendingCollection = () => {
       <div className="content-wrapper">
         {/* Title */}
         <div className="flex flex-col gap-2.5">
-          <h3>Trending Collection</h3>
-          <p className="text-[22px] capitalize">Checkout our weekly updated trending collection.</p>
+          <h3 className="hidden sm:block">Trending Collection</h3>
+          <h4 className="sm:hidden block">Trending Collection</h4>
+          <p className="text-[16px] lg:text-[22px] capitalize">Checkout our weekly updated trending collection.</p>
         </div>
         {/* Cards */}
-        <div className="mt-[60px] grid grid-cols-3 gap-[30px]">
+        <div className="mt-[60px] grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
           {collectionData.map((item) => {
             const countSecondaryImages = item.secondaryImages.length - 2;
             return (
@@ -112,7 +113,7 @@ const TrendingCollection = () => {
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
                     <a href="#">
-                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono font-bold text-center rounded-[20px] hover-scale">
+                      <h5 className="w-[100px] h-[100px] bg-action flex justify-center items-center px-3.5 py-8 font-space-mono font-bold rounded-[20px] hover-scale">
                         {countSecondaryImages}+
                       </h5>
                     </a>

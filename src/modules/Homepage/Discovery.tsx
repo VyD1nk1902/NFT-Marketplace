@@ -48,22 +48,23 @@ const DiscoveryMore = () => {
     <section className="content-wrapper flex flex-col gap-[60px]">
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-2.5">
-          <h3>Discover More NFTs</h3>
-          <p className="text-[22px] capitalize">Explore new trending NFTs</p>
+          <h3 className="hidden lg:block">Discover More NFTs</h3>
+          <h4 className="block lg:hidden">Discover More NFTs</h4>
+          <p className="lg:text-[22px] capitalize">Explore new trending NFTs</p>
         </div>
-        <Buttons className="px-[50px] mt-4.5 mr-1" size="secondary" background="transparent" link="#">
+        <Buttons className="px-[50px] mt-4.5 mr-1 hidden sm:flex" size="secondary" background="transparent" link="#">
           <Eye className="fill-action w-[20px] h-[20px]" />
           See All
         </Buttons>
       </div>
-      <div className="grid grid-cols-3 gap-[30px] h-[469px]">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px] ">
         {discoveryCardContents.map((item) => (
           <a href="#" key={item.id} className="hover-scale ">
             <img
               src={item.background1x}
               srcSet={`${item.background1x} 1x, ${item.background2x} 2x`}
               alt=""
-              className="w-full h-[296px] object-cover rounded-t-[20px]"
+              className="w-full min-h-[296px] object-cover rounded-t-[20px]"
             />
             <div className="p-5 flex flex-col gap-2.5 bg-bg-secondary rounded-b-[20px]">
               <h5>{item.nftName}</h5>
