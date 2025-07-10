@@ -1,15 +1,27 @@
-import headerLogox1 from "@assets/Homepage/Header/NFT Marketplace.png";
-import headerLogox2 from "@assets/Homepage/Header/NFT Marketplace-2x.png";
+import headerLogo from "@assets/Homepage/Footer/NFT Marketplace.svg";
 import { StoreFront } from "@assets/Svg/SvgExport";
 import { Discord } from "@assets/Svg/SvgExport";
 import { Youtube } from "@assets/Svg/SvgExport";
 import { Twitter } from "@assets/Svg/SvgExport";
 import { Instagram } from "@assets/Svg/SvgExport";
+import { Email } from "@assets/Svg/SvgExport";
+
 import { v4 as uuidv4 } from "uuid";
+
 import Inputs from "@components/Inputs";
 import Buttons from "@components/Buttons";
 
+import { useResponsive } from "@hooks/useResponsive";
+
 const Footer = () => {
+  // Responsive
+  const { isDesktop: Desktop, isTablet: Tablet, isMobile: Mobile } = useResponsive();
+  let wrapClass = "";
+  if (Desktop) wrapClass = "grid grid-cols-[1fr_1fr_1.5fr] justify-between px-[195px] gap-5";
+  if (Tablet) wrapClass = "w-[690px] flex flex-col gap-[30px] px-[60px]";
+  if (Mobile) wrapClass = "w-[315px] flex flex-col gap-[30px] m-auto";
+
+  // Explore navigation link data
   const footerExplore = [
     {
       id: uuidv4(),
@@ -27,18 +39,19 @@ const Footer = () => {
       link: "#",
     },
   ];
+
   return (
     <>
-      <footer className="px-[195px] py-10 bg-bg-secondary">
-        <div className="grid grid-cols-[243px_240px_420px] justify-between">
+      <footer className="py-10 bg-bg-secondary">
+        <div className={wrapClass}>
           {/* First Col */}
-          <div className="flex flex-col justify-center items-start">
-            <div className="flex justify-center items-center gap-3 pb-[30px]">
+          <div className="flex flex-col items-start">
+            <div className="flex justify-center items-center gap-3 pb-[20px] lg:pb-[30px]">
               <span>
                 <StoreFront className="text-action mb-1 " />
               </span>
               <span>
-                <img src={headerLogox1} srcSet={`${headerLogox1} 1x, ${headerLogox2} 2x`} alt="main logo" />
+                <img src={headerLogo} className="bg-bg-secondary w-[200px]" alt="main logo" />
               </span>
             </div>
             <p className="text-[#CCC] pb-[15px]">
@@ -59,9 +72,10 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
           {/* Second Col */}
-          <div>
-            <h5 className="font-space-mono pb-[25px]">Explore</h5>
+          <div className="flex flex-col gap-[25px]">
+            <h5 className="font-space-mono">Explore</h5>
             <ul className="flex flex-col gap-5 text-[#CCC]">
               {footerExplore.map((item) => (
                 <li key={item.id}>
@@ -70,31 +84,101 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
           {/* Third Col */}
           <div>
             <h5 className="font-space-mono pb-[25px] capitalize">Join our weekly digest</h5>
-            <p className="text-[#CCC] pb-5">
-              Get exclusive promotions & updates <br /> straight to your inbox.
-            </p>
-            <div className="bg-white rounded-[20px] w-[420px] flex gap-5">
-              <div>
-                <Inputs
-                  id="email"
-                  name="email"
-                  autoComplete="email"
-                  placeholder="Enter your email here..."
-                  type="text"
-                  className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
-                />
+            {Tablet ? (
+              <p className="text-[#CCC] pb-5">Get exclusive promotions & updates straight to your inbox.</p>
+            ) : (
+              <p className="text-[#CCC] pb-5">
+                Get exclusive promotions & updates <br /> straight to your inbox.
+              </p>
+            )}
+
+            {Desktop && (
+              <div className="bg-white rounded-[20px] flex justify-between 2xl:w-[50%] gap-5">
+                <div>
+                  <Inputs
+                    id="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="Enter your email here..."
+                    type="text"
+                    className=" bg-white w-[100%] pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
+                  />
+                </div>
+                <div className="w-[70%]">
+                  <Buttons className="" size="secondary" background="color" link="#">
+                    Subcribe
+                  </Buttons>
+                </div>
               </div>
-              <div>
-                <Buttons className="w-[200px] " size="secondary" background="color" link="#">
-                  Subcribe
-                </Buttons>
+            )}
+
+            {Tablet && (
+              <div className="bg-white w-[420px] rounded-[20px] flex gap-5">
+                <div>
+                  <Inputs
+                    id="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="Enter your email here..."
+                    type="text"
+                    className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
+                  />
+                </div>
+                <div>
+                  <Buttons className="w-[200px] " size="secondary" background="color" link="#">
+                    Subcribe
+                  </Buttons>
+                </div>
               </div>
-            </div>
+            )}
+
+            {Mobile && (
+              <div className="flex flex-col rounded-[20px]  w-full gap-4">
+                <div>
+                  <Inputs
+                    id="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="Enter your email here..."
+                    type="text"
+                    className=" bg-white w-full h-[46px] pl-5 py-4 text-bg-primary rounded-[20px] border-none  "
+                  />
+                </div>
+                <div>
+                  <Buttons className="" size="tertiary" background="color" link="#">
+                    <Email className="fill-text w-5 h-5" /> Subcribe
+                  </Buttons>
+                </div>
+              </div>
+            )}
           </div>
         </div>
+
+        {/* Copyright */}
+        {Desktop && (
+          <div className="px-[160px]">
+            <div className="border-b w-full text-caption-label pt-[30px] mb-[20px]"></div>
+            <p className="text-[12px] text-[#ccc]">Ⓒ NFT Market. Use this template freely.</p>
+          </div>
+        )}
+
+        {Tablet && (
+          <div className="px-[60px]">
+            <div className="border-b w-full text-caption-label pt-[50px] mb-[20px]"></div>
+            <p className="text-[12px] text-[#ccc]">Ⓒ NFT Market. Use this template freely.</p>
+          </div>
+        )}
+
+        {Mobile && (
+          <div className="px-[30px]">
+            <div className="border-b w-full text-caption-label pt-[30px] mb-[20px]"></div>
+            <p className="text-[12px] text-[#ccc]">Ⓒ NFT Market. Use this template freely.</p>
+          </div>
+        )}
       </footer>
     </>
   );
