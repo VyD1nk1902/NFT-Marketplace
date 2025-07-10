@@ -3,39 +3,77 @@ import Buttons from "@components/Buttons";
 import Photo from "@assets/Homepage/Subcribe/Photo.png";
 import Photo2x from "@assets/Homepage/Subcribe/Photo@2x.png";
 import { Email } from "@assets/Svg/SvgExport";
+import { useReponsive } from "@hooks/useReponsive";
 
 const Subcribe = () => {
+  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useReponsive();
+  let borderClass = "";
+  if (Desktop) borderClass = "bg-bg-secondary p-[60px] rounded-[20px] flex gap-[80px]";
+  if (Tablet) borderClass = "bg-bg-secondary px-[30px] py-[40px] rounded-[20px] flex gap-[30px]";
+  if (Mobile) borderClass = "p-[60px] rounded-[20px] flex gap-[80px]";
+
   return (
     <section className="content-wrapper">
-      <div className="bg-bg-secondary p-[60px] rounded-[20px] flex gap-[80px]">
+      <div className={`${borderClass}`}>
+        {Desktop && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} className="w-[425px] h-[310px]" alt="" />}
+        {Tablet && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} className="w-[300px] h-[280px]" alt="" />}
+        {Mobile && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} className="w-[315px] h-[255px]" alt="" />}
         <div>
-          <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} alt="" />
-        </div>
-        <div>
-          <h3 className="capitalize">
-            Join our weekly <br /> digest
-          </h3>
-          <p className="capitalize text-[22px] pt-2.5 pb-10">
-            Get exclusive promotions & updates
-            <br /> straight to your inbox.
-          </p>
-          <div className="bg-white rounded-[20px] flex gap-5">
-            <div>
+          {Desktop ? (
+            <div className="capitalize">
+              <h3>
+                Join our weekly <br /> digest
+              </h3>
+              <p className="text-[22px] pt-2.5 pb-10">
+                Get exclusive promotions & updates
+                <br /> straight to your inbox.
+              </p>
+            </div>
+          ) : (
+            <div className="capitalize">
+              <h4>
+                Join our weekly <br /> digest
+              </h4>
+              <p className="pt-2.5 pb-10">
+                Get exclusive promotions & updates
+                <br /> straight to your inbox.
+              </p>
+            </div>
+          )}
+
+          {Desktop && (
+            <div className="bg-white rounded-[20px] flex gap-5">
               <Inputs
                 id="email"
                 name="email"
                 autoComplete="email"
                 placeholder="Enter your email here..."
                 type="text"
-                className=" bg-white text-bg-primary rounded-[20px] border-none  "
+                className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
               />
-            </div>
-            <div>
+
               <Buttons className="w-[200px] " size="secondary" background="color" link="#">
                 <Email className="fill-text w-5 h-5" /> Subcribe
               </Buttons>
             </div>
-          </div>
+          )}
+
+          {Tablet && (
+            <div className=" flex-col rounded-[20px]  gap-4">
+              <Inputs
+                id="email"
+                name="email"
+                autoComplete="email"
+                placeholder="Enter your email here..."
+                type="text"
+                className=" bg-white px-5 py-4 w-full h-[46px] text-bg-primary rounded-[20px] border-none  "
+              />
+
+              <Buttons className="w-full" size="tertiary" background="color" link="#">
+                <Email className="fill-text w-5 h-5" /> Subcribe
+              </Buttons>
+            </div>
+          )}
         </div>
       </div>
     </section>
