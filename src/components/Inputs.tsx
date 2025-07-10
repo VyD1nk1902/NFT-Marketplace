@@ -8,7 +8,7 @@ const Inputs = ({ className, placeholder, type, id, name, autoComplete }: InputP
       placeholder={placeholder}
       type={type}
       autoComplete={autoComplete}
-      className={`pl-5 py-4 h-[60px] flex items-center focus:outline-none ${className} `}
+      className={`flex items-center focus:outline-none ${className} `}
     />
   );
 };
