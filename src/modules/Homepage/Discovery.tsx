@@ -9,9 +9,11 @@ import DiscoveryNFT2small from "@assets/Homepage/Discovery/DiscoveryNFT(2).png";
 import DiscoveryNFT2large from "@assets/Homepage/Discovery/DiscoveryNFT(2)@2x.png";
 import DiscoveryNFT3small from "@assets/Homepage/Discovery/DiscoveryNFT(3).png";
 import DiscoveryNFT3large from "@assets/Homepage/Discovery/DiscoveryNFT(3)@2x.png";
+
 import { v4 as uuidv4 } from "uuid";
 
 const DiscoveryMore = () => {
+  // Cards list data render
   const discoveryCardContents = [
     {
       id: uuidv4(),
@@ -44,9 +46,11 @@ const DiscoveryMore = () => {
       bid: 0.33,
     },
   ];
+
   return (
-    <section className="content-wrapper flex flex-col gap-[60px]">
+    <section className="content-wrapper flex flex-col gap-[40px] lg:gap-[60px]">
       <div className="flex justify-between items-center">
+        {/* Section Title */}
         <div className="flex flex-col gap-2.5">
           <h3 className="hidden lg:block">Discover More NFTs</h3>
           <h4 className="block lg:hidden">Discover More NFTs</h4>
@@ -57,6 +61,8 @@ const DiscoveryMore = () => {
           See All
         </Buttons>
       </div>
+
+      {/* Cards list */}
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px] ">
         {discoveryCardContents.map((item) => (
           <a href="#" key={item.id} className="hover-scale ">
@@ -88,6 +94,12 @@ const DiscoveryMore = () => {
           </a>
         ))}
       </div>
+
+      {/* Button reponsive */}
+      <Buttons size="secondary" background="transparent" className=" px-[50px] text-base sm:hidden" link="#">
+        <Eye className="fill-action w-[20px] h-[20px]" />
+        See All
+      </Buttons>
     </section>
   );
 };
