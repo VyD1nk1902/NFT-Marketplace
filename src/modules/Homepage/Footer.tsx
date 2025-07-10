@@ -17,7 +17,9 @@ const Footer = () => {
   // Responsive
   const { isDesktop: Desktop, isTablet: Tablet, isMobile: Mobile } = useResponsive();
   let wrapClass = "";
-  if (Desktop) wrapClass = "grid grid-cols-[1fr_1fr_1.5fr] justify-between px-[195px] gap-5";
+  if (Desktop)
+    wrapClass =
+      "grid grid-cols-[1fr_1fr_1.5fr] justify-between 2xl:grid-cols-[1fr_1fr_1fr] 2xl:px-[350px] 2xl:place-items-center px-[195px] gap-5";
   if (Tablet) wrapClass = "w-[690px] flex flex-col gap-[30px] px-[60px]";
   if (Mobile) wrapClass = "w-[315px] flex flex-col gap-[30px] m-auto";
 
@@ -42,7 +44,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="py-10 bg-bg-secondary">
+      <footer className="py-10 bg-bg-secondary ">
         <div className={wrapClass}>
           {/* First Col */}
           <div className="flex flex-col items-start">
@@ -74,7 +76,7 @@ const Footer = () => {
           </div>
 
           {/* Second Col */}
-          <div className="flex flex-col gap-[25px]">
+          <div className="flex flex-col gap-[25px] 2xl:pb-3">
             <h5 className="font-space-mono">Explore</h5>
             <ul className="flex flex-col gap-5 text-[#CCC]">
               {footerExplore.map((item) => (
@@ -97,7 +99,7 @@ const Footer = () => {
             )}
 
             {Desktop && (
-              <div className="bg-white rounded-[20px] flex justify-between 2xl:w-[50%] gap-5">
+              <div className="bg-white rounded-[20px] flex justify-between gap-5">
                 <div>
                   <Inputs
                     id="email"
@@ -108,7 +110,7 @@ const Footer = () => {
                     className=" bg-white w-[100%] pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
                   />
                 </div>
-                <div className="w-[70%]">
+                <div className="w-[50%]">
                   <Buttons className="" size="secondary" background="color" link="#">
                     Subcribe
                   </Buttons>
