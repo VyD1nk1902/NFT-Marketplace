@@ -3,13 +3,19 @@ import Buttons from "@components/Buttons";
 import headerLogox1 from "@assets/Homepage/Header/NFT Marketplace.png";
 import headerLogox2 from "@assets/Homepage/Header/NFT Marketplace-2x.png";
 import User from "@assets/Icons/User.svg";
-import { StoreFront } from "@assets/Svg/SvgExport";
-import { v4 as uuidv4 } from "uuid";
-import { useShowModal } from "@stores/ShowModal";
 import { BurgerMenu } from "@assets/Svg/SvgExport";
 
+import { StoreFront } from "@assets/Svg/SvgExport";
+
+import { v4 as uuidv4 } from "uuid";
+
+import { useShowModal } from "@stores/ShowModal";
+
 const Header = () => {
+  // Burger Menu show Nav state
   const showModal = useShowModal((state) => state.open);
+
+  // List of main navigation items displayed in the header menu
   const navHeaderMenu = [
     {
       id: uuidv4(),
@@ -30,6 +36,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 h-[100px] bg-bg-primary w-full z-40 shadow">
       <div className="flex justify-between items-center sm:px-12 px-2 py-5">
+        {/* Left */}
         <div>
           <a href="#" className="flex items-center justify-center gap-3">
             <span>
@@ -41,6 +48,7 @@ const Header = () => {
           </a>
         </div>
 
+        {/* Right */}
         <div className="hidden lg:flex justify-center items-center gap-2.5 ">
           <ul className="flex gap-2.5">
             {navHeaderMenu.map((item) => (
@@ -57,6 +65,7 @@ const Header = () => {
             Sign up
           </Buttons>
         </div>
+        {/* Burger menu button */}
         <Buttons size="none" background="none" link="" className="fill-white lg:hidden " onClick={showModal}>
           <BurgerMenu className="" />
         </Buttons>

@@ -4,10 +4,13 @@ import Collection from "@assets/Homepage/HowItWorks/Create Collection Icon.png";
 import Collection2x from "@assets/Homepage/HowItWorks/Create Collection Icon@2x.png";
 import Earning from "@assets/Homepage/HowItWorks/Start Earning Icon.png";
 import Earning2x from "@assets/Homepage/HowItWorks/Start Earning Icon@2x.png";
+
 import { v4 as uuidv4 } from "uuid";
+
 import { useReponsive } from "@hooks/useReponsive";
 
 const HowItWorks = () => {
+  // Cards list data render
   const HIWCarData = [
     {
       id: uuidv4(),
@@ -32,6 +35,7 @@ const HowItWorks = () => {
     },
   ];
 
+  // Reponsive variables
   const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useReponsive();
 
   let pxClass = "";
@@ -41,6 +45,7 @@ const HowItWorks = () => {
 
   return (
     <section className="content-wrapper flex flex-col gap-12">
+      {/* Section title */}
       <div className="flex flex-col gap-2.5">
         {Desktop ? <h3 className="capitalize">How it works</h3> : <h4 className="capitalize">How it works</h4>}
         {Desktop ? (
@@ -49,6 +54,8 @@ const HowItWorks = () => {
           <p className="text-base capitalize ">Find out how to get started</p>
         )}
       </div>
+
+      {/* Cards list */}
       <div className="grid sm:grid-cols-3 grid-cols-1 gap-[30px]">
         {HIWCarData.map((item) => (
           <div
@@ -69,6 +76,7 @@ const HowItWorks = () => {
                 </div>
               </>
             )}
+
             {Tablet && (
               <>
                 <img
@@ -83,6 +91,7 @@ const HowItWorks = () => {
                 </div>
               </>
             )}
+
             {Mobile && (
               <>
                 <img

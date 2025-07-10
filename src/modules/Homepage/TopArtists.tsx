@@ -1,4 +1,5 @@
 import Buttons from "@components/Buttons";
+
 import { RocketLaunch } from "@assets/Svg/SvgExport";
 import UserImg1 from "@assets/Avatars/Avatar Placeholder.png";
 import UserImg2 from "@assets/Avatars/Avatar Placeholder (1).png";
@@ -12,9 +13,11 @@ import UserImg9 from "@assets/Avatars/Avatar Placeholder (8).png";
 import UserImg10 from "@assets/Avatars/Avatar Placeholder (13).png";
 import UserImg11 from "@assets/Avatars/Avatar Placeholder (14).png";
 import UserImg12 from "@assets/Avatars/Avatar Placeholder (16).png";
+
 import { v4 as uuidv4 } from "uuid";
 
 const TopArtists = () => {
+  // Cards List render data
   const artistsData = [
     {
       id: uuidv4(),
@@ -89,9 +92,11 @@ const TopArtists = () => {
       balance: 34.53,
     },
   ];
+
   return (
     <section>
       <div className="content-wrapper">
+        {/* Section title */}
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2.5">
             <h3 className="hidden sm:block">Top Creators</h3>
@@ -106,6 +111,7 @@ const TopArtists = () => {
           </Buttons>
         </div>
 
+        {/* Cards list */}
         <div className="pt-[60px] grid lg:grid-cols-[240px_240px_240px_240px] sm:grid-cols-[330px_330px] grid-cols-[315px] gap-[30px] place-content-center ">
           {artistsData.map((item, index) => (
             <a
@@ -127,6 +133,8 @@ const TopArtists = () => {
             </a>
           ))}
         </div>
+
+        {/* Button reponsive */}
         <Buttons size="secondary" background="transparent" className="mt-[40px] px-[50px] text-base sm:hidden" link="#">
           <RocketLaunch className="fill-action w-[20px] h-[20px]" />
           View Rankings

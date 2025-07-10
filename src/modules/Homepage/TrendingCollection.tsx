@@ -19,9 +19,11 @@ import secondaryR2x from "@assets/Homepage/TrendingCollection/SecondaryRobot2@2x
 import avatarFox from "@assets/Avatars/Avatar Placeholder (5).png";
 import avatarHuman from "@assets/Avatars/Avatar Placeholder (6).png";
 import avatarRobot from "@assets/Avatars/Avatar Placeholder (11).png";
+
 import { v4 as uuidv4 } from "uuid";
 
 const TrendingCollection = () => {
+  // Card items list data render
   const collectionData = [
     {
       id: uuidv4(),

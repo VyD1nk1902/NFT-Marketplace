@@ -14,9 +14,11 @@ import iconCard4 from "@assets/Icons/VideoCamera.svg";
 import iconCard5 from "@assets/Icons/MagicWand.svg";
 import iconCard6 from "@assets/Icons/Basketball.svg";
 import iconCard7 from "@assets/Icons/Planet.svg";
+
 import { v4 as uuidv4 } from "uuid";
 
 const BrowseCategories = () => {
+  // Cards List render data
   const categoryCardsData = [
     {
       id: uuidv4(),
@@ -71,8 +73,10 @@ const BrowseCategories = () => {
   return (
     <section className="content-wrapper">
       <div>
+        {/* Section Title */}
         <h3 className="pb-[60px] hidden lg:block">Browse Categories</h3>
         <h4 className="pb-[60px] block lg:hidden">Browse Categories</h4>
+        {/* Cards list */}
         <div className="grid sm:grid-cols-4 grid-cols-2 gap-[30px]">
           {categoryCardsData.map((item) => (
             <a

@@ -3,10 +3,13 @@ import Rocket from "@assets/Icons/RocketLaunch.svg";
 import HeroImgx1 from "@assets/Homepage/Hero/hero-x1.png";
 import HeroImgx2 from "@assets/Homepage/Hero/hero-x2.png";
 import AvatarSpace from "@assets/Avatars/Avatar Placeholder (13).png";
+
 import { v4 as uuidv4 } from "uuid";
+
 import HeroCard from "@components/HeroCarrd";
 
 const HeroSection = () => {
+  // Item list render data
   const heroData = [
     {
       id: uuidv4(),
@@ -28,11 +31,11 @@ const HeroSection = () => {
   return (
     <section className="pt-[100px]">
       <div className="content-wrapper grid grid-cols-1 sm:grid-cols-2 gap-[30px] ">
-        {/* Nội dung */}
+        {/* Content Left */}
         <div className="flex flex-col gap-[30px]">
           <div className="flex flex-col gap-5">
             <h1>Discover Digital Art & Collect NFTs</h1>
-            <p className="lg:text-xl text-base  font-light capitalize">
+            <p className="lg:text-xl text-base  font-light lg:capitalize">
               NFT Marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
             </p>
           </div>
@@ -54,7 +57,8 @@ const HeroSection = () => {
             </ul>
           </div>
         </div>
-        {/* Card ảnh */}
+
+        {/* Image Card */}
         <div className="hidden sm:block">
           <img src={HeroImgx1} srcSet={`${HeroImgx1} 1x, ${HeroImgx2} 2x`} alt="" />
           <div className="p-5 flex flex-col gap-2.5 bg-bg-secondary rounded-b-[20px]">

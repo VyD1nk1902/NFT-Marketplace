@@ -1,9 +1,13 @@
 import { v4 as uuidv4 } from "uuid";
+
 import { useShowModal } from "@stores/ShowModal";
 
 const ModalHeader = () => {
+  // State
   const isOpen = useShowModal((state) => state.isOpen);
   const closeModal = useShowModal((state) => state.close);
+
+  // List of main navigation items displayed in the header menu
   const navHeaderMenu = [
     {
       id: uuidv4(),
@@ -30,6 +34,7 @@ const ModalHeader = () => {
         className=" min-h-screen fixed inset-0 z-40 bg-bg-primary/95 flex items-center justify-center "
         onClick={closeModal}
       >
+        {/* Use stopPropagation to prevent click event from bubbling up and closing modal when click navigation items */}
         <ul className="flex flex-col items-center justify-center gap-10 " onClick={(e) => e.stopPropagation()}>
           {navHeaderMenu.map((item) => (
             <li key={item.id}>
