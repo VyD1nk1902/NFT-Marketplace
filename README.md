@@ -33,6 +33,29 @@ Demo: 👉 [NFT Marketplace Page Demo](https://nft-marketplace-smoky-eta.vercel.
 - 🧩 **Component-based Architecture** – All UI is split into reusable, isolated components
 - ▲ **Deployed with Vercel** – Quick and seamless deployment platform for modern frontend apps
 
+## Path Aliases
+
+To keep import paths clean and maintainable, this project uses [Vite](https://vitejs.dev/) alias configuration.
+
+**Alias configuration in `vite.config.ts`:**
+
+```js
+alias: {
+  "@styles": path.resolve(__dirname, "./src/styles"),
+  "@modules": path.resolve(__dirname, "./src/modules"),
+  "@assets": path.resolve(__dirname, "./src/assets"),
+  "@components": path.resolve(__dirname, "./src/components"),
+  "@pages": path.resolve(__dirname, "./src/pages"),
+  "@myTypes": path.resolve(__dirname, "./src/types"),
+  "@stores": path.resolve(__dirname, "./src/stores"),
+  "@hooks": path.resolve(__dirname, "./src/hooks"),
+}
+// Instead of:
+import Button from "../../../components/Buttons" // ❌
+
+// Use:
+import Button from "@components/Buttons"         // ✅
+
 ## Roadmap
 
 - [x] Homepage (Landing page)
@@ -47,3 +70,4 @@ Demo: 👉 [NFT Marketplace Page Demo](https://nft-marketplace-smoky-eta.vercel.
 
 This project is for personal learning and practice only.
 Do not use for commercial purposes.
+```
