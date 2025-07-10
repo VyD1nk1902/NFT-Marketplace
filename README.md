@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# NFT Marketplace - React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A practice project to cut and build an NFT Marketplace from Figma using React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+Figma Template: 👉 [NFT Marketplace Page](https://www.figma.com/design/FOhDKjKZzGymr6LH0rcQUQ/NFT-Marketplace-Template---Create-an-NFT-website-in-minutes--Community-?node-id=1647-17907&p=f)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Modular structure:** Each section (header, hero, highlight, etc.) is built as a separate component and organized into the `modules` folder.
+- **Reusable components:** Created common components (button, input, heroCard, etc.) for reusability and consistency.
+- **Responsive design:** Used [react-responsive](https://github.com/yocontra/react-responsive) to implement fully responsive layouts for mobile, tablet, and desktop following the Figma template.
+- **Countdown clock:** Used [react-flip-clock-countdown](https://github.com/sLeeNguyen/react-flip-clock-countdown) for the animated countdown timer in the Highlight section.
+- **SVG as component:** Learned to convert SVG files to React components for easier usage.
+- **State management:** Used Zustand for simple, fast state management (like open/close mobile modal).
+- **Project structure:** Learned and practiced organizing files and folders in a scalable React project.
+- **Currently finished:** Only the homepage; more pages (Marketplace, NFT detail, Artist, Create Account) are planned.
+- **Deployment:** Hosted on [Vercel](https://vercel.com/) for easy and quick deployment.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚛️ **React** – For fast, component-based UI development
+- 🟦 **TypeScript** – For type safety and better development experience
+- 💨 **Tailwind CSS** – Utility-first CSS framework for building responsive layouts
+- 🧠 **Zustand** – Minimal, fast state-management solution
+- 🏃‍♂️ **React Flip Clock Countdown** – For smooth countdown clock animation
+- 🆔 **UUID** – For unique keys in lists
+- 📏 **React Responsive** – For responsive rendering based on breakpoints
+- 📱 **Responsive Design** – Optimized for both mobile, tablet and desktop screens
+- 🧩 **Component-based Architecture** – All UI is split into reusable, isolated components
+- ▲ **Deployed with Vercel** – Quick and seamless deployment platform for modern frontend apps
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Roadmap
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [x] Homepage (Landing page)
+- [ ] Marketplace Page
+- [ ] NFT Detail Page
+- [ ] Artist Page
+- [ ] Create Account Page
+- [ ] Polish UI, animations & loading state (optional)
+- [ ] Add real data & connect to backend (optional)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## License
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is for personal learning and practice only.
+Do not use for commercial purposes.
