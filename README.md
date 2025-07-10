@@ -2,7 +2,9 @@
 
 A practice project to cut and build an NFT Marketplace from Figma using React, TypeScript, and Tailwind CSS.
 
-Figma Template: 👉 [NFT Marketplace Page](https://www.figma.com/design/FOhDKjKZzGymr6LH0rcQUQ/NFT-Marketplace-Template---Create-an-NFT-website-in-minutes--Community-?node-id=1647-17907&p=f)
+Figma Template: 👉 [NFT Marketplace Page Figma](https://www.figma.com/design/FOhDKjKZzGymr6LH0rcQUQ/NFT-Marketplace-Template---Create-an-NFT-website-in-minutes--Community-?node-id=1647-17907&p=f)
+
+Demo: 👉 [NFT Marketplace Page Demo](https://nft-marketplace-smoky-eta.vercel.app/)
 
 ---
 
