@@ -134,7 +134,7 @@ const TopArtists = () => {
           ))}
         </div>
 
-        {/* Button reponsive */}
+        {/* Button responsive */}
         <Buttons size="secondary" background="transparent" className="mt-[40px] px-[50px] text-base sm:hidden" link="#">
           <RocketLaunch className="fill-action w-[20px] h-[20px]" />
           View Rankings

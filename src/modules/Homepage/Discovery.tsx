@@ -95,7 +95,7 @@ const DiscoveryMore = () => {
         ))}
       </div>
 
-      {/* Button reponsive */}
+      {/* Button responsive */}
       <Buttons size="secondary" background="transparent" className=" px-[50px] text-base sm:hidden" link="#">
         <Eye className="fill-action w-[20px] h-[20px]" />
         See All

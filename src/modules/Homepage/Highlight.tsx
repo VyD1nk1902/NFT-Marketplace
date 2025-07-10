@@ -4,12 +4,12 @@ import { Eye } from "@assets/Svg/SvgExport";
 import Avatar from "@assets/Avatars/Avatar Placeholder (6).png";
 
 import { useMemo } from "react";
-import { useReponsive } from "@hooks/useReponsive";
+import { useResponsive } from "@hooks/useResponsive";
 
 import Clock from "@components/Clock";
 
 const Highlight = () => {
-  const { isTablet: Tablet, isMobile: Mobile, isDesktop: PC } = useReponsive();
+  const { isTablet: Tablet, isMobile: Mobile, isDesktop: PC } = useResponsive();
   // Make sure time not reset after render
   const timeEnd = useMemo(() => {
     return new Date().getTime() + 24 * 3600 * 1000 * 2.5;

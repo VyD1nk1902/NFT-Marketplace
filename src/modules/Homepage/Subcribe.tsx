@@ -5,11 +5,11 @@ import Photo from "@assets/Homepage/Subcribe/Photo.png";
 import Photo2x from "@assets/Homepage/Subcribe/Photo@2x.png";
 
 import { Email } from "@assets/Svg/SvgExport";
-import { useReponsive } from "@hooks/useReponsive";
+import { useResponsive } from "@hooks/useResponsive";
 
 const Subcribe = () => {
-  // Reponsive wrap div variables
-  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useReponsive();
+  // Responsive wrap div variables
+  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
   let borderClass = "";
   if (Desktop) borderClass = "bg-bg-secondary p-[60px] rounded-[20px] flex gap-[80px]";
   if (Tablet) borderClass = "bg-bg-secondary px-[30px] py-[40px] rounded-[20px] flex gap-[30px]";

@@ -7,7 +7,7 @@ import Earning2x from "@assets/Homepage/HowItWorks/Start Earning Icon@2x.png";
 
 import { v4 as uuidv4 } from "uuid";
 
-import { useReponsive } from "@hooks/useReponsive";
+import { useResponsive } from "@hooks/useResponsive";
 
 const HowItWorks = () => {
   // Cards list data render
@@ -35,8 +35,8 @@ const HowItWorks = () => {
     },
   ];
 
-  // Reponsive variables
-  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useReponsive();
+  // Responsive variables
+  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
 
   let pxClass = "";
   if (Mobile) pxClass = "p-5";
