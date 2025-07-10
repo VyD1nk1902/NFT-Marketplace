@@ -112,7 +112,7 @@ const Footer = () => {
                 </div>
                 <div className="w-[50%]">
                   <Buttons className="" size="secondary" background="color" link="#">
-                    Subcribe
+                    Subscribe
                   </Buttons>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <Buttons className="w-[200px] " size="secondary" background="color" link="#">
-                    Subcribe
+                    Subscribe
                   </Buttons>
                 </div>
               </div>
@@ -152,7 +152,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <Buttons className="" size="tertiary" background="color" link="#">
-                    <Email className="fill-text w-5 h-5" /> Subcribe
+                    <Email className="fill-text w-5 h-5" /> Subscribe
                   </Buttons>
                 </div>
               </div>

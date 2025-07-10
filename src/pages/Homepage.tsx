@@ -6,7 +6,7 @@ import BrowseCategories from "@modules/Homepage/BrowseCategories";
 import DiscoveryMore from "@modules/Homepage/Discovery";
 import Highlight from "@modules/Homepage/Highlight";
 import HowItWorks from "@modules/Homepage/HowItWorks";
-import Subcribe from "@modules/Homepage/Subcribe";
+import Subscribe from "@modules/Homepage/Subscribe";
 import Footer from "@modules/Homepage/Footer";
 import ModalHeader from "@modules/Homepage/ModalHeader";
 
@@ -23,7 +23,7 @@ const Homepage = () => {
         <DiscoveryMore />
         <Highlight />
         <HowItWorks />
-        <Subcribe />
+        <Subscribe />
         <Footer />
       </div>
     </>
