@@ -84,7 +84,7 @@ const Footer = () => {
                   autoComplete="email"
                   placeholder="Enter your email here..."
                   type="text"
-                  className=" bg-white text-bg-primary rounded-[20px] border-none  "
+                  className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
                 />
               </div>
               <div>
