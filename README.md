@@ -55,6 +55,7 @@ import Button from "../../../components/Buttons" // ❌
 
 // Use:
 import Button from "@components/Buttons"         // ✅
+```
 
 ## Roadmap
 
@@ -70,4 +71,3 @@ import Button from "@components/Buttons"         // ✅
 
 This project is for personal learning and practice only.
 Do not use for commercial purposes.
-```
