@@ -22,7 +22,7 @@
 
 body,
 html {
-  @apply bg-bg-primary text-text font-work-sans m-0;
+  @apply bg-bg-primary text-text font-work-sans m-0 overflow-x-hidden;
 }
 
 h1 {
