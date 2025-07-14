@@ -6,7 +6,7 @@ import AvatarSpace from "@assets/Avatars/Avatar Placeholder (13).png";
 
 import { v4 as uuidv4 } from "uuid";
 
-import HeroCard from "@components/HeroCarrd";
+import HeroCard from "@components/HeroCard";
 
 const HeroSection = () => {
   // Item list render data
