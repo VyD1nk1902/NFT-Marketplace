@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 interface ButtonProps {
   size?: "primary" | "secondary" | "tertiary" | "none";
   background?: "color" | "transparent" | "none";
@@ -8,6 +10,10 @@ interface ButtonProps {
 }
 
 const Buttons = ({ size = "secondary", background = "color", className, children, onClick, link }: ButtonProps) => {
+  // Class always applied
+  const baseClass =
+    "flex gap-3 rounded-[20px] cursor-pointer justify-center items-center scale-100 transition-all ease-in-out duration-300 hover:scale-95";
+
   const sizeOptions = {
     primary: " h-[72px] text-[22px] font-[600]",
     secondary: " h-[60px] text-[16px] font-[600]",
@@ -21,20 +27,20 @@ const Buttons = ({ size = "secondary", background = "color", className, children
     none: "bg-none",
   };
 
-  const buttonSize = sizeOptions[size] || sizeOptions.secondary;
-  const buttonColor = colorOptions[background] || colorOptions.color;
+  const appliedSizeClass = sizeOptions[size] || sizeOptions.secondary;
+  const appliedColorClass = colorOptions[background] || colorOptions.color;
 
-  const buttonOptionClass = `flex gap-3 rounded-[20px] cursor-pointer justify-center items-center scale-100 transition-all ease-in-out duration-300 hover:scale-95 ${buttonSize} ${buttonColor} `;
+  const finalButtonClasses = clsx(baseClass, appliedSizeClass, appliedColorClass, className);
 
   if (link === "")
     return (
-      <button onClick={onClick} className={`${buttonOptionClass}, ${className}`}>
+      <button onClick={onClick} className={finalButtonClasses}>
         {children}
       </button>
     );
 
   return (
-    <a href={link} onClick={onClick} className={`${buttonOptionClass}, ${className}`}>
+    <a href={link} onClick={onClick} className={finalButtonClasses}>
       {children}
     </a>
   );
