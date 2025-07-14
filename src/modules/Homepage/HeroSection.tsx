@@ -8,6 +8,9 @@ import { v4 as uuidv4 } from "uuid";
 
 import HeroCard from "@components/HeroCard";
 
+import { ROUTES } from "@utils/constants/route";
+import { useNavigate } from "react-router-dom";
+
 const HeroSection = () => {
   // Item list render data
   const heroData = [
@@ -28,6 +31,10 @@ const HeroSection = () => {
     },
   ];
 
+  //Navigate
+  const navigate = useNavigate();
+  const handleGetStartClick = () => navigate(ROUTES.CREATE_ACCOUNT);
+
   return (
     <section className="pt-[100px]">
       <div className="content-wrapper grid grid-cols-1 sm:grid-cols-2 gap-[30px] ">
@@ -42,7 +49,12 @@ const HeroSection = () => {
           <div className="sm:hidden block">
             <HeroCard url1={HeroImgx1} url2={HeroImgx2} url3={AvatarSpace} className="mb-10" />
           </div>
-          <Buttons className="px-[50px] sm:w-[224px] w-full" size="tertiary" background="color" to="/">
+          <Buttons
+            className="px-[50px] sm:w-[224px] w-full"
+            size="tertiary"
+            background="color"
+            onClick={handleGetStartClick}
+          >
             <img src={Rocket} className="w-[20px] h-[20px]" alt="" />
             Get Started
           </Buttons>
