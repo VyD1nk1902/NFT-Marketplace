@@ -1,6 +1,3 @@
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import ModalHeader from "@components/ModalHeader";
 import HeroSection from "@modules/Homepage/HeroSection";
 import TrendingCollection from "@modules/Homepage/TrendingCollection";
 import TopArtists from "@modules/Homepage/TopArtists";
@@ -13,9 +10,7 @@ import Subscribe from "@modules/Homepage/Subscribe";
 const Homepage = () => {
   return (
     <>
-      <div className="overflow-x-hidden">
-        <Header />
-        <ModalHeader />
+      <div>
         <HeroSection />
         <TrendingCollection />
         <TopArtists />
@@ -24,7 +19,6 @@ const Homepage = () => {
         <Highlight />
         <HowItWorks />
         <Subscribe />
-        <Footer />
       </div>
     </>
   );
