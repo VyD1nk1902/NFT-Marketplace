@@ -11,6 +11,7 @@ import CreateAccount from "@pages/CreateAccount";
 
 //Routes and Route
 import { Routes, Route } from "react-router-dom";
+import { ROUTES } from "@utils/constants/route";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
       <Header />
       <ModalHeader />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path={ROUTES.HOME} element={<Homepage />} />
+        <Route path={ROUTES.CREATE_ACCOUNT} element={<CreateAccount />} />
       </Routes>
       <Footer />
     </div>
