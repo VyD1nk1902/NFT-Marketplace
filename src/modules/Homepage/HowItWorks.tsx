@@ -9,6 +9,8 @@ import { v4 as uuidv4 } from "uuid";
 
 import { useResponsive } from "@hooks/useResponsive";
 
+import clsx from "clsx";
+
 const HowItWorks = () => {
   // Cards list data render
   const HIWCarData = [
@@ -38,10 +40,11 @@ const HowItWorks = () => {
   // Responsive variables
   const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
 
-  let pxClass = "";
-  if (Mobile) pxClass = "p-5";
-  if (Tablet) pxClass = "pt-2.5 pb-[30px] px-5";
-  if (Desktop) pxClass = "pt-2.5 pb-[30px] px-[30px]";
+  const pxClass = clsx({
+    "pt-2.5 pb-[30px] px-[30px]": Desktop,
+    "pt-2.5 pb-[30px] px-5": Tablet,
+    "p-5": Mobile,
+  });
 
   return (
     <section className="content-wrapper flex flex-col gap-12">
@@ -60,7 +63,7 @@ const HowItWorks = () => {
         {HIWCarData.map((item) => (
           <div
             key={item.id}
-            className={`flex sm:flex-col gap-5 ${pxClass}  items-center bg-bg-secondary rounded-[20px]`}
+            className={clsx("flex gap-5 items-center ", "sm:flex-col", "bg-bg-secondary rounded-[20px]", pxClass)}
           >
             {Desktop && (
               <>
