@@ -13,15 +13,23 @@ import Buttons from "@components/Buttons";
 
 import { useResponsive } from "@hooks/useResponsive";
 
+import clsx from "clsx";
+
 const Footer = () => {
   // Responsive
   const { isDesktop: Desktop, isTablet: Tablet, isMobile: Mobile } = useResponsive();
-  let wrapClass = "";
-  if (Desktop)
-    wrapClass =
-      "grid grid-cols-[1fr_1fr_1.5fr] justify-between 2xl:grid-cols-[1fr_1fr_1fr] 2xl:px-[350px] 2xl:place-items-center px-[195px] gap-5";
-  if (Tablet) wrapClass = "w-[690px] flex flex-col gap-[30px] px-[60px]";
-  if (Mobile) wrapClass = "w-[315px] flex flex-col gap-[30px] m-auto";
+  const wrapClass = clsx({
+    "grid grid-cols-[1fr_1fr_1.5fr] justify-between 2xl:grid-cols-[1fr_1fr_1fr] 2xl:px-[350px] 2xl:place-items-center px-[195px] gap-5":
+      Desktop,
+    "w-[690px] flex flex-col gap-[30px] px-[60px]": Tablet,
+    "w-[315px] flex flex-col gap-[30px] m-auto": Mobile,
+  });
+
+  const copyRightClass = clsx({
+    "px-[160px]": Desktop,
+    "px-[60px]": Tablet,
+    "px-[30px]": Mobile,
+  });
 
   // Explore navigation link data
   const footerExplore = [
@@ -162,21 +170,21 @@ const Footer = () => {
 
         {/* Copyright */}
         {Desktop && (
-          <div className="px-[160px]">
+          <div className={copyRightClass}>
             <div className="border-b w-full text-caption-label pt-[30px] mb-[20px]"></div>
             <p className="text-[12px] text-[#ccc]">Ⓒ NFT Market. Use this template freely.</p>
           </div>
         )}
 
         {Tablet && (
-          <div className="px-[60px]">
+          <div className={copyRightClass}>
             <div className="border-b w-full text-caption-label pt-[50px] mb-[20px]"></div>
             <p className="text-[12px] text-[#ccc]">Ⓒ NFT Market. Use this template freely.</p>
           </div>
         )}
 
         {Mobile && (
-          <div className="px-[30px]">
+          <div className={copyRightClass}>
             <div className="border-b w-full text-caption-label pt-[30px] mb-[20px]"></div>
             <p className="text-[12px] text-[#ccc]">Ⓒ NFT Market. Use this template freely.</p>
           </div>
