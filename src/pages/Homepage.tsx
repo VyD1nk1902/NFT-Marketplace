@@ -1,4 +1,4 @@
-import Header from "@modules/Homepage/Header";
+import Header from "@components/Header";
 import HeroSection from "@modules/Homepage/HeroSection";
 import TrendingCollection from "@modules/Homepage/TrendingCollection";
 import TopArtists from "@modules/Homepage/TopArtists";
@@ -7,13 +7,13 @@ import DiscoveryMore from "@modules/Homepage/Discovery";
 import Highlight from "@modules/Homepage/Highlight";
 import HowItWorks from "@modules/Homepage/HowItWorks";
 import Subscribe from "@modules/Homepage/Subscribe";
-import Footer from "@modules/Homepage/Footer";
+import Footer from "@components/Footer";
 import ModalHeader from "@modules/Homepage/ModalHeader";
 
 const Homepage = () => {
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-x-hidden">
         <Header />
         <ModalHeader />
         <HeroSection />
