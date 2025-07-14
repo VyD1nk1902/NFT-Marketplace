@@ -18,13 +18,19 @@ const Subcribe = () => {
     " flex flex-col gap-[30px]": Mobile,
   });
 
+  const imageSizeClass = clsx({
+    "w-[425px] h-[310px]": Desktop,
+    "w-[300px] h-[280px]": Tablet,
+    "w-[315px] h-[255px]": Mobile,
+  });
+
   return (
     <section className="content-wrapper">
-      <div className={`${borderClass}`}>
+      <div className={borderClass}>
         {/* Left Pic */}
-        {Desktop && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} className="w-[425px] h-[310px]" alt="" />}
-        {Tablet && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} className="w-[300px] h-[280px]" alt="" />}
-        {Mobile && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x}`} className="w-[315px] h-[255px]" alt="" />}
+        {Desktop && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
+        {Tablet && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
+        {Mobile && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
 
         {/* Content */}
         <div>
