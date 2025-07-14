@@ -1,4 +1,6 @@
 import Header from "@components/Header";
+import Footer from "@components/Footer";
+import ModalHeader from "@components/ModalHeader";
 import HeroSection from "@modules/Homepage/HeroSection";
 import TrendingCollection from "@modules/Homepage/TrendingCollection";
 import TopArtists from "@modules/Homepage/TopArtists";
@@ -7,8 +9,6 @@ import DiscoveryMore from "@modules/Homepage/Discovery";
 import Highlight from "@modules/Homepage/Highlight";
 import HowItWorks from "@modules/Homepage/HowItWorks";
 import Subscribe from "@modules/Homepage/Subscribe";
-import Footer from "@components/Footer";
-import ModalHeader from "@modules/Homepage/ModalHeader";
 
 const Homepage = () => {
   return (
