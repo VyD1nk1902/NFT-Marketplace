@@ -9,6 +9,7 @@ import { StoreFront } from "@assets/Svg/SvgExport";
 import { v4 as uuidv4 } from "uuid";
 
 import { useShowModal } from "@stores/ShowModal";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // Burger Menu show Nav state
@@ -19,17 +20,17 @@ const Header = () => {
     {
       id: uuidv4(),
       title: "Marketplace",
-      link: "#",
+      link: "/",
     },
     {
       id: uuidv4(),
       title: "Rankings",
-      link: "#",
+      link: "/",
     },
     {
       id: uuidv4(),
       title: "Connect a wallet",
-      link: "#",
+      link: "/",
     },
   ];
   return (
@@ -37,14 +38,14 @@ const Header = () => {
       <div className="flex justify-between items-center sm:px-12 px-2 py-5">
         {/* Left */}
         <div>
-          <a href="#" className="flex items-center justify-center gap-3">
+          <Link to="/" className="flex items-center justify-center gap-3">
             <span>
               <StoreFront className="text-action mb-1 " />
             </span>
             <span>
               <img src={headerLogox1} srcSet={`${headerLogox1} 1x, ${headerLogox2} 2x`} alt="main logo" />
             </span>
-          </a>
+          </Link>
         </div>
 
         {/* Right */}
@@ -55,17 +56,17 @@ const Header = () => {
                 key={item.id}
                 className="p-5 font-[600] scale-105 transition-all ease-in-out duration-300 hover:scale-100 hover:text-action"
               >
-                <a href={item.link}>{item.title}</a>
+                <Link to={item.link}>{item.title}</Link>
               </li>
             ))}
           </ul>
-          <Buttons size="secondary" background="color" className="w-[152px] px-[30px]" link="#">
+          <Buttons size="secondary" background="color" className="w-[152px] px-[30px]" to="/create-account">
             <img src={User} className="w-[20px] h-[20px]" alt="" />
             Sign up
           </Buttons>
         </div>
         {/* Burger menu button */}
-        <Buttons size="none" background="none" link="" className="fill-white lg:hidden " onClick={showModal}>
+        <Buttons size="none" background="none" className="fill-white lg:hidden " onClick={showModal}>
           <BurgerMenu className="" />
         </Buttons>
       </div>

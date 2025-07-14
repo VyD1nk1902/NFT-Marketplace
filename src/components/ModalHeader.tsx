@@ -2,6 +2,8 @@ import { v4 as uuidv4 } from "uuid";
 
 import { useShowModal } from "@stores/ShowModal";
 
+import { Link } from "react-router-dom";
+
 const ModalHeader = () => {
   // State
   const isOpen = useShowModal((state) => state.isOpen);
@@ -12,17 +14,17 @@ const ModalHeader = () => {
     {
       id: uuidv4(),
       title: "Marketplace",
-      link: "#",
+      link: "/",
     },
     {
       id: uuidv4(),
       title: "Rankings",
-      link: "#",
+      link: "/",
     },
     {
       id: uuidv4(),
       title: "Connect a wallet",
-      link: "#",
+      link: "/",
     },
   ];
 
@@ -38,9 +40,9 @@ const ModalHeader = () => {
         <ul className="flex flex-col items-center justify-center gap-10 " onClick={(e) => e.stopPropagation()}>
           {navHeaderMenu.map((item) => (
             <li key={item.id}>
-              <a href={item.link} className="text-xl">
+              <Link to={item.link} className="text-xl">
                 {item.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

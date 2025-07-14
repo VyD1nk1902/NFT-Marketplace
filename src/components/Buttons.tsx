@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 interface ButtonProps {
   size?: "primary" | "secondary" | "tertiary" | "none";
@@ -6,10 +7,10 @@ interface ButtonProps {
   className: string;
   children: React.ReactNode;
   onClick?: () => void;
-  link: string;
+  to?: string;
 }
 
-const Buttons = ({ size = "secondary", background = "color", className, children, onClick, link }: ButtonProps) => {
+const Buttons = ({ size = "secondary", background = "color", className, children, onClick, to }: ButtonProps) => {
   // Class always applied
   const baseClass =
     "flex gap-3 rounded-[20px] cursor-pointer justify-center items-center scale-100 transition-all ease-in-out duration-300 hover:scale-95";
@@ -32,17 +33,17 @@ const Buttons = ({ size = "secondary", background = "color", className, children
 
   const finalButtonClasses = clsx(baseClass, appliedSizeClass, appliedColorClass, className);
 
-  if (link === "")
+  if (to)
     return (
-      <button onClick={onClick} className={finalButtonClasses}>
+      <Link to={to} onClick={onClick} className={finalButtonClasses}>
         {children}
-      </button>
+      </Link>
     );
 
   return (
-    <a href={link} onClick={onClick} className={finalButtonClasses}>
+    <button onClick={onClick} className={finalButtonClasses}>
       {children}
-    </a>
+    </button>
   );
 };
 

@@ -15,6 +15,8 @@ import { useResponsive } from "@hooks/useResponsive";
 
 import clsx from "clsx";
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   // Responsive
   const { isDesktop: Desktop, isTablet: Tablet, isMobile: Mobile } = useResponsive();
@@ -36,17 +38,17 @@ const Footer = () => {
     {
       id: uuidv4(),
       title: "Marketplace",
-      link: "#",
+      link: "/",
     },
     {
       id: uuidv4(),
       title: "Rankings",
-      link: "#",
+      link: "/",
     },
     {
       id: uuidv4(),
       title: "Connect a wallet",
-      link: "#",
+      link: "/",
     },
   ];
 
@@ -68,18 +70,18 @@ const Footer = () => {
               NFT marketplace UI created with Anima for Figma. <br /> <br /> Join our community
             </p>
             <div className="flex gap-2.5">
-              <a href="#">
+              <Link to="/">
                 <Discord className="fill-caption-label" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <Youtube className="fill-caption-label" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <Twitter className="fill-caption-label" />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <Instagram className="fill-caption-label" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -89,7 +91,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-5 text-[#CCC]">
               {footerExplore.map((item) => (
                 <li key={item.id}>
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 </li>
               ))}
             </ul>
@@ -119,7 +121,7 @@ const Footer = () => {
                   />
                 </div>
                 <div className="w-[50%]">
-                  <Buttons className="" size="secondary" background="color" link="#">
+                  <Buttons className="" size="secondary" background="color">
                     Subscribe
                   </Buttons>
                 </div>
@@ -139,7 +141,7 @@ const Footer = () => {
                   />
                 </div>
                 <div>
-                  <Buttons className="w-[200px] " size="secondary" background="color" link="#">
+                  <Buttons className="w-[200px] " size="secondary" background="color">
                     Subscribe
                   </Buttons>
                 </div>
@@ -159,7 +161,7 @@ const Footer = () => {
                   />
                 </div>
                 <div>
-                  <Buttons className="" size="tertiary" background="color" link="#">
+                  <Buttons className="" size="tertiary" background="color">
                     <Email className="fill-text w-5 h-5" /> Subscribe
                   </Buttons>
                 </div>
