@@ -18,7 +18,7 @@ const Highlight = () => {
 
   // The clock positions is different depending on the responsive layout.
   // React will re-render (unmount/mount) the Clock component when the layout changes,
-  // so we use useMemo to ensure the countdown time stays the same across renders.
+  // so I use useMemo to ensure the countdown time stays the same across renders.
   // Using react-responsive for conditional rendering is better than relying on
   // CSS (hidden/block/flex) because it prevents multiple Clocks from being mounted
   // and avoids timer resets or glitches.
