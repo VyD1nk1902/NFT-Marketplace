@@ -9,13 +9,18 @@ import ModalHeader from "@components/ModalHeader";
 import Homepage from "@pages/Homepage";
 import CreateAccount from "@pages/CreateAccount";
 
+//Routes and Route
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <div>
       <Header />
       <ModalHeader />
-      <Homepage />
-      <CreateAccount />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+      </Routes>
       <Footer />
     </div>
   );
