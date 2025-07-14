@@ -1,4 +1,11 @@
-import type { InputProps } from "@myTypes/Inputs/InputTypes";
+interface InputProps {
+  id: string;
+  name: string;
+  className: string;
+  placeholder: string;
+  autoComplete: string;
+  type: "checkbox" | "email" | "number" | "text" | "password";
+}
 
 const Inputs = ({ className, placeholder, type, id, name, autoComplete }: InputProps) => {
   return (

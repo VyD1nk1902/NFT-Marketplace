@@ -1,4 +1,12 @@
-import type { ButtonProps } from "@myTypes/Buttons/ButtonTypes";
+interface ButtonProps {
+  size?: "primary" | "secondary" | "tertiary" | "none";
+  background?: "color" | "transparent" | "none";
+  className: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+  link: string;
+}
+
 const Buttons = ({ size = "secondary", background = "color", className, children, onClick, link }: ButtonProps) => {
   const sizeOptions = {
     primary: " h-[72px] text-[22px] font-[600]",

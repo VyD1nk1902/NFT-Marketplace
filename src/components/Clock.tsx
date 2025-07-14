@@ -1,6 +1,11 @@
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
-import type { ClockProps } from "@myTypes/CountDownClock/ClockTypes";
+
+interface ClockProps {
+  time: number;
+  day: boolean;
+  className: string;
+}
 
 const Clock = ({ className, day, time }: ClockProps) => {
   return (
