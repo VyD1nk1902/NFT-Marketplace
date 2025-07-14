@@ -12,6 +12,8 @@ import DiscoveryNFT3large from "@assets/Homepage/Discovery/DiscoveryNFT(3)@2x.pn
 
 import { v4 as uuidv4 } from "uuid";
 
+import { Link } from "react-router-dom";
+
 const DiscoveryMore = () => {
   // Cards list data render
   const discoveryCardContents = [
@@ -56,7 +58,7 @@ const DiscoveryMore = () => {
           <h4 className="block lg:hidden">Discover More NFTs</h4>
           <p className="lg:text-[22px] capitalize">Explore new trending NFTs</p>
         </div>
-        <Buttons className="px-[50px] mt-4.5 mr-1 hidden sm:flex" size="secondary" background="transparent" link="#">
+        <Buttons className="px-[50px] mt-4.5 mr-1 hidden sm:flex" size="secondary" background="transparent" to="/">
           <Eye className="fill-action w-[20px] h-[20px]" />
           See All
         </Buttons>
@@ -65,7 +67,7 @@ const DiscoveryMore = () => {
       {/* Cards list */}
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px] ">
         {discoveryCardContents.map((item) => (
-          <a href="#" key={item.id} className="hover-scale ">
+          <Link to="/" key={item.id} className="hover-scale ">
             <img
               src={item.background1x}
               srcSet={`${item.background1x} 1x, ${item.background2x} 2x`}
@@ -91,12 +93,12 @@ const DiscoveryMore = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
       {/* Button responsive */}
-      <Buttons size="secondary" background="transparent" className=" px-[50px] text-base sm:hidden" link="#">
+      <Buttons size="secondary" background="transparent" className=" px-[50px] text-base sm:hidden" to="/">
         <Eye className="fill-action w-[20px] h-[20px]" />
         See All
       </Buttons>

@@ -16,6 +16,7 @@ import iconCard6 from "@assets/Icons/Basketball.svg";
 import iconCard7 from "@assets/Icons/Planet.svg";
 
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 
 const BrowseCategories = () => {
   // Cards List render data
@@ -79,9 +80,9 @@ const BrowseCategories = () => {
         {/* Cards list */}
         <div className="grid sm:grid-cols-4 grid-cols-2 gap-[30px]">
           {categoryCardsData.map((item) => (
-            <a
+            <Link
               key={item.id}
-              href="#"
+              to="/"
               className="lg:w-[240px] lg:h-[316px] sm:w-[150px] sm:h-[209px] rounded-[20px] bg-bg-secondary hover-scale"
             >
               <div className="relative overflow-hidden rounded-t-[20px]">
@@ -98,7 +99,7 @@ const BrowseCategories = () => {
               <div className="pt-5 pb-6 px-[20px] lg:hidden block">
                 <p>{item.name}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

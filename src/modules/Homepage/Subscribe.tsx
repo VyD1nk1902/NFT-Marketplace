@@ -69,7 +69,7 @@ const Subcribe = () => {
                 className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
               />
 
-              <Buttons className="w-[200px] " size="secondary" background="color" link="#">
+              <Buttons className="w-[200px] " size="secondary" background="color" to="/">
                 <Email className="fill-text w-5 h-5" /> Subcribe
               </Buttons>
             </div>
@@ -86,7 +86,7 @@ const Subcribe = () => {
                 className=" bg-white px-5 py-4 h-[46px] text-bg-primary rounded-[20px] border-none  "
               />
 
-              <Buttons className="w-[300px]" size="tertiary" background="color" link="#">
+              <Buttons className="w-[300px]" size="tertiary" background="color" to="/">
                 <Email className="fill-text w-5 h-5" /> Subcribe
               </Buttons>
             </div>
@@ -103,7 +103,7 @@ const Subcribe = () => {
                 className=" bg-white px-5 py-4 h-[46px] text-bg-primary rounded-[20px] border-none  "
               />
 
-              <Buttons className="w-full" size="tertiary" background="color" link="#">
+              <Buttons className="w-full" size="tertiary" background="color" to="/">
                 <Email className="fill-text w-5 h-5" /> Subcribe
               </Buttons>
             </div>

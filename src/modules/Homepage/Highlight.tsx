@@ -7,6 +7,7 @@ import { useMemo } from "react";
 import { useResponsive } from "@hooks/useResponsive";
 
 import Clock from "@components/Clock";
+import { Link } from "react-router-dom";
 
 const Highlight = () => {
   const { isTablet: Tablet, isMobile: Mobile, isDesktop: PC } = useResponsive();
@@ -34,17 +35,17 @@ const Highlight = () => {
         <div className="relative z-30 lg:max-w-[1050px] sm:max-w-[690px] max-w-[315px] m-auto md:pt-[360px] pt-[120px] mb-[100px] ">
           <div className="flex justify-between md:items-end">
             <div className="flex flex-col gap-[30px]">
-              <a href="#" className="flex px-5 py-2.5 bg-bg-secondary w-[151px] rounded-[20px] gap-3 hover-scale">
+              <Link to="/" className="flex px-5 py-2.5 bg-bg-secondary w-[151px] rounded-[20px] gap-3 hover-scale">
                 <img src={Avatar} className="w-6 h-6" alt="" />
                 <span>Schroomie</span>
-              </a>
+              </Link>
               {PC ? <h2>Magic Mashrooms</h2> : <h3>Magic Mashrooms</h3>}
 
               {/* Clock-mobile */}
               {Mobile && <Clock time={timeEnd} className="flip-clock-mobile" day={Tablet || PC} />}
               <Buttons
                 className="sm:w-[198px] w-full px-[50px] py-[22px] text-black bg-text"
-                link="#"
+                to="/"
                 size="secondary"
                 background="transparent"
               >

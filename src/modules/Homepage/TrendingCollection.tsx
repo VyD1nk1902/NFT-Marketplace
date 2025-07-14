@@ -21,6 +21,7 @@ import avatarHuman from "@assets/Avatars/Avatar Placeholder (6).png";
 import avatarRobot from "@assets/Avatars/Avatar Placeholder (11).png";
 
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 
 const TrendingCollection = () => {
   // Card items list data render
@@ -91,40 +92,40 @@ const TrendingCollection = () => {
             return (
               <div key={item.id} className="flex flex-col gap-3.5">
                 {/* Render main image */}
-                <a href="#">
+                <Link to="/">
                   <img
                     className="hover-scale"
                     src={`${item.primaryImage1x}`}
                     srcSet={`${item.primaryImage1x} 1x, ${item.primaryImage2x} 2x`}
                     alt=""
                   />
-                </a>
+                </Link>
 
                 {/* Render sub images */}
                 <div className="flex gap-3.5 items-center justify-between">
                   {item.secondaryImages.slice(0, 2).map((image, index) => (
-                    <a href="#" key={index}>
+                    <Link to="/" key={index}>
                       <img
                         src={image.small}
                         srcSet={`${image.small} 1x, ${image.large} 2x`}
                         className="hover-scale"
                         alt=""
                       />
-                    </a>
+                    </Link>
                   ))}
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
-                    <a href="#">
+                    <Link to="/">
                       <h5 className="w-[100px] h-[100px] bg-action flex justify-center items-center px-3.5 py-8 font-space-mono font-bold rounded-[20px] hover-scale">
                         {countSecondaryImages}+
                       </h5>
-                    </a>
+                    </Link>
                   ) : (
-                    <a href="">
+                    <Link to="">
                       <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono font-bold flex justify-center items-center rounded-[20px] hover-scale">
                         Bonus Img
                       </h5>
-                    </a>
+                    </Link>
                   )}
                 </div>
                 {/* Cards footer */}

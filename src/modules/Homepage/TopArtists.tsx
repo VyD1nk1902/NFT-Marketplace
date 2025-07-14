@@ -15,6 +15,7 @@ import UserImg11 from "@assets/Avatars/Avatar Placeholder (14).png";
 import UserImg12 from "@assets/Avatars/Avatar Placeholder (16).png";
 
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 
 const TopArtists = () => {
   // Cards List render data
@@ -105,7 +106,7 @@ const TopArtists = () => {
               Checkout Top Rated Creators on the NFT Marketplace
             </p>
           </div>
-          <Buttons size="secondary" background="transparent" className="px-[50px]  text-base hidden sm:flex" link="#">
+          <Buttons size="secondary" background="transparent" className="px-[50px]  text-base hidden sm:flex" to="/">
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
             View Rankings
           </Buttons>
@@ -114,9 +115,9 @@ const TopArtists = () => {
         {/* Cards list */}
         <div className="pt-[60px] grid lg:grid-cols-[240px_240px_240px_240px] sm:grid-cols-[330px_330px] grid-cols-[315px] gap-[30px] place-content-center ">
           {artistsData.map((item, index) => (
-            <a
+            <Link
               key={item.id}
-              href="#"
+              to="/"
               className="relative p-5 rounded-[20px] bg-bg-secondary flex lg:flex-col items-center justify-center gap-5 hover-scale"
             >
               <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-bg-primary text-caption-label font-space-mono rounded-full flex items-center justify-center">
@@ -130,12 +131,12 @@ const TopArtists = () => {
                   <span className="font-space-mono">{item.balance} ETH</span>
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Button responsive */}
-        <Buttons size="secondary" background="transparent" className="mt-[40px] px-[50px] text-base sm:hidden" link="#">
+        <Buttons size="secondary" background="transparent" className="mt-[40px] px-[50px] text-base sm:hidden" to="/">
           <RocketLaunch className="fill-action w-[20px] h-[20px]" />
           View Rankings
         </Buttons>

@@ -42,7 +42,7 @@ const HeroSection = () => {
           <div className="sm:hidden block">
             <HeroCard url1={HeroImgx1} url2={HeroImgx2} url3={AvatarSpace} className="mb-10" />
           </div>
-          <Buttons className="px-[50px] sm:w-[224px] w-full" size="tertiary" background="color" link="#">
+          <Buttons className="px-[50px] sm:w-[224px] w-full" size="tertiary" background="color" to="/">
             <img src={Rocket} className="w-[20px] h-[20px]" alt="" />
             Get Started
           </Buttons>
