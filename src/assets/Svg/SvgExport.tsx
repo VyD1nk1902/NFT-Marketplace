@@ -1,4 +1,6 @@
-import type { ExportSVGProps } from "@myTypes/ExportSvg/ExportSVG";
+export interface ExportSVGProps {
+  className: string;
+}
 
 export const StoreFront = ({ className }: ExportSVGProps) => {
   return (
