@@ -7,13 +7,16 @@ import Photo2x from "@assets/Homepage/Subscribe/Photo@2x.png";
 import { Email } from "@assets/Svg/SvgExport";
 import { useResponsive } from "@hooks/useResponsive";
 
+import clsx from "clsx";
+
 const Subcribe = () => {
   // Responsive wrap div variables
   const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
-  let borderClass = "";
-  if (Desktop) borderClass = "bg-bg-secondary p-[60px] rounded-[20px] flex gap-[80px]";
-  if (Tablet) borderClass = "bg-bg-secondary px-[30px] py-[40px] rounded-[20px] flex gap-[30px]";
-  if (Mobile) borderClass = " flex flex-col gap-[30px]";
+  const borderClass = clsx({
+    "bg-bg-secondary p-[60px] rounded-[20px] flex gap-[80px]": Desktop,
+    "bg-bg-secondary px-[30px] py-[40px] rounded-[20px] flex gap-[30px]": Tablet,
+    " flex flex-col gap-[30px]": Mobile,
+  });
 
   return (
     <section className="content-wrapper">
