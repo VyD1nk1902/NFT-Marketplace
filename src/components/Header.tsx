@@ -9,28 +9,37 @@ import { StoreFront } from "@assets/Svg/SvgExport";
 import { v4 as uuidv4 } from "uuid";
 
 import { useShowModal } from "@stores/ShowModal";
+
 import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
+import { ROUTES } from "@utils/constants/route";
 
 const Header = () => {
   // Burger Menu show Nav state
   const showModal = useShowModal((state) => state.open);
+
+  // navigate for buttons
+  const navigate = useNavigate();
+  const handleSignupClick = () => navigate(ROUTES.CREATE_ACCOUNT);
 
   // List of main navigation items displayed in the header menu
   const navHeaderMenu = [
     {
       id: uuidv4(),
       title: "Marketplace",
-      link: "/",
+      link: `${ROUTES.MARKETPLACE}`,
     },
     {
       id: uuidv4(),
       title: "Rankings",
-      link: "/",
+      link: `${ROUTES.RANKINGS}`,
     },
     {
       id: uuidv4(),
       title: "Connect a wallet",
-      link: "/",
+      link: `${ROUTES.CONNECT_WALLET}`,
     },
   ];
   return (
@@ -38,7 +47,7 @@ const Header = () => {
       <div className="flex justify-between items-center sm:px-12 px-2 py-5">
         {/* Left */}
         <div>
-          <Link to="/" className="flex items-center justify-center gap-3">
+          <Link to={ROUTES.HOME} className="flex items-center justify-center gap-3">
             <span>
               <StoreFront className="text-action mb-1 " />
             </span>
@@ -60,7 +69,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <Buttons size="secondary" background="color" className="w-[152px] px-[30px]" to="/create-account">
+          <Buttons size="secondary" background="color" className="w-[152px] px-[30px]" onClick={handleSignupClick}>
             <img src={User} className="w-[20px] h-[20px]" alt="" />
             Sign up
           </Buttons>

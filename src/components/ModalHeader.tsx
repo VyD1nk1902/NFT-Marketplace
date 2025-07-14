@@ -4,6 +4,8 @@ import { useShowModal } from "@stores/ShowModal";
 
 import { Link } from "react-router-dom";
 
+import { ROUTES } from "@utils/constants/route";
+
 const ModalHeader = () => {
   // State
   const isOpen = useShowModal((state) => state.isOpen);
@@ -14,17 +16,17 @@ const ModalHeader = () => {
     {
       id: uuidv4(),
       title: "Marketplace",
-      link: "/",
+      link: `${ROUTES.MARKETPLACE}`,
     },
     {
       id: uuidv4(),
       title: "Rankings",
-      link: "/",
+      link: `${ROUTES.RANKINGS}`,
     },
     {
       id: uuidv4(),
       title: "Connect a wallet",
-      link: "/",
+      link: `${ROUTES.CONNECT_WALLET}`,
     },
   ];
 

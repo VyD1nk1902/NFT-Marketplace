@@ -17,6 +17,8 @@ import clsx from "clsx";
 
 import { Link } from "react-router-dom";
 
+import { ROUTES } from "@utils/constants/route";
+
 const Footer = () => {
   // Responsive
   const { isDesktop: Desktop, isTablet: Tablet, isMobile: Mobile } = useResponsive();
@@ -38,17 +40,17 @@ const Footer = () => {
     {
       id: uuidv4(),
       title: "Marketplace",
-      link: "/",
+      link: `${ROUTES.MARKETPLACE}`,
     },
     {
       id: uuidv4(),
       title: "Rankings",
-      link: "/",
+      link: `${ROUTES.RANKINGS}`,
     },
     {
       id: uuidv4(),
       title: "Connect a wallet",
-      link: "/",
+      link: `${ROUTES.CONNECT_WALLET}`,
     },
   ];
 
