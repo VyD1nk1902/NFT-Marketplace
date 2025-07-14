@@ -121,7 +121,7 @@ const Footer = () => {
                   />
                 </div>
                 <div className="w-[50%]">
-                  <Buttons className="" size="secondary" background="color">
+                  <Buttons className="w-full" size="secondary" background="color">
                     Subscribe
                   </Buttons>
                 </div>
