@@ -22,7 +22,7 @@ import avatarRobot from "@assets/Avatars/Avatar Placeholder (11).png";
 
 import { Link } from "react-router-dom";
 
-import type { CollectionMetaData, LocalCollectionImage, SecondaryImage, CombinedCollectionData } from "@myTypes/api";
+import type { CollectionMetaData, LocalCollectionImage, CombinedCollectionData } from "@myTypes/api";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
