@@ -20,64 +20,171 @@ import avatarFox from "@assets/Avatars/Avatar Placeholder (5).png";
 import avatarHuman from "@assets/Avatars/Avatar Placeholder (6).png";
 import avatarRobot from "@assets/Avatars/Avatar Placeholder (11).png";
 
-import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 
+import type { CollectionMetaData, LocalCollectionImage, CombinedCollectionData } from "@myTypes/api";
+
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+// Local image data
+const localCollectionImageData: Record<string, LocalCollectionImage> = {
+  animalCollection: {
+    imgUser: avatarFox,
+    primaryImage1x: primaryDog1x,
+    primaryImage2x: primaryDog2x,
+    secondaryImages: [
+      { small: secondaryCat1x, large: secondaryCat2x },
+      { small: secondaryBear1x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+    ],
+  },
+  mushroomCollection: {
+    imgUser: avatarHuman,
+    primaryImage1x: primaryMushroom1x,
+    primaryImage2x: primaryMushroom2x,
+    secondaryImages: [
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMush1x, large: secondaryMush2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+    ],
+  },
+  robotCollection: {
+    imgUser: avatarRobot,
+    primaryImage1x: primaryRobot1x,
+    primaryImage2x: primaryRobot2x,
+    secondaryImages: [
+      { small: secondaryRobot1x, large: secondaryRobot2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+    ],
+  },
+};
+
 const TrendingCollection = () => {
-  // Card items list data render
-  const collectionData = [
-    {
-      id: uuidv4(),
-      title: "DSGN Animals",
-      imgUser: avatarFox,
-      nameUser: "MrFox",
-      primaryImage1x: primaryDog1x,
-      primaryImage2x: primaryDog2x,
-      secondaryImages: [
-        { small: secondaryCat1x, large: secondaryCat2x },
-        { small: secondaryBear1x, large: secondaryBear2x },
-        { small: secondaryBear2x, large: secondaryBear2x },
-        { small: secondaryBear2x, large: secondaryBear2x },
-      ],
-    },
-    {
-      id: uuidv4(),
-      title: "Magic Mushrooms",
-      imgUser: avatarHuman,
-      nameUser: "Shroomie",
-      primaryImage1x: primaryMushroom1x,
-      primaryImage2x: primaryMushroom2x,
-      secondaryImages: [
-        { small: secondaryMushroom1x, large: secondaryMushroom2x },
-        { small: secondaryMush1x, large: secondaryMush2x },
-        { small: secondaryMushroom1x, large: secondaryMushroom2x },
-        { small: secondaryMushroom1x, large: secondaryMushroom2x },
-        { small: secondaryMushroom1x, large: secondaryMushroom2x },
-        { small: secondaryMushroom1x, large: secondaryMushroom2x },
-      ],
-    },
-    {
-      id: uuidv4(),
-      title: "Disco Machines",
-      imgUser: avatarRobot,
-      nameUser: "BeKind2Robots",
-      primaryImage1x: primaryRobot1x,
-      primaryImage2x: primaryRobot2x,
-      secondaryImages: [
-        { small: secondaryRobot1x, large: secondaryRobot2x },
-        { small: secondaryR1x, large: secondaryR2x },
-        { small: secondaryR1x, large: secondaryR2x },
-        { small: secondaryR1x, large: secondaryR2x },
-        { small: secondaryR1x, large: secondaryR2x },
-        { small: secondaryR1x, large: secondaryR2x },
-        { small: secondaryR1x, large: secondaryR2x },
-        { small: secondaryR1x, large: secondaryR2x },
-      ],
-    },
-  ];
+  // Local Card items list data render
+  // const collectionData = [
+  //   {
+  //     id: uuidv4(),
+  //     title: "DSGN Animals",
+  //     imgUser: avatarFox,
+  //     nameUser: "MrFox",
+  //     primaryImage1x: primaryDog1x,
+  //     primaryImage2x: primaryDog2x,
+  //     secondaryImages: [
+  //       { small: secondaryCat1x, large: secondaryCat2x },
+  //       { small: secondaryBear1x, large: secondaryBear2x },
+  //       { small: secondaryBear2x, large: secondaryBear2x },
+  //       { small: secondaryBear2x, large: secondaryBear2x },
+  //     ],
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     title: "Magic Mushrooms",
+  //     imgUser: avatarHuman,
+  //     nameUser: "Shroomie",
+  //     primaryImage1x: primaryMushroom1x,
+  //     primaryImage2x: primaryMushroom2x,
+  //     secondaryImages: [
+  //       { small: secondaryMushroom1x, large: secondaryMushroom2x },
+  //       { small: secondaryMush1x, large: secondaryMush2x },
+  //       { small: secondaryMushroom1x, large: secondaryMushroom2x },
+  //       { small: secondaryMushroom1x, large: secondaryMushroom2x },
+  //       { small: secondaryMushroom1x, large: secondaryMushroom2x },
+  //       { small: secondaryMushroom1x, large: secondaryMushroom2x },
+  //     ],
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     title: "Disco Machines",
+  //     imgUser: avatarRobot,
+  //     nameUser: "BeKind2Robots",
+  //     primaryImage1x: primaryRobot1x,
+  //     primaryImage2x: primaryRobot2x,
+  //     secondaryImages: [
+  //       { small: secondaryRobot1x, large: secondaryRobot2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //       { small: secondaryR1x, large: secondaryR2x },
+  //     ],
+  //   },
+  // ];
+
+  const [collectionData, setCollectionData] = useState<CombinedCollectionData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    // fetch funct
+    const fetchCollectionMetaData = async () => {
+      try {
+        // Call API Mockoon get metadata
+        // Type of response.data CollectionMetaData[]
+        const response = await axios.get<CollectionMetaData[]>("http://localhost:3001/collections-metadata");
+        const fetchedMetaData = response.data;
+
+        // Combine data from api and img local
+        const combinedData: CombinedCollectionData[] = fetchedMetaData.map((item) => ({
+          ...item,
+          ...localCollectionImageData[item.imageKey],
+        }));
+
+        // Update state collectionData when finish combined
+        setCollectionData(combinedData);
+      } catch (err) {
+        // Check error fetching
+        // update error state
+        if (err instanceof Error) {
+          setError(err);
+        } else {
+          setError(new Error("An unknown error occurred."));
+        }
+        // Log bug for easier debug
+        console.error("Error fetching trending collections metadata:", err);
+      } finally {
+        // After fetch, turn off loading state
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+      }
+    };
+
+    fetchCollectionMetaData(); // Active fetch
+  }, []); // Dependency array [] make sure useEffect run only once after first render
+
+  // --- Render ReactLoading component  ---
+  if (loading) {
+    return (
+      <section className=" min-h-[300px] flex justify-center items-center flex-col gap-4">
+        <p className="text-xl text-action">Loading Trending collection...</p>
+      </section>
+    );
+  }
+
+  // --- Render Error ---
+  if (error) {
+    return (
+      <section className="min-h-[300px] flex justify-center items-center text-red-500">
+        <p className="text-xl">An error occurred while loading the collection: {error.message}</p>
+      </section>
+    );
+  }
 
   return (
-    <section>
+    <section className="">
       <div className="content-wrapper">
         {/* Title */}
         <div className="flex flex-col gap-2.5">
