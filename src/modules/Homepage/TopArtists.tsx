@@ -14,85 +14,165 @@ import UserImg10 from "@assets/Avatars/Avatar Placeholder (13).png";
 import UserImg11 from "@assets/Avatars/Avatar Placeholder (14).png";
 import UserImg12 from "@assets/Avatars/Avatar Placeholder (16).png";
 
-import { v4 as uuidv4 } from "uuid";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import type { ArtistMetaData, LocalArtistImage, CombinedArtistMetaData } from "@myTypes/api";
+
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+import { FormatBalance } from "@components/FormatBalance";
+
+import { ROUTES } from "@utils/constants/route";
+
+//Local img profile data
+const localArtistImageData: Record<string, LocalArtistImage> = {
+  artist1: { profileImg: UserImg1 },
+  artist2: { profileImg: UserImg2 },
+  artist3: { profileImg: UserImg3 },
+  artist4: { profileImg: UserImg4 },
+  artist5: { profileImg: UserImg5 },
+  artist6: { profileImg: UserImg6 },
+  artist7: { profileImg: UserImg7 },
+  artist8: { profileImg: UserImg8 },
+  artist9: { profileImg: UserImg9 },
+  artist10: { profileImg: UserImg10 },
+  artist11: { profileImg: UserImg11 },
+  artist12: { profileImg: UserImg12 },
+};
 
 const TopArtists = () => {
-  // Cards List render data
-  const artistsData = [
-    {
-      id: uuidv4(),
-      profileImg: UserImg1,
-      name: "Keepitreal",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg2,
-      name: "DigiLab",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg3,
-      name: "GravityOne",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg4,
-      name: "Juanie",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg5,
-      name: "BlueWhale",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg6,
-      name: "Mr Fox",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg7,
-      name: "Shroomie",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg8,
-      name: "Robotica",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg9,
-      name: "RustyRobot",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg10,
-      name: "Animakid",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg11,
-      name: "Dotgu",
-      balance: 34.53,
-    },
-    {
-      id: uuidv4(),
-      profileImg: UserImg12,
-      name: "Ghiblier",
-      balance: 34.53,
-    },
-  ];
+  // Local artists data
+  // const artistsData = [
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg1,
+  //     name: "Keepitreal",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg2,
+  //     name: "DigiLab",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg3,
+  //     name: "GravityOne",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg4,
+  //     name: "Juanie",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg5,
+  //     name: "BlueWhale",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg6,
+  //     name: "Mr Fox",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg7,
+  //     name: "Shroomie",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg8,
+  //     name: "Robotica",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg9,
+  //     name: "RustyRobot",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg10,
+  //     name: "Animakid",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg11,
+  //     name: "Dotgu",
+  //     balance: 34.53,
+  //   },
+  //   {
+  //     id: uuidv4(),
+  //     profileImg: UserImg12,
+  //     name: "Ghiblier",
+  //     balance: 34.53,
+  //   },
+  // ];
+
+  const navigate = useNavigate();
+  const handleViewRankings = () => navigate(ROUTES.RANKINGS);
+
+  const [artistData, setArtistData] = useState<CombinedArtistMetaData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const fetchArtistData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        const response = await axios.get<ArtistMetaData[]>("http://localhost:3001/artists-metadata");
+        const fetchedArtistMetaData = response.data;
+
+        const combinedData: CombinedArtistMetaData[] = fetchedArtistMetaData.map((item) => ({
+          ...item,
+          ...localArtistImageData[item.imageKey],
+        }));
+
+        setArtistData(combinedData);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err);
+        } else {
+          setError(new Error("An unknown error occured."));
+        }
+        console.error("Error fetching top artist data: ", err);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+      }
+    };
+    fetchArtistData();
+  }, []);
+
+  // --- Render ReactLoading component  ---
+  if (loading) {
+    return (
+      <section className=" min-h-[300px] flex justify-center items-center flex-col gap-4">
+        <p className="text-xl text-action">Loading Top Creators...</p>
+      </section>
+    );
+  }
+
+  // --- Render Error ---
+  if (error) {
+    return (
+      <section className="min-h-[300px] flex justify-center items-center text-red-500">
+        <p className="text-xl">An error occurred while loading the top creators: {error.message}</p>
+      </section>
+    );
+  }
 
   return (
     <section>
@@ -106,7 +186,12 @@ const TopArtists = () => {
               Checkout Top Rated Creators on the NFT Marketplace
             </p>
           </div>
-          <Buttons size="secondary" background="transparent" className="px-[50px]  text-base hidden sm:flex" to="/">
+          <Buttons
+            onClick={handleViewRankings}
+            size="secondary"
+            background="transparent"
+            className="px-[50px]  text-base hidden sm:flex"
+          >
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
             View Rankings
           </Buttons>
@@ -114,10 +199,10 @@ const TopArtists = () => {
 
         {/* Cards list */}
         <div className="pt-[60px] grid lg:grid-cols-[240px_240px_240px_240px] sm:grid-cols-[330px_330px] grid-cols-[315px] gap-[30px] place-content-center ">
-          {artistsData.map((item, index) => (
+          {artistData.map((item, index) => (
             <Link
               key={item.id}
-              to="/"
+              to={ROUTES.ARTIST_DETAILS}
               className="relative p-5 rounded-[20px] bg-bg-secondary flex lg:flex-col items-center justify-center gap-5 hover-scale"
             >
               <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-bg-primary text-caption-label font-space-mono rounded-full flex items-center justify-center">
@@ -127,8 +212,8 @@ const TopArtists = () => {
               <div className="flex flex-col">
                 <h5 className="lg:text-center">{item.name}</h5>
                 <p>
-                  <span className="text-caption-label">Total Sales:</span>{" "}
-                  <span className="font-space-mono">{item.balance} ETH</span>
+                  <span className="text-caption-label">Total Sales: </span>{" "}
+                  <span className="font-space-mono"> {FormatBalance(item.balance)} ETH</span>
                 </p>
               </div>
             </Link>
@@ -136,7 +221,12 @@ const TopArtists = () => {
         </div>
 
         {/* Button responsive */}
-        <Buttons size="secondary" background="transparent" className="mt-[40px] px-[50px] text-base sm:hidden" to="/">
+        <Buttons
+          size="secondary"
+          background="transparent"
+          className="mt-[40px] px-[50px] text-base sm:hidden"
+          onClick={handleViewRankings}
+        >
           <RocketLaunch className="fill-action w-[20px] h-[20px]" />
           View Rankings
         </Buttons>
