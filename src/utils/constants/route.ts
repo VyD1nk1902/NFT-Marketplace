@@ -6,7 +6,7 @@ export const ROUTES = {
   CONNECT_WALLET: "/connect-wallet",
 
   //Dynamic routes
-  ITEM_DETAILS: "/item/:id",
+  NFT_DETAILS: "/nft/:id",
   ARTIST_DETAILS: "/artist/:id",
 
   //placeholder :id
