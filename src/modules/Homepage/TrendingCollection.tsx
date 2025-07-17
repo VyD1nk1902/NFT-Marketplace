@@ -23,9 +23,10 @@ import avatarRobot from "@assets/Avatars/Avatar Placeholder (11).png";
 import { Link } from "react-router-dom";
 
 import type { CollectionMetaData, LocalCollectionImage, CombinedCollectionData } from "@myTypes/api";
-
 import { useState, useEffect } from "react";
 import axios from "axios";
+
+import { ROUTES } from "@utils/constants/route";
 
 // Local image data
 const localCollectionImageData: Record<string, LocalCollectionImage> = {
@@ -131,6 +132,11 @@ const TrendingCollection = () => {
     // fetch funct
     const fetchCollectionMetaData = async () => {
       try {
+        // Set loading state true when starting fetch
+        setLoading(true);
+        // Return null if last fetch error
+        setError(null);
+
         // Call API Mockoon get metadata
         // Type of response.data CollectionMetaData[]
         const response = await axios.get<CollectionMetaData[]>("http://localhost:3001/collections-metadata");
@@ -169,7 +175,7 @@ const TrendingCollection = () => {
   if (loading) {
     return (
       <section className=" min-h-[300px] flex justify-center items-center flex-col gap-4">
-        <p className="text-xl text-action">Loading Trending collection...</p>
+        <p className="text-xl text-action">Loading Trending Collections...</p>
       </section>
     );
   }
@@ -178,7 +184,7 @@ const TrendingCollection = () => {
   if (error) {
     return (
       <section className="min-h-[300px] flex justify-center items-center text-red-500">
-        <p className="text-xl">An error occurred while loading the collection: {error.message}</p>
+        <p className="text-xl">An error occurred while loading the collections: {error.message}</p>
       </section>
     );
   }
@@ -199,7 +205,7 @@ const TrendingCollection = () => {
             return (
               <div key={item.id} className="flex flex-col gap-3.5">
                 {/* Render main image */}
-                <Link to="/">
+                <Link to={ROUTES.NFT_DETAILS}>
                   <img
                     className="hover-scale"
                     src={`${item.primaryImage1x}`}
@@ -211,7 +217,7 @@ const TrendingCollection = () => {
                 {/* Render sub images */}
                 <div className="flex gap-3.5 items-center justify-between">
                   {item.secondaryImages.slice(0, 2).map((image, index) => (
-                    <Link to="/" key={index}>
+                    <Link to={ROUTES.NFT_DETAILS} key={index}>
                       <img
                         src={image.small}
                         srcSet={`${image.small} 1x, ${image.large} 2x`}
@@ -222,7 +228,7 @@ const TrendingCollection = () => {
                   ))}
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
-                    <Link to="/">
+                    <Link to={ROUTES.NFT_DETAILS}>
                       <h5 className="w-[100px] h-[100px] bg-action flex justify-center items-center px-3.5 py-8 font-space-mono font-bold rounded-[20px] hover-scale">
                         {countSecondaryImages}+
                       </h5>
