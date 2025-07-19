@@ -213,7 +213,7 @@ const TopArtists = () => {
                 <h5 className="lg:text-center">{item.name}</h5>
                 <p>
                   <span className="text-caption-label">Total Sales: </span>{" "}
-                  <span className="font-space-mono"> {FormatBalance(item.balance)} ETH</span>
+                  <span className="font-space-mono"> {FormatBalance(item.balance, 4)} ETH</span>
                 </p>
               </div>
             </Link>
