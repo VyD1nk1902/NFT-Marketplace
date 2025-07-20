@@ -35,6 +35,11 @@ export const getPath = ({ pathConstant, params }: getPathProps) => {
     // (if...)Make sure code run for key in params not other prototype properties
     // replace placeholder with value of the key (id: 123)
     // use String(params[key] make sure value is string because replace() expect string
+
+    //Use Case:
+    // <Route path={ROUTES.ITEM_DETAILS} element={<ItemDetails />} />
+    // <Link to={getPath(ROUTES.ITEM_DETAILS, { params: { id: item.id } })}>Xem chi tiết</Link>
+    // navigate(getPath(ROUTES.ARTIST_DETAILS, { params: { id: artistId } }));
   }
   return resultPath;
 };
