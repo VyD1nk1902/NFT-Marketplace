@@ -18,6 +18,9 @@ import iconCard7 from "@assets/Icons/Planet.svg";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 
+import clsx from "clsx";
+import { useResponsive } from "@hooks/useResponsive";
+
 const BrowseCategories = () => {
   // Cards List render data
   const categoryCardsData = [
@@ -71,6 +74,15 @@ const BrowseCategories = () => {
     },
   ];
 
+  const { isMobileSmall: MobileS, isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
+
+  const IconPosition = clsx({
+    " w-[100px] h-[100px] xl:top-17 xl:left-18 lg:top-12 lg:left-12": Desktop,
+    "w-[80px] h-[80px] top-9 left-9": Tablet,
+    "w-[80px] h-[80px] top-8 left-8": Mobile,
+    "w-[70px] h-[70px] top-7 left-7": MobileS,
+  });
+
   return (
     <section className="content-wrapper">
       <div>
@@ -78,20 +90,16 @@ const BrowseCategories = () => {
         <h3 className="pb-[60px] hidden lg:block">Browse Categories</h3>
         <h4 className="pb-[60px] block lg:hidden">Browse Categories</h4>
         {/* Cards list */}
-        <div className="grid sm:grid-cols-4 grid-cols-2 gap-[30px]">
+        <div className="grid md:grid-cols-4 grid-cols-2 gap-[30px]">
           {categoryCardsData.map((item) => (
             <Link
               key={item.id}
               to="/"
-              className="lg:w-[240px] lg:h-[316px] sm:w-[150px] sm:h-[209px] rounded-[20px] bg-bg-secondary hover-scale"
+              className="xl:w-[240px] xl:h-[316px] lg:w-[200px] lg:h-[300px] sm:w-[150px] sm:h-[209px] rounded-[20px] bg-bg-secondary hover-scale"
             >
               <div className="relative overflow-hidden rounded-t-[20px]">
                 <img src={item.background} className="blur-[7.5px] " alt="" />
-                <img
-                  src={item.icon}
-                  className="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] absolute lg:top-17 lg:left-17 top-8 left-8 "
-                  alt=""
-                />
+                <img src={item.icon} className={clsx("absolute", IconPosition)} alt="" />
               </div>
               <div className="pt-5 pb-6 px-[30px] lg:block hidden">
                 <h5>{item.name}</h5>
