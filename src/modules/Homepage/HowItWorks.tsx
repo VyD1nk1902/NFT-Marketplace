@@ -64,7 +64,7 @@ const HowItWorks = () => {
         {HIWCarData.map((item) => (
           <div
             key={item.id}
-            className={clsx("flex gap-5 items-center ", "sm:flex-col", "bg-bg-secondary rounded-[20px]", pxClass)}
+            className={clsx("flex gap-5 items-center sm:flex-col bg-bg-secondary rounded-[20px]", pxClass)}
           >
             {Desktop && (
               <>
