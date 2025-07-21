@@ -9,9 +9,23 @@ import { useResponsive } from "@hooks/useResponsive";
 import Clock from "@components/Clock";
 import { Link } from "react-router-dom";
 
+import { ROUTES } from "@utils/constants/route";
+import { useNavigate } from "react-router-dom";
+import clsx from "clsx";
+
 const Highlight = () => {
-  const { isTablet: Tablet, isMobile: Mobile, isDesktop: PC } = useResponsive();
-  // Make sure time not reset after render
+  const { isMobileSmall: MobileS, isTablet: Tablet, isMobile: Mobile, isDesktop: Desktop } = useResponsive();
+  const navigate = useNavigate();
+  const handleSeeNFT = () => navigate(ROUTES.NFT_DETAILS);
+
+  const contentWrapClass = clsx({
+    "xl:max-w-[1050px] lg:max-w-[900px] pt-[360px]": Desktop,
+    "max-w-[690px] pt-[360px]": Tablet,
+    "max-w-[315px] pt-[120px]": Mobile,
+    "max-w-[290px] pt-[120px]": MobileS,
+  });
+  // mx-auto md:pt-[360px] pt-[120px] mb-[100px]
+  // Make sure time not reset after render with useMemo
   const timeEnd = useMemo(() => {
     return new Date().getTime() + 24 * 3600 * 1000 * 2.5;
   }, []);
@@ -32,20 +46,24 @@ const Highlight = () => {
         {/* Background filter */}
         <div className="absolute inset-0 bg-gradient3 sm:blur-3xl blur"></div>
         {/* Content */}
-        <div className="relative z-30 lg:max-w-[1050px] sm:max-w-[690px] max-w-[315px] m-auto md:pt-[360px] pt-[120px] mb-[100px] ">
-          <div className="flex justify-between md:items-end">
-            <div className="flex flex-col gap-[30px]">
-              <Link to="/" className="flex px-5 py-2.5 bg-bg-secondary w-[151px] rounded-[20px] gap-3 hover-scale">
+        <div className="relative z-30 pb-[100px] ">
+          <div className={clsx("flex sm:items-end mx-auto", contentWrapClass)}>
+            <div className="flex flex-col gap-[30px] mx-auto">
+              <Link
+                to={ROUTES.ARTIST_DETAILS}
+                className="flex px-5 py-2.5 bg-bg-secondary w-[151px] rounded-[20px] gap-3 hover-scale"
+              >
                 <img src={Avatar} className="w-6 h-6" alt="" />
                 <span>Schroomie</span>
               </Link>
-              {PC ? <h2>Magic Mashrooms</h2> : <h3>Magic Mashrooms</h3>}
+              {Desktop ? <h2>Magic Mashrooms</h2> : <h3>Magic Mashrooms</h3>}
 
               {/* Clock-mobile */}
-              {Mobile && <Clock time={timeEnd} className="flip-clock-mobile" day={Tablet || PC} />}
+              {Mobile && <Clock time={timeEnd} className="flip-clock-mobile" day={Tablet || Desktop} />}
+              {MobileS && <Clock time={timeEnd} className="flip-clock-mobileS" day={Tablet || Desktop} />}
               <Buttons
                 className="sm:w-[198px] w-full px-[50px] py-[22px] text-black bg-text"
-                to="/"
+                onClick={handleSeeNFT}
                 size="secondary"
                 background="transparent"
               >
@@ -53,9 +71,11 @@ const Highlight = () => {
                 <span className="whitespace-nowrap">See NFT</span>
               </Buttons>
             </div>
-            {/* Clock */}
-            {Tablet && <Clock time={timeEnd} className="flip-clock-tablet" day={Tablet || PC} />}
-            {PC && <Clock time={timeEnd} className="" day={Tablet || PC} />}
+            <div>
+              {/* Clock */}
+              {Tablet && <Clock time={timeEnd} className="flip-clock-tablet" day={Tablet || Desktop} />}
+              {Desktop && <Clock time={timeEnd} className="" day={Tablet || Desktop} />}
+            </div>
           </div>
         </div>
       </div>
