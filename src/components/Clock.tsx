@@ -9,7 +9,7 @@ interface ClockProps {
 
 const Clock = ({ className, day, time }: ClockProps) => {
   return (
-    <div className="relative p-[30px] font-space-mono flex flex-col gap-[30px] ">
+    <div className="relative sm:p-[30px] p-[20px] font-space-mono flex flex-col gap-[30px] ">
       <div className="absolute inset-0 bg-[#3B3B3B80] rounded-[20px]"></div>
       <div className="relative z-10">
         <p className="text-xs pb-5">Auction ends in:</p>
