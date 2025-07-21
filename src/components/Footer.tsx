@@ -23,7 +23,7 @@ const Footer = () => {
   // Responsive
   const { isDesktop: Desktop, isTablet: Tablet, isMobile: Mobile } = useResponsive();
   const wrapClass = clsx({
-    "grid grid-cols-[1fr_1fr_1.5fr] justify-between 2xl:grid-cols-[1fr_1fr_1fr] 2xl:px-[350px] 2xl:place-items-center px-[195px] gap-5":
+    "grid grid-cols-[1fr_1fr_1.5fr] justify-between 2xl:grid-cols-[1fr_1fr_1fr] 2xl:px-[350px] 2xl:place-items-center xl:px-[195px] px-[100px] gap-5":
       Desktop,
     "w-[690px] flex flex-col gap-[30px] px-[60px]": Tablet,
     "w-[315px] flex flex-col gap-[30px] m-auto": Mobile,
