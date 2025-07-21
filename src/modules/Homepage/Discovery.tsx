@@ -183,7 +183,12 @@ const DiscoveryMore = () => {
       </div>
 
       {/* Button responsive */}
-      <Buttons size="secondary" background="transparent" className=" px-[50px] text-base sm:hidden" to="/">
+      <Buttons
+        size="secondary"
+        background="transparent"
+        className=" px-[50px] text-base sm:hidden"
+        onClick={handleSeeAll}
+      >
         <Eye className="fill-action w-[20px] h-[20px]" />
         See All
       </Buttons>
