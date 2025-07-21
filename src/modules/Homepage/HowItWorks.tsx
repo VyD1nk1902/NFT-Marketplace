@@ -38,12 +38,13 @@ const HowItWorks = () => {
   ];
 
   // Responsive variables
-  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
+  const { isMobileSmall: MobileS, isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
 
   const pxClass = clsx({
     "pt-2.5 pb-[30px] px-[30px]": Desktop,
     "pt-2.5 pb-[30px] px-5": Tablet,
     "p-5": Mobile,
+    "p-3": MobileS,
   });
 
   return (
@@ -105,6 +106,16 @@ const HowItWorks = () => {
                 />
                 <div className=" flex flex-col gap-2.5">
                   <p className="font-[600]">{item.title}</p>
+                  <p className="text-[12px]">{item.desc}</p>
+                </div>
+              </>
+            )}
+
+            {MobileS && (
+              <>
+                <img src={item.img} srcSet={`${item.img} 1x, ${item.img2x} 2x`} className="w-[90px] h-[90px]" alt="" />
+                <div className=" flex flex-col gap-2">
+                  <p className="font-[600] text-[14px]">{item.title}</p>
                   <p className="text-[12px]">{item.desc}</p>
                 </div>
               </>
