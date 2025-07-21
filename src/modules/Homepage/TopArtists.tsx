@@ -198,7 +198,7 @@ const TopArtists = () => {
         </div>
 
         {/* Cards list */}
-        <div className="pt-[60px] grid lg:grid-cols-[240px_240px_240px_240px] sm:grid-cols-[330px_330px] grid-cols-[315px] gap-[30px] place-content-center ">
+        <div className="pt-[60px] grid xl:grid-cols-[240px_240px_240px_240px] lg:grid-cols-[220px_220px_220px_220px] sm:grid-cols-[330px_330px] xs:grid-cols-[315px] grid-cols-[290px] gap-[30px] place-content-center ">
           {artistData.map((item, index) => (
             <Link
               key={item.id}
