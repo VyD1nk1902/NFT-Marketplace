@@ -11,17 +11,19 @@ import clsx from "clsx";
 
 const Subcribe = () => {
   // Responsive wrap div variables
-  const { isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
+  const { isMobileSmall: MobileS, isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
   const borderClass = clsx({
-    "bg-bg-secondary p-[60px] rounded-[20px] flex gap-[80px]": Desktop,
+    "bg-bg-secondary lg:p-[40px] xl:p-[60px] rounded-[20px] flex lg:gap-[40px] xl:gap-[80px]": Desktop,
     "bg-bg-secondary px-[30px] py-[40px] rounded-[20px] flex gap-[30px]": Tablet,
-    " flex flex-col gap-[30px]": Mobile,
+    "flex flex-col gap-[30px]": Mobile,
+    "flex flex-col gap-[25px]": MobileS,
   });
 
   const imageSizeClass = clsx({
     "w-[425px] h-[310px]": Desktop,
     "w-[300px] h-[280px]": Tablet,
     "w-[315px] h-[255px]": Mobile,
+    "w-[285px] h-[250px]": MobileS,
   });
 
   return (
@@ -31,6 +33,7 @@ const Subcribe = () => {
         {Desktop && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
         {Tablet && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
         {Mobile && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
+        {MobileS && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}
 
         {/* Content */}
         <div>
@@ -59,7 +62,7 @@ const Subcribe = () => {
 
           {/* Input button */}
           {Desktop && (
-            <div className="bg-white rounded-[20px] flex gap-5">
+            <div className="bg-white rounded-[20px] flex xl:gap-5 lg:gap-2">
               <Inputs
                 id="email"
                 name="email"
@@ -69,7 +72,7 @@ const Subcribe = () => {
                 className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
               />
 
-              <Buttons className="w-[200px] " size="secondary" background="color" to="/">
+              <Buttons className="xl:w-[200px] lg:w-[150px]" size="secondary" background="color" to="/">
                 <Email className="fill-text w-5 h-5" /> Subcribe
               </Buttons>
             </div>
@@ -93,6 +96,23 @@ const Subcribe = () => {
           )}
 
           {Mobile && (
+            <div className="flex flex-col rounded-[20px] gap-4">
+              <Inputs
+                id="email"
+                name="email"
+                autoComplete="email"
+                placeholder="Enter your email here..."
+                type="text"
+                className=" bg-white px-5 py-4 h-[46px] text-bg-primary rounded-[20px] border-none  "
+              />
+
+              <Buttons className="w-full" size="tertiary" background="color" to="/">
+                <Email className="fill-text w-5 h-5" /> Subcribe
+              </Buttons>
+            </div>
+          )}
+
+          {MobileS && (
             <div className="flex flex-col rounded-[20px] gap-4">
               <Inputs
                 id="email"
