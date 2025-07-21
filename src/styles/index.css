@@ -3,6 +3,7 @@
 @import "@assets/Font/font.css";
 
 @theme {
+  --breakpoint-xs: 350px;
   --color-bg-primary: #2b2b2b;
   --color-bg-secondary: #3b3b3b;
   --color-caption-label: #858584;
@@ -56,7 +57,7 @@ input:-webkit-autofill {
 }
 
 .content-wrapper {
-  @apply lg:max-w-[1050px] sm:max-w-[690px] max-w-[315px]  sm:w-screen sm:py-20 py-10 mx-auto;
+  @apply xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px]  sm:w-screen sm:py-20 py-10 max-xs:px-5 mx-auto;
 }
 
 .hover-scale {
@@ -67,6 +68,24 @@ input:-webkit-autofill {
   --fcc-flip-duration: 0; /* transition duration when flip card */
   --fcc-spacing: 8px; /* space between unit times and separators */
   --fcc-digit-block-width: 35px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-radius: 5px; /* border radius of digit card */
+  --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
+  --fcc-digit-font-size: 25px; /* font size of digit */
+  --fcc-digit-color: white; /* color of digit */
+  --fcc-label-font-size: 10px; /* font size of label */
+  --fcc-label-color: #ffffff; /* color of label */
+  --fcc-background: black; /* background of digit card */
+  --fcc-divider-color: white; /* color of divider */
+  --fcc-divider-height: 0px; /* height of divider */
+  --fcc-separator-size: 5px; /* size of colon */
+  --fcc-separator-color: white; /* color of colon */
+}
+
+.flip-clock-mobileS {
+  --fcc-flip-duration: 0; /* transition duration when flip card */
+  --fcc-spacing: 10px; /* space between unit times and separators */
+  --fcc-digit-block-width: 30px; /* width of digit card */
   --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
   --fcc-digit-block-radius: 5px; /* border radius of digit card */
   --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
