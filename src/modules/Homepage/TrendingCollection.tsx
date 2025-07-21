@@ -229,13 +229,13 @@ const TrendingCollection = () => {
                   {/* Render count sub images */}
                   {countSecondaryImages > 0 ? (
                     <Link to={ROUTES.NFT_DETAILS}>
-                      <h5 className="w-[100px] h-[100px] bg-action flex justify-center items-center px-3.5 py-8 font-space-mono font-bold rounded-[20px] hover-scale">
+                      <h5 className="w-[100px] h-[100px] max-[350px]:w-[90px] max-[350px]:h-[90px] bg-action flex justify-center items-center px-3.5 py-8 font-space-mono font-bold rounded-[20px] hover-scale">
                         {countSecondaryImages}+
                       </h5>
                     </Link>
                   ) : (
                     <Link to="">
-                      <h5 className="w-[100px] h-[100px] bg-action px-3.5 py-8 font-space-mono font-bold flex justify-center items-center rounded-[20px] hover-scale">
+                      <h5 className="w-[100px] h-[100px] max-[350px]:w-[90px] max-[350px]:h-[90px] bg-action px-3.5 py-8 font-space-mono font-bold flex justify-center items-center rounded-[20px] hover-scale">
                         Bonus Img
                       </h5>
                     </Link>
