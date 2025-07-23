@@ -23,7 +23,7 @@ export const createFetchingStore = <T>() =>
     // Action to handle the fetch lifecycle
     fetchData: async (fetchFunction) => {
       //setTimeout
-      const loadingDelay: Promise<void> = new Promise((resolve) => setTimeout(resolve, 2000));
+      const loadingDelay: Promise<void> = new Promise((resolve) => setTimeout(resolve, 2500));
       set({ loading: true, error: null });
       try {
         const [result] = await Promise.all([fetchFunction(), loadingDelay]);
