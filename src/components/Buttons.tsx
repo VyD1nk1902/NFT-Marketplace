@@ -8,6 +8,7 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   to?: string;
+  type?: string;
 }
 
 const Buttons = ({ size = "secondary", background = "color", className, children, onClick, to }: ButtonProps) => {
