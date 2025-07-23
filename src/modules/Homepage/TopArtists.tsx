@@ -25,6 +25,8 @@ import { FormatBalance } from "@components/FormatBalance";
 
 import { ROUTES } from "@utils/constants/route";
 
+import { TbFidgetSpinner } from "react-icons/tb";
+
 //Local img profile data
 const localArtistImageData: Record<string, LocalArtistImage> = {
   artist1: { profileImg: UserImg1 },
@@ -160,7 +162,9 @@ const TopArtists = () => {
   if (loading) {
     return (
       <section className=" min-h-[300px] flex justify-center items-center flex-col gap-4">
-        <p className="text-xl text-action">Loading Top Creators...</p>
+        <span>
+          <TbFidgetSpinner className="text-8xl text-action animate-spin" />
+        </span>
       </section>
     );
   }

@@ -22,6 +22,8 @@ import { useNavigate } from "react-router-dom";
 
 import { FormatBalance } from "@components/FormatBalance";
 
+import { TbFidgetSpinner } from "react-icons/tb";
+
 // Local image NFT data
 const localImageNFT: Record<string, LocalDiscoveryImage> = {
   discovery1: {
@@ -106,7 +108,9 @@ const DiscoveryMore = () => {
   if (loading) {
     return (
       <section className=" min-h-[300px] flex justify-center items-center flex-col gap-4">
-        <p className="text-xl text-action">Loading NFTs...</p>
+        <span>
+          <TbFidgetSpinner className="text-8xl text-action animate-spin" />
+        </span>
       </section>
     );
   }

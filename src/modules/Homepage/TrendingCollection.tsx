@@ -28,6 +28,8 @@ import axios from "axios";
 
 import { ROUTES } from "@utils/constants/route";
 
+import { TbFidgetSpinner } from "react-icons/tb";
+
 // Local image data
 const localCollectionImageData: Record<string, LocalCollectionImage> = {
   animalCollection: {
@@ -174,8 +176,10 @@ const TrendingCollection = () => {
   // --- Render ReactLoading component  ---
   if (loading) {
     return (
-      <section className=" min-h-[300px] flex justify-center items-center flex-col gap-4">
-        <p className="text-xl text-action">Loading Trending Collections...</p>
+      <section className=" min-h-[300px] flex justify-center items-center gap-4">
+        <span>
+          <TbFidgetSpinner className="text-8xl text-action animate-spin" />
+        </span>
       </section>
     );
   }
