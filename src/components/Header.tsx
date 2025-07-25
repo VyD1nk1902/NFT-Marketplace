@@ -3,8 +3,8 @@ import Buttons from "@components/Buttons";
 import headerLogox1 from "@assets/Homepage/Header/NFT Marketplace.png";
 import headerLogox2 from "@assets/Homepage/Header/NFT Marketplace-2x.png";
 import User from "@assets/Icons/User.svg";
-import { BurgerMenu } from "@assets/Svg/SvgExport";
-import { StoreFront } from "@assets/Svg/SvgExport";
+import { BurgerMenu } from "@assets/Export/SvgExport";
+import { StoreFront } from "@assets/Export/SvgExport";
 
 import { v4 as uuidv4 } from "uuid";
 

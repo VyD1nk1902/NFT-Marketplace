@@ -1,10 +1,10 @@
 import headerLogo from "@assets/Homepage/Footer/NFT Marketplace.svg";
-import { StoreFront } from "@assets/Svg/SvgExport";
-import { Discord } from "@assets/Svg/SvgExport";
-import { Youtube } from "@assets/Svg/SvgExport";
-import { Twitter } from "@assets/Svg/SvgExport";
-import { Instagram } from "@assets/Svg/SvgExport";
-import { Email } from "@assets/Svg/SvgExport";
+import { StoreFront } from "@assets/Export/SvgExport";
+import { Discord } from "@assets/Export/SvgExport";
+import { Youtube } from "@assets/Export/SvgExport";
+import { Twitter } from "@assets/Export/SvgExport";
+import { Instagram } from "@assets/Export/SvgExport";
+import { Email } from "@assets/Export/SvgExport";
 
 import { v4 as uuidv4 } from "uuid";
 
