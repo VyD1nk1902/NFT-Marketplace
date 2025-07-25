@@ -26,6 +26,10 @@ html {
   @apply bg-bg-primary text-text font-work-sans m-0 overflow-x-hidden;
 }
 
+button {
+  @apply cursor-pointer;
+}
+
 h1 {
   @apply lg:text-6xl sm:text-5xl text-3xl font-[600];
 }
@@ -56,12 +60,12 @@ input:-webkit-autofill {
   box-shadow: 0 0 0px 1000px white inset !important;
 }
 
-.content-wrapper-homepage-homepage {
+.content-wrapper-homepage {
   @apply xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px] sm:w-screen sm:py-20 py-10 max-xs:px-5 mx-auto;
 }
 
 .content-wrapper {
-  @apply 2xl:max-w-[1200px] xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px] mx-auto;
+  @apply 2xl:max-w-[1400px] xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px] mx-auto;
 }
 
 .hover-scale {
