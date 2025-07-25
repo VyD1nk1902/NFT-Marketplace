@@ -8,7 +8,7 @@ import ModalHeader from "@components/ModalHeader";
 //Pages
 import Homepage from "@pages/Homepage";
 import CreateAccount from "@pages/CreateAccount";
-import ConnectWallet from "@modules/ConnectWallet/ConnectWallet";
+import ConnectWallet from "@pages/ConnectWallet";
 
 //Routes and Route
 import { Routes, Route } from "react-router-dom";
