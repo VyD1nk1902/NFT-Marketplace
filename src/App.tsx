@@ -8,6 +8,7 @@ import ModalHeader from "@components/ModalHeader";
 //Pages
 import Homepage from "@pages/Homepage";
 import CreateAccount from "@pages/CreateAccount";
+import ConnectWallet from "@modules/ConnectWallet/ConnectWallet";
 
 //Routes and Route
 import { Routes, Route } from "react-router-dom";
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path={ROUTES.HOME} element={<Homepage />} />
         <Route path={ROUTES.CREATE_ACCOUNT} element={<CreateAccount />} />
+        <Route path={ROUTES.CONNECT_WALLET} element={<ConnectWallet />} />
       </Routes>
       <Footer />
     </div>
