@@ -51,6 +51,7 @@ const MainSection = () => {
 
   // Handle SweetAlert2
   const handleShowAlert: SubmitHandler<FormData> = (data) => {
+    // SweetAlert Responsive
     const windowWidth = window.innerWidth;
 
     let swalWidth: number | string = "90%";
