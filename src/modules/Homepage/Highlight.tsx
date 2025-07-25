@@ -1,6 +1,6 @@
 import HighlightBg from "@assets/Homepage/Highlight/NFT Highlight.png";
 import Buttons from "@components/Buttons";
-import { Eye } from "@assets/Svg/SvgExport";
+import { Eye } from "@assets/Export/SvgExport";
 import Avatar from "@assets/Avatars/Avatar Placeholder (6).png";
 
 import { useMemo } from "react";

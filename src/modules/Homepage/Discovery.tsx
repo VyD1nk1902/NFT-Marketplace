@@ -1,5 +1,5 @@
 import Buttons from "@components/Buttons";
-import { Eye } from "@assets/Svg/SvgExport";
+import { Eye } from "@assets/Export/SvgExport";
 import NFTavatar from "@assets/Avatars/Avatar Placeholder (15).png";
 import NFTavatar1 from "@assets/Avatars/Avatar Placeholder (9).png";
 import NFTavatar2 from "@assets/Avatars/Avatar Placeholder (14).png";

@@ -4,7 +4,7 @@ import Buttons from "@components/Buttons";
 import Photo from "@assets/Homepage/Subscribe/Photo.png";
 import Photo2x from "@assets/Homepage/Subscribe/Photo@2x.png";
 
-import { Email } from "@assets/Svg/SvgExport";
+import { Email } from "@assets/Export/SvgExport";
 import { useResponsive } from "@hooks/useResponsive";
 
 import clsx from "clsx";

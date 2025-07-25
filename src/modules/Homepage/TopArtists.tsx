@@ -1,6 +1,6 @@
 import Buttons from "@components/Buttons";
 
-import { RocketLaunch } from "@assets/Svg/SvgExport";
+import { RocketLaunch } from "@assets/Export/SvgExport";
 import UserImg1 from "@assets/Avatars/Avatar Placeholder.png";
 import UserImg2 from "@assets/Avatars/Avatar Placeholder (1).png";
 import UserImg3 from "@assets/Avatars/Avatar Placeholder (2).png";
