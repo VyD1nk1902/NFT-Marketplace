@@ -55,7 +55,7 @@ const ConnectWalletMain = () => {
             </div>
             {/* Link List */}
             <div>
-              <ul className="flex flex-col gap-5 2xl:gap-10 xl:justify-center xl:items-center">
+              <ul className="flex flex-col gap-5 2xl:gap-10 justify-center items-center">
                 <Link to="https://metamask.io/">
                   <li className={liClass}>
                     <img src={Metamask} className={ImgSize} alt="meta-mask" />
