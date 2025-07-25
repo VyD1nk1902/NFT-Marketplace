@@ -33,53 +33,51 @@ const ConnectWalletMain = () => {
     "pl-10 pr-5 max-[350px]:w-64 w-80 2xl:w-100 2xl:h-30 lg:h-16 h-[60px] rounded-[20px] flex gap-5 2xl:gap-10 items-center bg-bg-secondary border-action border hover-scale";
 
   return (
-    <div>
-      <section className="pt-[100px] w-full overflow-hidden">
-        <div className={WrapClass}>
-          <div>
-            <img
-              src={ConnectWalletBG}
-              srcSet={`${ConnectWalletBG1x} 1x, ${ConnectWalletBG2x} 2x`}
-              className={ImgClass}
-              alt=""
-            />
+    <section className="pt-[100px] w-full overflow-hidden">
+      <div className={WrapClass}>
+        <div>
+          <img
+            src={ConnectWalletBG}
+            srcSet={`${ConnectWalletBG1x} 1x, ${ConnectWalletBG2x} 2x`}
+            className={ImgClass}
+            alt=""
+          />
+        </div>
+        <div className="pb-[40px] px-[30px] md:py-[80px] lg:py-[100px]">
+          {/* Title */}
+          <div className="flex flex-col justify-center md:px-0 px-[30px] pb-[30px] 2xl:pb-[60px] md:pb-[40px] max-w-[460px] 2xl:max-w-[800px] mx-auto">
+            <h2 className="hidden lg:block">Connect wallet</h2>
+            <h3 className="lg:hidden">Connect wallet</h3>
+            <p className="text-[16px] md:text-[22px] 2xl:text-[33px] pt-5">
+              Choose a wallet you want to connect. There are several wallet providers.
+            </p>
           </div>
-          <div className="pb-[40px] px-[30px] md:py-[80px] lg:py-[100px]">
-            {/* Title */}
-            <div className="flex flex-col justify-center md:px-0 px-[30px] pb-[30px] 2xl:pb-[60px] md:pb-[40px] max-w-[460px] 2xl:max-w-[800px] mx-auto">
-              <h2 className="hidden lg:block">Connect wallet</h2>
-              <h3 className="lg:hidden">Connect wallet</h3>
-              <p className="text-[16px] md:text-[22px] 2xl:text-[33px] pt-5">
-                Choose a wallet you want to connect. There are several wallet providers.
-              </p>
-            </div>
-            {/* Link List */}
-            <div>
-              <ul className="flex flex-col gap-5 2xl:gap-10 justify-center items-center">
-                <Link to="https://metamask.io/">
-                  <li className={liClass}>
-                    <img src={Metamask} className={ImgSize} alt="meta-mask" />
-                    <p className="font-[600] max-[350px]:text-base  text-[22px] 2xl:text-[30px]">Metamask</p>
-                  </li>
-                </Link>
-                <Link to="https://walletconnect.network/">
-                  <li className={liClass}>
-                    <img src={WalletConnect} className={ImgSize} alt="wallet-connect" />
-                    <p className="font-[600] max-[350px]:text-base  text-[22px] 2xl:text-[30px]">Wallet Connect</p>
-                  </li>
-                </Link>
-                <Link to="https://www.coinbase.com/">
-                  <li className={liClass}>
-                    <img src={Coinbase} className={ImgSize} alt="coin-base" />
-                    <p className="font-[600] max-[350px]:text-base text-[22px] 2xl:text-[30px]">Coinbase</p>
-                  </li>
-                </Link>
-              </ul>
-            </div>
+          {/* Link List */}
+          <div>
+            <ul className="flex flex-col gap-5 2xl:gap-10 justify-center items-center">
+              <Link to="https://metamask.io/">
+                <li className={liClass}>
+                  <img src={Metamask} className={ImgSize} alt="meta-mask" />
+                  <p className="font-[600] max-[350px]:text-base  text-[22px] 2xl:text-[30px]">Metamask</p>
+                </li>
+              </Link>
+              <Link to="https://walletconnect.network/">
+                <li className={liClass}>
+                  <img src={WalletConnect} className={ImgSize} alt="wallet-connect" />
+                  <p className="font-[600] max-[350px]:text-base  text-[22px] 2xl:text-[30px]">Wallet Connect</p>
+                </li>
+              </Link>
+              <Link to="https://www.coinbase.com/">
+                <li className={liClass}>
+                  <img src={Coinbase} className={ImgSize} alt="coin-base" />
+                  <p className="font-[600] max-[350px]:text-base text-[22px] 2xl:text-[30px]">Coinbase</p>
+                </li>
+              </Link>
+            </ul>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
