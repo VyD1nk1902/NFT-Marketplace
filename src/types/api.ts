@@ -52,3 +52,11 @@ export interface LocalDiscoveryImage {
 }
 
 export interface CombinedDiscoveryMetaData extends DiscoveryMetaData, LocalDiscoveryImage {}
+
+// Marketplace NFTs Data
+
+export interface LocalMarketplaceImage {
+  background1x: string;
+  background2x: string;
+  artistIMG: string;
+}
