@@ -199,7 +199,7 @@ const MainSection = () => {
                 {...register("emailRegister", {
                   required: "Email is required",
                   pattern: {
-                    value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+                    value: /^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$/g,
                     message: "Invalid email address",
                   },
                 })}
