@@ -1,7 +1,7 @@
 import CreateAccount1x from "@assets/CreateAccount/CreateAccount1x.png";
 import CreateAccount2x from "@assets/CreateAccount/CreateAccount2x.png";
 import CreateAccount from "@assets/CreateAccount/CreateAccountMain.png";
-import { LockIcon, Email, User } from "@assets/Svg/SvgExport";
+import { LockIcon, Email, User } from "@assets/Export/SvgExport";
 
 import Inputs from "@components/Inputs";
 import Buttons from "@components/Buttons";
