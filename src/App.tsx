@@ -13,6 +13,7 @@ import ConnectWallet from "@pages/ConnectWallet";
 //Routes and Route
 import { Routes, Route } from "react-router-dom";
 import { ROUTES } from "@utils/constants/route";
+import Marketplace from "@pages/Marketplace";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path={ROUTES.HOME} element={<Homepage />} />
         <Route path={ROUTES.CREATE_ACCOUNT} element={<CreateAccount />} />
         <Route path={ROUTES.CONNECT_WALLET} element={<ConnectWallet />} />
+        <Route path={ROUTES.MARKETPLACE} element={<Marketplace />} />
       </Routes>
       <Footer />
     </div>
