@@ -27,7 +27,7 @@ const Subcribe = () => {
   });
 
   return (
-    <section className="content-wrapper">
+    <section className="content-wrapper-homepage">
       <div className={borderClass}>
         {/* Left Pic */}
         {Desktop && <img src={Photo} srcSet={`${Photo} 1x , ${Photo2x} 2x`} className={imageSizeClass} alt="" />}

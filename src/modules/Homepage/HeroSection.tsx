@@ -37,7 +37,7 @@ const HeroSection = () => {
 
   return (
     <section className="pt-[100px]">
-      <div className="content-wrapper grid grid-cols-1 sm:grid-cols-2 gap-[30px] ">
+      <div className="content-wrapper-homepage grid grid-cols-1 sm:grid-cols-2 gap-[30px] ">
         {/* Content Left */}
         <div className="flex flex-col gap-[30px]">
           <div className="flex flex-col gap-5">

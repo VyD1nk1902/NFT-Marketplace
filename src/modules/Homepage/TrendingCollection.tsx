@@ -195,7 +195,7 @@ const TrendingCollection = () => {
 
   return (
     <section className="">
-      <div className="content-wrapper">
+      <div className="content-wrapper-homepage">
         {/* Title */}
         <div className="flex flex-col gap-2.5">
           <h3 className="hidden sm:block">Trending Collection</h3>

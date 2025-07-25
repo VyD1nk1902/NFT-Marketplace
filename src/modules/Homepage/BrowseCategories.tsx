@@ -84,7 +84,7 @@ const BrowseCategories = () => {
   });
 
   return (
-    <section className="content-wrapper">
+    <section className="content-wrapper-homepage">
       <div>
         {/* Section Title */}
         <h3 className="pb-[60px] hidden lg:block">Browse Categories</h3>

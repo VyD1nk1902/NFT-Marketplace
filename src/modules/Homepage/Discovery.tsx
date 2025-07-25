@@ -134,7 +134,7 @@ const DiscoveryMore = () => {
   }
 
   return (
-    <section className="content-wrapper flex flex-col gap-[40px] lg:gap-[60px]">
+    <section className="content-wrapper-homepage flex flex-col gap-[40px] lg:gap-[60px]">
       <div className="flex justify-between items-center">
         {/* Section Title */}
         <div className="flex flex-col gap-2.5">

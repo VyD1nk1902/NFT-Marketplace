@@ -180,7 +180,7 @@ const TopArtists = () => {
 
   return (
     <section>
-      <div className="content-wrapper">
+      <div className="content-wrapper-homepage">
         {/* Section title */}
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2.5">

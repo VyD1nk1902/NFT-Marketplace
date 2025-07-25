@@ -48,7 +48,7 @@ const HowItWorks = () => {
   });
 
   return (
-    <section className="content-wrapper flex flex-col gap-12">
+    <section className="content-wrapper-homepage flex flex-col gap-12">
       {/* Section title */}
       <div className="flex flex-col gap-2.5">
         {Desktop ? <h3 className="capitalize">How it works</h3> : <h4 className="capitalize">How it works</h4>}
