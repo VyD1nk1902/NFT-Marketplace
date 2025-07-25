@@ -56,8 +56,12 @@ input:-webkit-autofill {
   box-shadow: 0 0 0px 1000px white inset !important;
 }
 
+.content-wrapper-homepage-homepage {
+  @apply xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px] sm:w-screen sm:py-20 py-10 max-xs:px-5 mx-auto;
+}
+
 .content-wrapper {
-  @apply xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px]  sm:w-screen sm:py-20 py-10 max-xs:px-5 mx-auto;
+  @apply 2xl:max-w-[1200px] xl:max-w-[1050px] lg:max-w-[900px] sm:max-w-[690px] max-w-[315px] mx-auto;
 }
 
 .hover-scale {
