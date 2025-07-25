@@ -1,5 +1,5 @@
 import Inputs from "@components/Inputs";
-import { SearchIcon } from "@assets/Svg/SvgExport";
+import { SearchIcon } from "@assets/Export/SvgExport";
 
 import clsx from "clsx";
 import { useResponsive } from "@hooks/useResponsive";
