@@ -63,7 +63,6 @@ const MarketplaceLists = () => {
     const response = await axios.get<MarketplaceCollections[]>(
       "http://localhost:3001/marketplace-collections-metadata"
     );
-    console.log("Collections API response:", response.data);
 
     return response.data.map((item) => ({
       ...item,
