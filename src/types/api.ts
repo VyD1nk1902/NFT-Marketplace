@@ -55,8 +55,37 @@ export interface CombinedDiscoveryMetaData extends DiscoveryMetaData, LocalDisco
 
 // Marketplace NFTs Data
 
-export interface LocalMarketplaceImage {
+export interface LocalMarketplaceNFTsImage {
   background1x: string;
   background2x: string;
   artistIMG: string;
 }
+
+export interface MarketplaceNFTs {
+  id: string;
+  nftName: string;
+  userName: string;
+  price: number;
+  bid: number;
+  imageKey: string;
+}
+
+export interface CombinedMarketplacNFTMetaData extends LocalMarketplaceNFTsImage, MarketplaceNFTs {}
+
+// Marketplace Collections Data
+
+export interface LocalMarketplaceCollectionsImg {
+  imgUser: string;
+  primeImg1x: string;
+  primeImg2x: string;
+  secondaryImg: SecondaryImage[];
+}
+
+export interface MarketplaceCollections {
+  id: string;
+  title: string;
+  nameUser: string;
+  imageKey: string;
+}
+
+export interface CombinedMarketplaceCollectionMetaData extends LocalMarketplaceCollectionsImg, MarketplaceCollections {}
