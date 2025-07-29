@@ -4,7 +4,13 @@ import { SearchIcon } from "@assets/Export/SvgExport";
 import clsx from "clsx";
 import { useResponsive } from "@hooks/useResponsive";
 
-const BrowseMarket = () => {
+interface BrowseMarketProps {
+  searchInput: string;
+  setSearchInput: (v: string) => void;
+  placeholder?: string;
+}
+
+const BrowseMarket = ({ searchInput, setSearchInput, placeholder }: BrowseMarketProps) => {
   const { isMobileSmall: MobileS, isMobile: Mobile, isTablet: Tablet, isDesktop: Desktop } = useResponsive();
   const contentWrapClass = clsx({
     "px-[115px] py-[80px]": Desktop,
@@ -21,7 +27,12 @@ const BrowseMarket = () => {
           <p className="lg:text-[22px] text-base pt-2.5">Browse through more than 50k NFTs on the NFT Marketplace.</p>
         </div>
         <div className="flex py-3 px-5 items-center gap-2.5 rounded-[20px] border border-bg-secondary">
-          <Inputs placeholder="Search your favourite NFTs" className="w-full" />
+          <Inputs
+            placeholder={placeholder ?? `Search your favourite NFTs`}
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            className="w-full"
+          />
           <SearchIcon className="fill-white" />
         </div>
       </div>
