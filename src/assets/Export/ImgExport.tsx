@@ -1,4 +1,4 @@
-// PNG
+//NFTs Marketplace PNG
 import MagicMush1x from "@assets/Marketplace/MagicMush1x.png";
 import MagicMush2x from "@assets/Marketplace/MagicMush2x.png";
 import RobotBlue1x from "@assets/Marketplace/Robot(032)1x.png";
@@ -21,6 +21,28 @@ import Desert1x from "@assets/Marketplace/Desert1x.png";
 import Desert2x from "@assets/Marketplace/Desert2x.png";
 import Monkey1x from "@assets/Marketplace/Monkey1x.png";
 import Monkey2x from "@assets/Marketplace/Monkey2x.png";
+import ColorDog1x from "@assets/Marketplace/ColorDog1x.png";
+import ColorDog2x from "@assets/Marketplace/ColorDog2x.png";
+
+// Collections Marketplace PNG
+import primaryDog1x from "@assets/Homepage/TrendingCollection/dog1x.png";
+import primaryDog2x from "@assets/Homepage/TrendingCollection/dog2x.png";
+import secondaryCat1x from "@assets/Homepage/TrendingCollection/cat1x.png";
+import secondaryCat2x from "@assets/Homepage/TrendingCollection/cat2x.png";
+import secondaryBear1x from "@assets/Homepage/TrendingCollection/bear1x.png";
+import secondaryBear2x from "@assets/Homepage/TrendingCollection/bear2x.png";
+import primaryMushroom1x from "@assets/Homepage/TrendingCollection/PrimaryMushroom.png";
+import primaryMushroom2x from "@assets/Homepage/TrendingCollection/PrimaryMushroomr@2x.png";
+import secondaryMushroom1x from "@assets/Homepage/TrendingCollection/SecondaryMushroom.png";
+import secondaryMushroom2x from "@assets/Homepage/TrendingCollection/SecondaryMushroom@2x.png";
+import secondaryMush1x from "@assets/Homepage/TrendingCollection/SecondaryMush.png";
+import secondaryMush2x from "@assets/Homepage/TrendingCollection/SecondaryMush@2x.png";
+import primaryRobot1x from "@assets/Homepage/TrendingCollection/PrimaryRobot.png";
+import primaryRobot2x from "@assets/Homepage/TrendingCollection/PrimaryRobot@2x.png";
+import secondaryRobot1x from "@assets/Homepage/TrendingCollection/SecondaryRobot.png";
+import secondaryRobot2x from "@assets/Homepage/TrendingCollection/SecondaryRobot@2x.png";
+import secondaryR1x from "@assets/Homepage/TrendingCollection/SecondaryRobot2.png";
+import secondaryR2x from "@assets/Homepage/TrendingCollection/SecondaryRobot2@2x.png";
 
 // Avatar
 import Avatar from "@assets/Avatars/Avatar Placeholder.png";
@@ -101,9 +123,129 @@ export const nftImagesMarketplace = {
     artistIMG: Avatar17,
   },
   Dog2: {
-    background1x: Dog1x,
-    background2x: Dog2x,
+    background1x: ColorDog1x,
+    background2x: ColorDog2x,
     artistIMG: Avatar12,
   },
   // ... thêm tất cả các ảnh khác
+};
+
+export const collectionImagesMarketplace = {
+  animalCollection: {
+    imgUser: Avatar,
+    primeImg1x: primaryDog1x,
+    primeImg2x: primaryDog2x,
+    secondaryImg: [
+      { small: secondaryCat1x, large: secondaryCat2x },
+      { small: secondaryBear1x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+    ],
+  },
+  mushroomCollection: {
+    imgUser: Avatar1,
+    primeImg1x: primaryMushroom1x,
+    primeImg2x: primaryMushroom2x,
+    secondaryImg: [
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMush1x, large: secondaryMush2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+    ],
+  },
+  robotCollection: {
+    imgUser: Avatar2,
+    primeImg1x: primaryRobot1x,
+    primeImg2x: primaryRobot2x,
+    secondaryImg: [
+      { small: secondaryRobot1x, large: secondaryRobot2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+    ],
+  },
+  animalCollection1: {
+    imgUser: Avatar3,
+    primeImg1x: primaryDog1x,
+    primeImg2x: primaryDog2x,
+    secondaryImg: [
+      { small: secondaryCat1x, large: secondaryCat2x },
+      { small: secondaryBear1x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+    ],
+  },
+  mushroomCollection1: {
+    imgUser: Avatar4,
+    primeImg1x: primaryMushroom1x,
+    primeImg2x: primaryMushroom2x,
+    secondaryImg: [
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMush1x, large: secondaryMush2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+    ],
+  },
+  robotCollection1: {
+    imgUser: Avatar8,
+    primeImg1x: primaryRobot1x,
+    primeImg2x: primaryRobot2x,
+    secondaryImg: [
+      { small: secondaryRobot1x, large: secondaryRobot2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+    ],
+  },
+  animalCollection2: {
+    imgUser: Avatar10,
+    primeImg1x: primaryDog1x,
+    primeImg2x: primaryDog2x,
+    secondaryImg: [
+      { small: secondaryCat1x, large: secondaryCat2x },
+      { small: secondaryBear1x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+      { small: secondaryBear2x, large: secondaryBear2x },
+    ],
+  },
+  mushroomCollection2: {
+    imgUser: Avatar16,
+    primeImg1x: primaryMushroom1x,
+    primeImg2x: primaryMushroom2x,
+    secondaryImg: [
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMush1x, large: secondaryMush2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+      { small: secondaryMushroom1x, large: secondaryMushroom2x },
+    ],
+  },
+  robotCollection2: {
+    imgUser: Avatar18,
+    primeImg1x: primaryRobot1x,
+    primeImg2x: primaryRobot2x,
+    secondaryImg: [
+      { small: secondaryRobot1x, large: secondaryRobot2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+      { small: secondaryR1x, large: secondaryR2x },
+    ],
+  },
 };
