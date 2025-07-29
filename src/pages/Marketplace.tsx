@@ -1,11 +1,11 @@
 import BrowseMarket from "@modules/Marketplace/BrowseMaket";
-import NFTLists from "@modules/Marketplace/NFTLists";
+import MarketplaceLists from "@modules/Marketplace/MarketplaceLists";
 
 const Marketplace = () => {
   return (
     <div>
       <BrowseMarket />
-      <NFTLists />
+      <MarketplaceLists />
     </div>
   );
 };
