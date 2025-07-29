@@ -1,5 +1,9 @@
 import { create } from "zustand";
-import type { CombinedDiscoveryMetaData } from "@myTypes/api";
+import {
+  type CombinedMarketplacNFTMetaData,
+  type CombinedMarketplaceCollectionMetaData,
+  type CombinedDiscoveryMetaData,
+} from "@myTypes/api";
 
 interface FetchingState<T> {
   data: T | null;
@@ -23,7 +27,7 @@ export const createFetchingStore = <T>() =>
     // Action to handle the fetch lifecycle
     fetchData: async (fetchFunction) => {
       //setTimeout
-      const loadingDelay: Promise<void> = new Promise((resolve) => setTimeout(resolve, 2500));
+      const loadingDelay: Promise<void> = new Promise((resolve) => setTimeout(resolve, 500));
       set({ loading: true, error: null });
       try {
         const [result] = await Promise.all([fetchFunction(), loadingDelay]);
@@ -51,3 +55,5 @@ export const createFetchingStore = <T>() =>
   }));
 
 export const useDiscoveryStore = createFetchingStore<CombinedDiscoveryMetaData[]>();
+export const useMarketplaceNFTStore = createFetchingStore<CombinedMarketplacNFTMetaData[]>();
+export const useMarketplaceCollectionStore = createFetchingStore<CombinedMarketplaceCollectionMetaData[]>();
