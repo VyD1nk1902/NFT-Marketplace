@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import clsx from "clsx";
-import { TbFidgetSpinner } from "react-icons/tb";
+import { Spinner, ErrorBox, EmptyBox } from "@components/UIFetchingHelper";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@utils/constants/route";
 import { useMarketplaceNFTStore, useMarketplaceCollectionStore } from "@stores/useFetchingStore";
@@ -24,7 +24,7 @@ const MarketplaceLists = () => {
 
   const tabBaseClass = "w-full h-[60px] flex justify-center items-center";
   const uiFetchingStateClass =
-    "min-h-[300px] flex justify-center place-items-center col-start-2 sm:col-start-1 lg:col-start-2";
+    "min-h-[300px] flex justify-center place-items-center min-[640px]:col-span-2 max-[1023px]:col-span-2 lg:col-span-3";
 
   const handleTabClick = (tabName: ActiveTab) => {
     setActive(tabName);
@@ -139,19 +139,14 @@ const MarketplaceLists = () => {
           {active == "nfts" && (
             <>
               {loadingNFTs ? (
-                <section className={`${uiFetchingStateClass} gap-4`}>
-                  <span>
-                    <TbFidgetSpinner className="text-8xl text-action animate-spin" />
-                  </span>
-                </section>
+                <Spinner className={uiFetchingStateClass} classNameIcon="text-8xl text-action animate-spin" />
               ) : errorNFTs ? (
-                <section className={`${uiFetchingStateClass} text-red-500`}>
-                  <p className="text-xl">An error occurred while loading NFTs: {errorNFTs}</p>
-                </section>
+                <ErrorBox
+                  message={`An error occurred while loading NFTs: ${errorNFTs}`}
+                  className={`${uiFetchingStateClass} text-red-500`}
+                />
               ) : !dataNFTs || dataNFTs.length === 0 ? (
-                <section className={`${uiFetchingStateClass}`}>
-                  <p className="text-xl text-caption-label">No NFTs found.</p>
-                </section>
+                <EmptyBox className={`${uiFetchingStateClass}`} message="No NFTs found." />
               ) : (
                 dataNFTs?.map((item) => (
                   <Link to={ROUTES.NFT_DETAILS} key={item.id} className="hover-scale ">
@@ -190,19 +185,14 @@ const MarketplaceLists = () => {
           {active == "collections" && (
             <>
               {loadingCollections ? (
-                <section className={`${uiFetchingStateClass} gap-4`}>
-                  <span>
-                    <TbFidgetSpinner className="text-8xl text-action animate-spin" />
-                  </span>
-                </section>
+                <Spinner className={uiFetchingStateClass} classNameIcon="text-8xl text-action animate-spin" />
               ) : errorCollections ? (
-                <section className={`${uiFetchingStateClass} text-red-500`}>
-                  <p className="text-xl">An error occurred while loading Collections: {errorCollections}</p>
-                </section>
+                <ErrorBox
+                  message={`An error occurred while loading Collections: ${errorCollections}`}
+                  className={`${uiFetchingStateClass} text-red-500`}
+                />
               ) : !dataCollections || dataCollections.length === 0 ? (
-                <section className={`${uiFetchingStateClass}`}>
-                  <p className="text-xl text-caption-label">No Collections found.</p>
-                </section>
+                <EmptyBox className={`${uiFetchingStateClass}`} message="No NFTs found." />
               ) : (
                 dataCollections?.map((item) => {
                   const countSecondaryImages = item.secondaryImg.length - 2;
