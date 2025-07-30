@@ -194,7 +194,7 @@ const TopArtists = () => {
             onClick={handleViewRankings}
             size="secondary"
             background="transparent"
-            className="px-[50px]  text-base hidden sm:flex"
+            className="px-[50px] text-base hidden sm:flex"
           >
             <RocketLaunch className="fill-action w-[20px] h-[20px]" />
             View Rankings
@@ -228,7 +228,7 @@ const TopArtists = () => {
         <Buttons
           size="secondary"
           background="transparent"
-          className="mt-[40px] px-[50px] text-base sm:hidden"
+          className="mt-[40px] w-full px-[50px] text-base sm:hidden"
           onClick={handleViewRankings}
         >
           <RocketLaunch className="fill-action w-[20px] h-[20px]" />

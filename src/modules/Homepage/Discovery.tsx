@@ -143,7 +143,7 @@ const DiscoveryMore = () => {
           <p className="lg:text-[22px] capitalize">Explore new trending NFTs</p>
         </div>
         <Buttons
-          className="px-[50px] mt-4.5 mr-1 hidden sm:flex"
+          className="px-[50px] mt-4.5 mr-1 hidden sm:flex w-[240px]"
           size="secondary"
           background="transparent"
           onClick={handleSeeAll}
