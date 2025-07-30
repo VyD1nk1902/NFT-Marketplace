@@ -31,7 +31,7 @@ const BrowseMarket = ({ searchInput, setSearchInput, placeholder }: BrowseMarket
             placeholder={placeholder ?? `Search your favourite NFTs`}
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            className="w-full"
+            className="w-full text-caption-label"
           />
           <SearchIcon className="fill-white" />
         </div>
