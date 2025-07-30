@@ -19,13 +19,17 @@ const TabItem = <T extends string>({ title, tabBaseClass, count, onTabClick, tab
       })}
     >
       <button onClick={() => onTabClick(tabKey)} className="w-full flex gap-4 justify-center">
-        <h5>{title}</h5>
+        <h5 className="xl:block hidden">{title}</h5>
+        <p className="block xl:hidden">{title}</p>
         {typeof count === "number" && (
           <div
-            className={clsx("font-space-mono rounded-[20px] px-2.5 py-[5px] text-white max-sm:hidden", {
-              "bg-caption-label": isActive,
-              "bg-bg-secondary": !isActive,
-            })}
+            className={clsx(
+              "font-space-mono rounded-[20px] px-1.5 py-[1px] xl:px-2.5 xl:py-[5px] text-white max-sm:hidden",
+              {
+                "bg-caption-label": isActive,
+                "bg-bg-secondary": !isActive,
+              }
+            )}
           >
             {count ?? 0}
           </div>
