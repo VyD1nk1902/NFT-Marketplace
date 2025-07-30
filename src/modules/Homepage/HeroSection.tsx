@@ -3,6 +3,7 @@ import Rocket from "@assets/Icons/RocketLaunch.svg";
 import HeroImgx1 from "@assets/Homepage/Hero/hero-x1.png";
 import HeroImgx2 from "@assets/Homepage/Hero/hero-x2.png";
 import AvatarSpace from "@assets/Avatars/Avatar Placeholder (13).png";
+import ProfileCard from "@components/Reactbits/ProfileCard/ProfileCard";
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -72,7 +73,7 @@ const HeroSection = () => {
 
         {/* Image Card */}
         <div className="hidden sm:block">
-          <img src={HeroImgx1} srcSet={`${HeroImgx1} 1x, ${HeroImgx2} 2x`} alt="" />
+          {/* <img src={HeroImgx1} srcSet={`${HeroImgx1} 1x, ${HeroImgx2} 2x`} alt="" />
           <div className="p-5 flex flex-col gap-2.5 bg-bg-secondary rounded-b-[20px]">
             <h5>Space Walking</h5>
             <div className="flex gap-3">
@@ -81,7 +82,16 @@ const HeroSection = () => {
               </span>
               Animakid
             </div>
-          </div>
+          </div> */}
+          <ProfileCard
+            handle="Animakid"
+            name="Space Walking"
+            onContactClick={() => navigate(ROUTES.ARTIST_DETAILS)}
+            avatarUrl={HeroImgx1}
+            // behindGradient="linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)"
+            behindGradient=" linear-gradient(to right, #56ccf2, #2f80ed)"
+            miniAvatarUrl={AvatarSpace}
+          />
         </div>
       </div>
     </section>
