@@ -187,14 +187,14 @@ const TrendingCollection = () => {
   // --- Render Error ---
   if (error) {
     return (
-      <section className="min-h-[300px] flex justify-center items-center text-red-500">
+      <section className="min-h-[300px] flex justify-center items-center text-center text-red-500">
         <p className="text-xl">An error occurred while loading the collections: {error.message}</p>
       </section>
     );
   }
 
   return (
-    <section className="">
+    <section>
       <div className="content-wrapper-homepage">
         {/* Title */}
         <div className="flex flex-col gap-2.5">

@@ -118,7 +118,7 @@ const DiscoveryMore = () => {
   // --- Render Error ---
   if (error) {
     return (
-      <section className="min-h-[300px] flex justify-center items-center text-red-500">
+      <section className="min-h-[300px] flex justify-center items-center text-center text-red-500">
         <p className="text-xl">An error occurred while loading NFTs: {error}</p>
       </section>
     );
@@ -127,7 +127,7 @@ const DiscoveryMore = () => {
   // --- Add this check to prevent the error data null ---
   if (!data || data.length === 0) {
     return (
-      <section className="min-h-[300px] flex justify-center items-center">
+      <section className="min-h-[300px] flex justify-center text-center items-center">
         <p className="text-xl text-caption-label">No NFTs found.</p>
       </section>
     );

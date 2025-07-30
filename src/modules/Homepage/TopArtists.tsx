@@ -172,7 +172,7 @@ const TopArtists = () => {
   // --- Render Error ---
   if (error) {
     return (
-      <section className="min-h-[300px] flex justify-center items-center text-red-500">
+      <section className="min-h-[300px] flex justify-center items-center text-center text-red-500">
         <p className="text-xl">An error occurred while loading the top creators: {error.message}</p>
       </section>
     );
