@@ -14,6 +14,7 @@ import ConnectWallet from "@pages/ConnectWallet";
 import { Routes, Route } from "react-router-dom";
 import { ROUTES } from "@utils/constants/route";
 import Marketplace from "@pages/Marketplace";
+import Ranking from "@pages/Ranking";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path={ROUTES.CREATE_ACCOUNT} element={<CreateAccount />} />
         <Route path={ROUTES.CONNECT_WALLET} element={<ConnectWallet />} />
         <Route path={ROUTES.MARKETPLACE} element={<Marketplace />} />
+        <Route path={ROUTES.RANKINGS} element={<Ranking />} />
       </Routes>
       <Footer />
     </div>
