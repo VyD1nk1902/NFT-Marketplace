@@ -89,3 +89,21 @@ export interface MarketplaceCollections {
 }
 
 export interface CombinedMarketplaceCollectionMetaData extends LocalMarketplaceCollectionsImg, MarketplaceCollections {}
+
+// Ranking Artists Data
+
+export interface LocalRankingAvatar {
+  avatarRanking: string;
+}
+
+export interface RankingArtists {
+  id: string;
+  rank: number;
+  name: string;
+  change: string | number;
+  nftsSold: number;
+  volume: string | number;
+  imageKey: string;
+}
+
+export interface CombinedRankingMetaData extends LocalRankingAvatar, RankingArtists {}
