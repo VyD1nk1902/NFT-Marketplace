@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import clsx from "clsx";
 import { Spinner, ErrorBox, EmptyBox } from "@components/UIFetchingHelper";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@utils/constants/route";
