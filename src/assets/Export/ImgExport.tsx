@@ -249,3 +249,66 @@ export const collectionImagesMarketplace = {
     ],
   },
 };
+
+export const artistAvatarRanking = {
+  artist_1: {
+    avatarRanking: Avatar,
+  },
+  artist_2: {
+    avatarRanking: Avatar1,
+  },
+  artist_3: {
+    avatarRanking: Avatar2,
+  },
+  artist_4: {
+    avatarRanking: Avatar3,
+  },
+  artist_5: {
+    avatarRanking: Avatar4,
+  },
+  artist_6: {
+    avatarRanking: Avatar5,
+  },
+  artist_7: {
+    avatarRanking: Avatar6,
+  },
+  artist_8: {
+    avatarRanking: Avatar7,
+  },
+  artist_9: {
+    avatarRanking: Avatar8,
+  },
+  artist_10: {
+    avatarRanking: Avatar9,
+  },
+  artist_11: {
+    avatarRanking: Avatar10,
+  },
+  artist_12: {
+    avatarRanking: Avatar11,
+  },
+  artist_13: {
+    avatarRanking: Avatar12,
+  },
+  artist_14: {
+    avatarRanking: Avatar13,
+  },
+  artist_15: {
+    avatarRanking: Avatar14,
+  },
+  artist_16: {
+    avatarRanking: Avatar15,
+  },
+  artist_17: {
+    avatarRanking: Avatar16,
+  },
+  artist_18: {
+    avatarRanking: Avatar17,
+  },
+  artist_19: {
+    avatarRanking: Avatar18,
+  },
+  artist_20: {
+    avatarRanking: Avatar19,
+  },
+};
