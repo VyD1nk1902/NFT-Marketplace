@@ -7,6 +7,7 @@ import { useMarketplaceNFTStore, useMarketplaceCollectionStore } from "@stores/u
 import { nftImagesMarketplace, collectionImagesMarketplace } from "@assets/Export/ImgExport";
 import BrowseMarket from "./BrowseMaket";
 
+import TabItem from "@components/Tabs";
 type ActiveTab = "nfts" | "collections";
 import { FormatBalance } from "@components/FormatBalance";
 
@@ -110,7 +111,7 @@ const MarketplaceLists = () => {
           {/* Tabs */}
           <div className="grid grid-cols-2 px-[30px] place-items-center">
             {/* NFTs tab */}
-            <div
+            {/* <div
               className={clsx(tabBaseClass, {
                 "border-b border-b-white text-white font-[600]": active === "nfts",
                 "border-none text-caption-label font-normal": active !== "nfts",
@@ -127,26 +128,24 @@ const MarketplaceLists = () => {
                   {filteredNFTs?.length ?? 0}
                 </div>
               </button>
-            </div>
+            </div> */}
+            <TabItem
+              title={"NFTs"}
+              tabBaseClass={tabBaseClass}
+              tabKey="nfts"
+              onTabClick={handleTabClick}
+              count={filteredNFTs?.length}
+              activeTab={active}
+            />
             {/* Collections tab */}
-            <div
-              className={clsx(tabBaseClass, {
-                "border-b border-b-white text-white font-[600]": active === "collections",
-                "border-none text-caption-label font-normal": active !== "collections",
-              })}
-            >
-              <button onClick={() => handleTabClick("collections")} className="w-full flex gap-4 justify-center">
-                <h5>Collections</h5>
-                <div
-                  className={clsx("font-space-mono rounded-[20px] px-2.5 py-[5px] text-white max-sm:hidden", {
-                    "bg-caption-label": active === "collections",
-                    "bg-bg-secondary": active !== "collections",
-                  })}
-                >
-                  {filteredCollections?.length ?? 0}
-                </div>
-              </button>
-            </div>
+            <TabItem
+              title={"Collections"}
+              tabBaseClass={tabBaseClass}
+              tabKey="collections"
+              onTabClick={handleTabClick}
+              count={filteredCollections?.length}
+              activeTab={active}
+            />
           </div>
         </div>
 
