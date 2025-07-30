@@ -3,6 +3,7 @@ import {
   type CombinedMarketplacNFTMetaData,
   type CombinedMarketplaceCollectionMetaData,
   type CombinedDiscoveryMetaData,
+  type CombinedRankingMetaData,
 } from "@myTypes/api";
 
 interface FetchingState<T> {
@@ -57,3 +58,4 @@ export const createFetchingStore = <T>() =>
 export const useDiscoveryStore = createFetchingStore<CombinedDiscoveryMetaData[]>();
 export const useMarketplaceNFTStore = createFetchingStore<CombinedMarketplacNFTMetaData[]>();
 export const useMarketplaceCollectionStore = createFetchingStore<CombinedMarketplaceCollectionMetaData[]>();
+export const useRankingStore = createFetchingStore<CombinedRankingMetaData[]>();
