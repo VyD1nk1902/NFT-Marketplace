@@ -51,7 +51,7 @@ const MarketplaceLists = () => {
   // Nếu không bọc useCallback, mỗi lần render sẽ tạo function mới, có thể gây fetch lại không mong muốn!
 
   const fetchMarketplaceNFTData = useCallback(async (): Promise<CombinedMarketplacNFTMetaData[]> => {
-    const response = await axios.get<MarketplaceNFTs[]>("/public/data/marketplace-nfts-metadata.json"); //mockoon(http://localhost:3001/marketplace-nfts-metadata)
+    const response = await axios.get<MarketplaceNFTs[]>("/data/marketplace-nfts-metadata.json"); //mockoon(http://localhost:3001/marketplace-nfts-metadata)
     return response.data.map((item) => ({
       ...item,
       ...((nftImagesMarketplace as Record<string, LocalMarketplaceNFTsImage>)[item.imageKey] ?? {}),
@@ -60,7 +60,7 @@ const MarketplaceLists = () => {
 
   // Fetch Collections (merge local IMG)
   const fetchMarketplaceCollectionData = useCallback(async (): Promise<CombinedMarketplaceCollectionMetaData[]> => {
-    const response = await axios.get<MarketplaceCollections[]>("/public/data/marketplace-collections-metadata.json"); //mockoon(http://localhost:3001/marketplace-collections-metadata)
+    const response = await axios.get<MarketplaceCollections[]>("/data/marketplace-collections-metadata.json"); //mockoon(http://localhost:3001/marketplace-collections-metadata)
 
     return response.data.map((item) => ({
       ...item,

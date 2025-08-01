@@ -78,7 +78,7 @@ const RankingContent = () => {
 
   useEffect(() => {
     const fetchRankingData = async () => {
-      const response = await axios.get<RankingArtists[]>("/public/data/ranking-metadata.json"); //mockoon(http://localhost:3001/ranking-metadata)
+      const response = await axios.get<RankingArtists[]>("/data/ranking-metadata.json"); //mockoon(http://localhost:3001/ranking-metadata)
       console.log(response.data);
       const fetchedData = response.data;
 
