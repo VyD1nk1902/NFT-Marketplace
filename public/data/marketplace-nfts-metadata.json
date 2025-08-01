@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "nftName": "Magic Mushroom 0325",
+    "userName": "Shroomie",
+    "price": "2.35",
+    "bid": "0.84",
+    "imageKey": "MagicMushroom"
+  },
+  {
+    "id": "2",
+    "nftName": "Happy Robot 032",
+    "userName": "BeKind2Robots",
+    "price": "1.88",
+    "bid": "0.68",
+    "imageKey": "RobotBlue"
+  },
+  {
+    "id": "3",
+    "nftName": "Happy Robot 024",
+    "userName": "BeKind2Robots",
+    "price": "3.01",
+    "bid": "0.59",
+    "imageKey": "RobotYellow"
+  },
+  {
+    "id": "4",
+    "nftName": "Designer Bear",
+    "userName": "Mr Fox",
+    "price": "1.23",
+    "bid": "0.73",
+    "imageKey": "Bear"
+  },
+  {
+    "id": "5",
+    "nftName": "Colorful Dog 0356",
+    "userName": "Keepitreal",
+    "price": "4.87",
+    "bid": "0.39",
+    "imageKey": "Dog"
+  },
+  {
+    "id": "6",
+    "nftName": "Dancing Robot 0312",
+    "userName": "Robotica",
+    "price": "0.94",
+    "bid": "0.51",
+    "imageKey": "RobotDancing"
+  },
+  {
+    "id": "7",
+    "nftName": "Cherry Blossom Girl 035",
+    "userName": "MoonDancer",
+    "price": "2.11",
+    "bid": "0.64",
+    "imageKey": "Blossom"
+  },
+  {
+    "id": "8",
+    "nftName": "Space Travel",
+    "userName": "NebulaKid",
+    "price": "3.47",
+    "bid": "0.91",
+    "imageKey": "Travel"
+  },
+  {
+    "id": "9",
+    "nftName": "Sunset Dimension",
+    "userName": "Animakid",
+    "price": "4.59",
+    "bid": "0.33",
+    "imageKey": "Sunset"
+  },
+  {
+    "id": "10",
+    "nftName": "Desert Walk",
+    "userName": "Catch 22",
+    "price": "2.73",
+    "bid": "0.48",
+    "imageKey": "Desert"
+  },
+  {
+    "id": "11",
+    "nftName": "IceCream Ape 0324",
+    "userName": "Ice Ape Club",
+    "price": "1.70",
+    "bid": "0.45",
+    "imageKey": "Monkey"
+  },
+  {
+    "id": "12",
+    "nftName": "Colorful Dog 0344",
+    "userName": "PuppyPower",
+    "price": "3.63",
+    "bid": "0.55",
+    "imageKey": "Dog2"
+  }
+]

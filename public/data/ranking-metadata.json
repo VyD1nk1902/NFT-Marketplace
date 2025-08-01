@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "rank": 1,
+    "name": "Jaydon Ekstrom Bothman",
+    "change": "1.25",
+    "nftsSold": 365,
+    "volume": "11.2",
+    "imageKey": "artist_1"
+  },
+  {
+    "id": "2",
+    "rank": 2,
+    "name": "Ruben Carder",
+    "change": "0.88",
+    "nftsSold": 278,
+    "volume": "10.9",
+    "imageKey": "artist_2"
+  },
+  {
+    "id": "3",
+    "rank": 3,
+    "name": "Alfredo Septimus",
+    "change": "1.06",
+    "nftsSold": 399,
+    "volume": "14.7",
+    "imageKey": "artist_3"
+  },
+  {
+    "id": "4",
+    "rank": 4,
+    "name": "Davis Franci",
+    "change": "0.59",
+    "nftsSold": 178,
+    "volume": "9.4",
+    "imageKey": "artist_4"
+  },
+  {
+    "id": "5",
+    "rank": 5,
+    "name": "Livia Rosser",
+    "change": "1.09",
+    "nftsSold": 287,
+    "volume": "13.3",
+    "imageKey": "artist_5"
+  },
+  {
+    "id": "6",
+    "rank": 6,
+    "name": "Kianna Donin",
+    "change": "0.92",
+    "nftsSold": 204,
+    "volume": "8.8",
+    "imageKey": "artist_6"
+  },
+  {
+    "id": "7",
+    "rank": 7,
+    "name": "Phillip Lipshutz",
+    "change": "0.77",
+    "nftsSold": 355,
+    "volume": "15.2",
+    "imageKey": "artist_7"
+  },
+  {
+    "id": "8",
+    "rank": 8,
+    "name": "Maria Rosser",
+    "change": "1.14",
+    "nftsSold": 398,
+    "volume": "16.8",
+    "imageKey": "artist_8"
+  },
+  {
+    "id": "9",
+    "rank": 9,
+    "name": "Kianna Stanton",
+    "change": "0.69",
+    "nftsSold": 183,
+    "volume": "8.6",
+    "imageKey": "artist_9"
+  },
+  {
+    "id": "10",
+    "rank": 10,
+    "name": "Angel Lubin",
+    "change": "1.13",
+    "nftsSold": 279,
+    "volume": "12.5",
+    "imageKey": "artist_10"
+  },
+  {
+    "id": "11",
+    "rank": 11,
+    "name": "Allison Torff",
+    "change": "1.07",
+    "nftsSold": 336,
+    "volume": "13.7",
+    "imageKey": "artist_11"
+  },
+  {
+    "id": "12",
+    "rank": 12,
+    "name": "Davis Workman",
+    "change": "0.95",
+    "nftsSold": 265,
+    "volume": "11.0",
+    "imageKey": "artist_12"
+  },
+  {
+    "id": "13",
+    "rank": 13,
+    "name": "Lindsey Lipshutz",
+    "change": "0.88",
+    "nftsSold": 199,
+    "volume": "9.8",
+    "imageKey": "artist_13"
+  },
+  {
+    "id": "14",
+    "rank": 14,
+    "name": "Randy Carder",
+    "change": "1.18",
+    "nftsSold": 352,
+    "volume": "14.3",
+    "imageKey": "artist_14"
+  },
+  {
+    "id": "15",
+    "rank": 15,
+    "name": "Lydia Culhane",
+    "change": "0.76",
+    "nftsSold": 215,
+    "volume": "10.2",
+    "imageKey": "artist_15"
+  },
+  {
+    "id": "16",
+    "rank": 16,
+    "name": "Rayna Bator",
+    "change": "0.98",
+    "nftsSold": 328,
+    "volume": "13.0",
+    "imageKey": "artist_16"
+  },
+  {
+    "id": "17",
+    "rank": 17,
+    "name": "Jocelyn Westervelt",
+    "change": "1.07",
+    "nftsSold": 222,
+    "volume": "10.7",
+    "imageKey": "artist_17"
+  },
+  {
+    "id": "18",
+    "rank": 18,
+    "name": "Marilyn Torff",
+    "change": "1.12",
+    "nftsSold": 189,
+    "volume": "8.3",
+    "imageKey": "artist_18"
+  },
+  {
+    "id": "19",
+    "rank": 19,
+    "name": "Skylar Levin",
+    "change": "1.01",
+    "nftsSold": 373,
+    "volume": "15.9",
+    "imageKey": "artist_19"
+  },
+  {
+    "id": "20",
+    "rank": 20,
+    "name": "Terry Dorwart",
+    "change": "0.92",
+    "nftsSold": 247,
+    "volume": "11.4",
+    "imageKey": "artist_20"
+  }
+]
