@@ -141,7 +141,7 @@ const TrendingCollection = () => {
 
         // Call API Mockoon get metadata
         // Type of response.data CollectionMetaData[]
-        const response = await axios.get<CollectionMetaData[]>("http://localhost:3001/collections-metadata");
+        const response = await axios.get<CollectionMetaData[]>("/public/data/collections-metadata.json"); //mockoon(http://localhost:3001/collections-metadata)
         const fetchedMetaData = response.data;
 
         // Combine data from api and img local
