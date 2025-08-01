@@ -15,6 +15,8 @@ import { useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
+import catGif from "@assets/CreateAccount/cat-gif.gif";
 
 import { useNavigate } from "react-router-dom";
 
@@ -70,7 +72,7 @@ const MainSection = () => {
       // 2xl, dùng repeat-x
       backdropStr = `
       rgba(0,0,123,0.5)
-      url(/src/assets/CreateAccount/cat-gif.gif) 
+      url(${catGif}) 
       repeat-x
       50% 25%
     `;
@@ -78,7 +80,7 @@ const MainSection = () => {
       // Tablet, desktop, ảnh ở góc trái trên
       backdropStr = `
       rgba(0,0,123,0.5)
-      url(/src/assets/CreateAccount/cat-gif.gif)
+      url(${catGif})
       repeat-x
       bottom
     `;
@@ -86,7 +88,7 @@ const MainSection = () => {
       // Mobile, cho ảnh ra góc phải dưới hoặc ẩn hoàn toàn
       backdropStr = `
       rgba(0,0,123,0.5)
-      url(/src/assets/CreateAccount/cat-gif.gif)
+      url(${catGif})
       bottom
       no-repeat
     `;
