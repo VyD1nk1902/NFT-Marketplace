@@ -42,7 +42,7 @@ const ModalHeader = () => {
         <ul className="flex flex-col items-center justify-center gap-10 " onClick={(e) => e.stopPropagation()}>
           {navHeaderMenu.map((item) => (
             <li key={item.id}>
-              <Link to={item.link} className="text-xl">
+              <Link to={item.link} onClick={closeModal} className="text-xl">
                 {item.title}
               </Link>
             </li>
