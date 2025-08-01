@@ -18,7 +18,43 @@ const RankingContent = () => {
   const contentWrapClass = clsx({
     "px-[115px] py-[80px]": Desktop,
     "px-[72px] py-[40px]": Tablet,
-    "px-[30px] py-[30px]": Mobile || MobileS,
+    "py-[30px]": Mobile,
+    "px-5 py-[40px]": MobileS,
+  });
+
+  // Table Header clsx
+  const gridClass = clsx(
+    "grid rounded-[20px] border border-bg-secondary text-caption-label font-space-mono text-center",
+    {
+      "grid-cols-[2fr_1fr_1fr_1fr] py-3 px-5": Desktop,
+      "grid-cols-[2fr_1fr_1fr] py-3 px-5": Tablet,
+      "grid-cols-[2fr_1fr] py-2.5 px-5 text-[12px]": Mobile || MobileS,
+    }
+  );
+
+  // Table content clsx
+  const rowClass = clsx("bg-bg-secondary grid py-3 rounded-[20px]", {
+    "grid-cols-[60px_2fr_1fr_1fr_1fr] place-items-center": Desktop,
+    "grid-cols-[60px_2fr_1fr_1fr] items-center": Tablet,
+    "grid-cols-[30px_2fr_1fr] pl-2 items-center": Mobile || MobileS,
+  });
+
+  const avatarClass = clsx("flex-shrink-0", {
+    "w-[60px] h-[60px]": Desktop,
+    "w-[24px] h-[24px]": Tablet || Mobile || MobileS,
+  });
+
+  const nameClass = clsx("truncate", {
+    "text-[22px] 2xl:text-[24px] 2xl:font-[600] 2xl:max-w-[300px] max-w-[150px]": Desktop,
+    "text-[22px] font-[600] max-w-[200px]": Tablet,
+    "text-[12px] max-w-[120px]": Mobile,
+    "text-[12px] max-w-[100px]": MobileS,
+  });
+
+  const itemRankClass = clsx("text-caption-label font-space-mono flex items-center justify-center", {
+    "bg-bg-primary rounded-full w-[30px] h-[30px]": Desktop,
+    "text-[16px]": Tablet,
+    "text-[12px]": Mobile || MobileS,
   });
 
   // tabState
@@ -57,8 +93,8 @@ const RankingContent = () => {
 
   return (
     <div>
-      <section className="pt-[100px] w-full overflow-hidden content-wrapper">
-        <div className={`flex flex-col gap-[30px] ${contentWrapClass}`}>
+      <section className="pt-[100px] overflow-hidden content-wrapper">
+        <div className={`flex flex-col gap-[30px] w-full ${contentWrapClass}`}>
           {/* Head Title */}
           <div>
             <h2 className="lg:block hidden">Top Creators</h2>
@@ -130,10 +166,10 @@ const RankingContent = () => {
             />
           </div>
           {/* Artists Table */}
-          <div className="pt-[40px] flex flex-col gap-[20px]">
+          <div className="pt-[40px] flex flex-col gap-[20px] w-full">
             {/* Table Header */}
             {Desktop && (
-              <div className="grid grid-cols-[2fr_1fr_1fr_1fr] py-3 px-5 rounded-[20px] border border-bg-secondary text-caption-label font-space-mon text-center">
+              <div className={gridClass}>
                 <div className="flex gap-5">
                   <p>#</p>
                   <p>Artist</p>
@@ -144,7 +180,7 @@ const RankingContent = () => {
               </div>
             )}
             {Tablet && (
-              <div className="grid grid-cols-[2fr_1fr_1fr] py-3 px-5 rounded-[20px] border border-bg-secondary text-caption-label font-space-mono text-center">
+              <div className={gridClass}>
                 <div className="flex gap-5">
                   <p>#</p>
                   <p>Artist</p>
@@ -154,12 +190,12 @@ const RankingContent = () => {
               </div>
             )}
             {(Mobile || MobileS) && (
-              <div className="grid grid-cols-[2fr_1fr] py-2.5 px-5 rounded-[20px] border border-bg-secondary text-caption-label font-space-mono text-[12px] w-full ">
+              <div className={gridClass}>
                 <div className="flex gap-2.5">
                   <p>#</p>
                   <p>Artist</p>
                 </div>
-                <p className="text-center">Volume</p>
+                <p>Volume</p>
               </div>
             )}
 
@@ -177,20 +213,17 @@ const RankingContent = () => {
               dataRanking.map((item) => {
                 if (Desktop) {
                   return (
-                    <div
-                      key={item.id}
-                      className="bg-bg-secondary grid grid-cols-[60px_2fr_1fr_1fr_1fr] py-3 rounded-[20px] place-items-center"
-                    >
-                      <div className="bg-bg-primary text-caption-label font-space-mono rounded-full w-[30px] h-[30px] flex items-center justify-center">
-                        {item.rank}
-                      </div>
+                    <div key={item.id} className={rowClass}>
+                      <div className={itemRankClass}>{item.rank}</div>
                       <div className="flex gap-5 items-center w-full">
-                        <div className="w-[60px] h-[60px] flex-shrink-0 ">
-                          <img src={item.avatarRanking} className="w-full h-full object-cover rounded-full" alt="" />
+                        <div className={avatarClass}>
+                          <img
+                            src={item.avatarRanking}
+                            className="w-full h-full object-cover rounded-full"
+                            alt="avatar"
+                          />
                         </div>
-                        <p className="truncate text-[22px] 2xl:text-[24px] 2xl:font-[600] max-w-[150px] xl:max-w-[300px]">
-                          {item.name}
-                        </p>
+                        <p className={nameClass}>{item.name}</p>
                       </div>
                       <p className="font-space-mono text-green">+{FormatBalance(item.change, 2)}%</p>
                       <p className="font-space-mono">{item.nftsSold}</p>
@@ -199,14 +232,61 @@ const RankingContent = () => {
                   );
                 }
                 if (Tablet) {
-                  return <div></div>;
+                  return (
+                    <div key={item.id} className={rowClass}>
+                      <div className={itemRankClass}>{item.rank}</div>
+                      <div className="flex gap-3 items-center">
+                        <div className={avatarClass}>
+                          <img
+                            src={item.avatarRanking}
+                            className="w-full h-full object-contain rounded-full"
+                            alt="avatar"
+                          />
+                        </div>
+                        <p className={nameClass}>{item.name}</p>
+                      </div>
+                      <p className="font-space-mono text-green">+{FormatBalance(item.change, 2)}%</p>
+                      <p className="font-space-mono">{FormatBalance(item.volume, 2)} ETH</p>
+                    </div>
+                  );
                 }
                 if (Mobile) {
-                  return <div></div>;
+                  return (
+                    <div key={item.id} className={rowClass}>
+                      <div className={itemRankClass}>{item.rank}</div>
+                      <div className="flex gap-3 items-center">
+                        <div className={avatarClass}>
+                          <img
+                            src={item.avatarRanking}
+                            className="w-full h-full object-contain rounded-full"
+                            alt="avatar"
+                          />
+                        </div>
+                        <p className={nameClass}>{item.name}</p>
+                      </div>
+                      <p className="font-space-mono text-[12px]">{FormatBalance(item.volume, 2)} ETH</p>
+                    </div>
+                  );
                 }
                 if (MobileS) {
-                  return <div></div>;
+                  return (
+                    <div key={item.id} className={rowClass}>
+                      <div className={itemRankClass}>{item.rank}</div>
+                      <div className="flex gap-3 items-center">
+                        <div className={avatarClass}>
+                          <img
+                            src={item.avatarRanking}
+                            className="w-full h-full object-contain rounded-full"
+                            alt="avatar"
+                          />
+                        </div>
+                        <p className={nameClass}>{item.name}</p>
+                      </div>
+                      <p className="font-space-mono text-[12px]">{FormatBalance(item.volume, 2)} ETH</p>
+                    </div>
+                  );
                 }
+                return null;
               })
             )}
           </div>
