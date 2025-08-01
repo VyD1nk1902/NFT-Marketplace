@@ -19,6 +19,7 @@ Demo: 👉 [NFT Marketplace Page Demo](https://nft-marketplace-smoky-eta.vercel.
 - **SVG as component:** Learned to convert SVG files to React components for easier usage.
 - **Data fetching**: Used Axios for easier, more maintainable API requests.
 - **Mock API with Mockoon**: Simulated backend using [Mockoon](https://mockoon.com/) for rapid UI dev/testing with fake data.
+- **Switch to static JSON for deployment**: When deploying to Vercel, all API data is served as static JSON files under /public/data/, allowing your app to fetch data globally without a running API server.
 - **State management:** Used Zustand for simple, fast state management (like open/close mobile modal).
 - **Project structure:** Learned and practiced organizing files and folders in a scalable React project.
 - **Dynamic data**: Fetched and displayed data for NFT items, artists, collections, etc. with fake/mock API.
@@ -65,6 +66,20 @@ import Button from "../../../components/Buttons" // ❌
 // Use:
 import Button from "@components/Buttons"         // ✅
 ```
+
+## Extra: How to use Mockoon with this project?
+
+1. Download & install Mockoon.
+
+2. Import the Mockoon environment file provided in this repo (or create endpoints manually).
+
+3. Start the Mockoon server (default http://localhost:3001).
+
+4. Change your axios/fetch endpoints to point to Mockoon for local dev.
+
+5. When ready to deploy: Export your Mockoon API data as JSON and put it under /public/data/.
+
+6. Update your fetch paths to use /data/your-endpoint.json when deploying.
 
 ## Roadmap
 
