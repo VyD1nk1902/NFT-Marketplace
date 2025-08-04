@@ -4,6 +4,7 @@ export const ROUTES = {
   MARKETPLACE: "/marketplace",
   RANKINGS: "/rankings",
   CONNECT_WALLET: "/connect-wallet",
+  RICK_ROLL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
 
   //Dynamic routes
   NFT_DETAILS: "/nft/:id",
