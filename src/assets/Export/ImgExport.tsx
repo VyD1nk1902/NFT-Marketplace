@@ -66,6 +66,27 @@ import Avatar17 from "@assets/Avatars/Avatar Placeholder (17).png";
 import Avatar18 from "@assets/Avatars/Avatar Placeholder (18).png";
 import Avatar19 from "@assets/Avatars/Avatar Placeholder (19).png";
 
+// NFTs Detail page
+import nftFox1x from "@assets/NFTPage/Fox1x.png";
+import nftFox2x from "@assets/NFTPage/Fox2x.png";
+import nftCat1x from "@assets/NFTPage/Cat1x.png";
+import nftCat2x from "@assets/NFTPage/Cat2x.png";
+import nftDog1x from "@assets/NFTPage/Dog1x.png";
+import nftDog2x from "@assets/NFTPage/Dog2x.png";
+import nftBear1x from "@assets/NFTPage/Bear1x.png";
+import nftBear2x from "@assets/NFTPage/Bear2x.png";
+import nftRobot0375_1x from "@assets/NFTPage/Robot(0375)1x.png";
+import nftRobot0375_2x from "@assets/NFTPage/Robot(0375)2x.png";
+import nftRobot0356_1x from "@assets/NFTPage/Robot(0356)1x.png";
+import nftRobot0356_2x from "@assets/NFTPage/Robot(0356)2x.png";
+import nftRobot0321_1x from "@assets/NFTPage/Robot(0321)1x.png";
+import nftRobot0321_2x from "@assets/NFTPage/Robot(0321)2x.png";
+import nftRobot0512_1x from "@assets/NFTPage/Robot(0512)1x.png";
+import nftRobot0512_2x from "@assets/NFTPage/Robot(0512)2x.png";
+import nftRobot0024_1x from "@assets/NFTPage/Robot(0024)1x.png";
+import nftRobot0024_2x from "@assets/NFTPage/Robot(0024)2x.png";
+
+// Marketplace
 export const nftImagesMarketplace = {
   MagicMushroom: {
     background1x: MagicMush1x,
@@ -250,6 +271,7 @@ export const collectionImagesMarketplace = {
   },
 };
 
+// Ranking
 export const artistAvatarRanking = {
   artist_1: {
     avatarRanking: Avatar,
@@ -310,5 +332,54 @@ export const artistAvatarRanking = {
   },
   artist_20: {
     avatarRanking: Avatar19,
+  },
+};
+
+// NFT Details
+export const nftDetailMoreIMG = {
+  Foxy: {
+    background1x: nftFox1x,
+    background2x: nftFox2x,
+    artistImg: Avatar8,
+  },
+  Cat: {
+    background1x: nftCat1x,
+    background2x: nftCat2x,
+    artistImg: Avatar8,
+  },
+  Dog: {
+    background1x: nftDog1x,
+    background2x: nftDog2x,
+    artistImg: Avatar8,
+  },
+  Bear: {
+    background1x: nftBear1x,
+    background2x: nftBear2x,
+    artistImg: Avatar8,
+  },
+  Robot_0375: {
+    background1x: nftRobot0375_1x,
+    background2x: nftRobot0375_2x,
+    artistImg: Avatar8,
+  },
+  Robot_0356: {
+    background1x: nftRobot0356_1x,
+    background2x: nftRobot0356_2x,
+    artistImg: Avatar8,
+  },
+  Robot_0321: {
+    background1x: nftRobot0321_1x,
+    background2x: nftRobot0321_2x,
+    artistImg: Avatar8,
+  },
+  Robot_0512: {
+    background1x: nftRobot0512_1x,
+    background2x: nftRobot0512_2x,
+    artistImg: Avatar8,
+  },
+  Robot_0024: {
+    background1x: nftRobot0024_1x,
+    background2x: nftRobot0024_2x,
+    artistImg: Avatar8,
   },
 };
