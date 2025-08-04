@@ -73,16 +73,16 @@ const Footer = () => {
             NFT marketplace UI created with Anima for Figma. <br /> <br /> Join our community
           </p>
           <div className="flex gap-2.5">
-            <Link to="/">
+            <Link to={ROUTES.RICK_ROLL}>
               <Discord className="fill-caption-label" />
             </Link>
-            <Link to="/">
+            <Link to={ROUTES.RICK_ROLL}>
               <Youtube className="fill-caption-label" />
             </Link>
-            <Link to="/">
+            <Link to={ROUTES.RICK_ROLL}>
               <Twitter className="fill-caption-label" />
             </Link>
-            <Link to="/">
+            <Link to={ROUTES.RICK_ROLL}>
               <Instagram className="fill-caption-label" />
             </Link>
           </div>
