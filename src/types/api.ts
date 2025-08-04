@@ -107,3 +107,22 @@ export interface RankingArtists {
 }
 
 export interface CombinedRankingMetaData extends LocalRankingAvatar, RankingArtists {}
+
+// NFT Details Data
+
+export interface NFTDetailCards {
+  id: string;
+  nftName: string;
+  artistName: string;
+  price: number;
+  bid: number;
+  imageKey: string;
+}
+
+export interface LocalNFTDetailCards {
+  background1x: string;
+  background2x: string;
+  artistImg: string;
+}
+
+export interface CombinedNFTDetailMetaData extends NFTDetailCards, LocalNFTDetailCards {}
