@@ -16,6 +16,7 @@ import ConnectWallet from "@pages/ConnectWallet";
 import Marketplace from "@pages/Marketplace";
 import Ranking from "@pages/Ranking";
 import NftPage from "@pages/NftPage";
+import ArtistPage from "@pages/ArtistPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path={ROUTES.MARKETPLACE} element={<Marketplace />} />
         <Route path={ROUTES.RANKINGS} element={<Ranking />} />
         <Route path={ROUTES.NFT_DETAILS} element={<NftPage />} />
+        <Route path={ROUTES.ARTIST_DETAILS} element={<ArtistPage />} />
       </Routes>
       <Footer />
     </div>
