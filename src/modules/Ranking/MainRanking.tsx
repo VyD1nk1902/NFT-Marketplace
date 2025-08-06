@@ -35,7 +35,7 @@ const RankingContent = () => {
   );
 
   // Table content clsx
-  const rowClass = clsx("bg-bg-secondary grid py-3 rounded-[20px]", {
+  const rowClass = clsx("bg-bg-secondary grid py-3 rounded-[20px] hover-scale", {
     "grid-cols-[60px_2fr_1fr_1fr_1fr] place-items-center": Desktop,
     "grid-cols-[60px_2fr_1fr_1fr] items-center": Tablet,
     "grid-cols-[30px_2fr_1fr] pl-2 items-center": Mobile || MobileS,
