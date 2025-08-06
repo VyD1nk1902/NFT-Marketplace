@@ -154,9 +154,9 @@ const DiscoveryMore = () => {
       </div>
 
       {/* Cards list */}
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px] ">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
         {data.map((item) => (
-          <Link to={ROUTES.NFT_DETAILS} key={item.id} className="hover-scale ">
+          <Link to={ROUTES.NFT_DETAILS} key={item.id} className="hover-scale">
             <img
               src={item.background1x}
               srcSet={`${item.background1x} 1x, ${item.background2x} 2x`}
