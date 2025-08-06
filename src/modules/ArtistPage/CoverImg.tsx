@@ -12,7 +12,8 @@ const CoverImg = () => {
     "h-[250px]": Mobile || MobileS,
   });
   const avatarClass = clsx("w-[120px] h-[120px] rounded-[20px]", {
-    "-mt-[60px]  overflow-hidden": Desktop,
+    "-mt-[80px] overflow-hidden": Desktop || Tablet,
+    "-mt-[80px] mx-auto overflow-hidden": Mobile || MobileS,
   });
   return (
     <section className="pt-[100px]">
