@@ -1,4 +1,4 @@
-//Trending Collection data
+// Homepage - Trending Collection data
 export interface SecondaryImage {
   small: string;
   large: string;
@@ -20,7 +20,7 @@ export interface LocalCollectionImage {
 
 export interface CombinedCollectionData extends CollectionMetaData, LocalCollectionImage {}
 
-// Artists Data
+// Homepage - Artists Data
 export interface ArtistMetaData {
   id: string;
   name: string;
@@ -34,7 +34,7 @@ export interface LocalArtistImage {
 
 export interface CombinedArtistMetaData extends ArtistMetaData, LocalArtistImage {}
 
-// Discovery NFTs Data
+// Homepage - Discovery NFTs Data
 
 export interface DiscoveryMetaData {
   id: string;
@@ -53,7 +53,7 @@ export interface LocalDiscoveryImage {
 
 export interface CombinedDiscoveryMetaData extends DiscoveryMetaData, LocalDiscoveryImage {}
 
-// Marketplace NFTs Data
+// Marketplace - NFTs Data
 
 export interface LocalMarketplaceNFTsImage {
   background1x: string;
@@ -72,7 +72,7 @@ export interface MarketplaceNFTs {
 
 export interface CombinedMarketplacNFTMetaData extends LocalMarketplaceNFTsImage, MarketplaceNFTs {}
 
-// Marketplace Collections Data
+// Marketplace - Collections Data
 
 export interface LocalMarketplaceCollectionsImg {
   imgUser: string;
@@ -90,7 +90,7 @@ export interface MarketplaceCollections {
 
 export interface CombinedMarketplaceCollectionMetaData extends LocalMarketplaceCollectionsImg, MarketplaceCollections {}
 
-// Ranking Artists Data
+// Ranking - Artists Data
 
 export interface LocalRankingAvatar {
   avatarRanking: string;
@@ -108,7 +108,7 @@ export interface RankingArtists {
 
 export interface CombinedRankingMetaData extends LocalRankingAvatar, RankingArtists {}
 
-// NFT Details Data
+// NFT page - NFT Details Data
 
 export interface NFTDetailCards {
   id: string;
@@ -126,3 +126,22 @@ export interface LocalNFTDetailCards {
 }
 
 export interface CombinedNFTDetailMetaData extends NFTDetailCards, LocalNFTDetailCards {}
+
+//Artist page - Card section Data
+
+export interface ArtistCardSectionData {
+  id: string;
+  nftName: string;
+  artistName: string;
+  price: number;
+  bid: number;
+  imageKey: string;
+}
+
+export interface LocalArtistCardSectionData {
+  background1x: string;
+  background2x: string;
+  artistIMG: string;
+}
+
+export interface CombinedArtistSectionCardMetaData extends ArtistCardSectionData, LocalArtistCardSectionData {}
