@@ -1,4 +1,4 @@
-//NFTs Marketplace PNG
+//NFTs Marketplace img
 import MagicMush1x from "@assets/Marketplace/MagicMush1x.png";
 import MagicMush2x from "@assets/Marketplace/MagicMush2x.png";
 import RobotBlue1x from "@assets/Marketplace/Robot(032)1x.png";
@@ -24,7 +24,7 @@ import Monkey2x from "@assets/Marketplace/Monkey2x.png";
 import ColorDog1x from "@assets/Marketplace/ColorDog1x.png";
 import ColorDog2x from "@assets/Marketplace/ColorDog2x.png";
 
-// Collections Marketplace PNG
+// Collections Marketplace img
 import primaryDog1x from "@assets/Homepage/TrendingCollection/dog1x.png";
 import primaryDog2x from "@assets/Homepage/TrendingCollection/dog2x.png";
 import secondaryCat1x from "@assets/Homepage/TrendingCollection/cat1x.png";
@@ -44,7 +44,7 @@ import secondaryRobot2x from "@assets/Homepage/TrendingCollection/SecondaryRobot
 import secondaryR1x from "@assets/Homepage/TrendingCollection/SecondaryRobot2.png";
 import secondaryR2x from "@assets/Homepage/TrendingCollection/SecondaryRobot2@2x.png";
 
-// Avatar
+// Avatar img
 import Avatar from "@assets/Avatars/Avatar Placeholder.png";
 import Avatar1 from "@assets/Avatars/Avatar Placeholder (1).png";
 import Avatar2 from "@assets/Avatars/Avatar Placeholder (2).png";
@@ -66,7 +66,7 @@ import Avatar17 from "@assets/Avatars/Avatar Placeholder (17).png";
 import Avatar18 from "@assets/Avatars/Avatar Placeholder (18).png";
 import Avatar19 from "@assets/Avatars/Avatar Placeholder (19).png";
 
-// NFTs Detail page
+// NFTs Detail page img
 import nftFox1x from "@assets/NFTPage/Fox1x.png";
 import nftFox2x from "@assets/NFTPage/Fox2x.png";
 import nftCat1x from "@assets/NFTPage/Cat1x.png";
@@ -85,6 +85,26 @@ import nftRobot0512_1x from "@assets/NFTPage/Robot(0512)1x.png";
 import nftRobot0512_2x from "@assets/NFTPage/Robot(0512)2x.png";
 import nftRobot0024_1x from "@assets/NFTPage/Robot(0024)1x.png";
 import nftRobot0024_2x from "@assets/NFTPage/Robot(0024)2x.png";
+
+// Artist page - Card section img
+import galaxy1x from "@assets/ArtistPage/Galaxy1x.png";
+import galaxy2x from "@assets/ArtistPage/Galaxy2x.png";
+import edena1x from "@assets/ArtistPage/edena1x.png";
+import edena2x from "@assets/ArtistPage/edena2x.png";
+import astro1x from "@assets/ArtistPage/astro1x.png";
+import astro2x from "@assets/ArtistPage/astro2x.png";
+import cryptocity1x from "@assets/ArtistPage/city1x.png";
+import cryptocity2x from "@assets/ArtistPage/city2x.png";
+import dog0524_1x from "@assets/ArtistPage/dog0524(1x).png";
+import dog0524_2x from "@assets/ArtistPage/dog0524(2x).png";
+import spacetales1x from "@assets/ArtistPage/spacetales1x.png";
+import spacetales2x from "@assets/ArtistPage/spacetales2x.png";
+import cherry1x from "@assets/ArtistPage/blossomgirl1x.png";
+import cherry2x from "@assets/ArtistPage/blossomgirl2x.png";
+import robot1x_0987 from "@assets/ArtistPage/robot(0987)1x.png";
+import robot2x_0987 from "@assets/ArtistPage/robot(0987)2x.png";
+import ape1x from "@assets/ArtistPage/iceape1x.png";
+import ape2x from "@assets/ArtistPage/iceape2x.png";
 
 // Marketplace
 export const nftImagesMarketplace = {
@@ -381,5 +401,54 @@ export const nftDetailMoreIMG = {
     background1x: nftRobot0024_1x,
     background2x: nftRobot0024_2x,
     artistImg: Avatar8,
+  },
+};
+
+// Artist page - Card section
+export const cardSectionNFTImage = {
+  Galaxy: {
+    background1x: galaxy1x,
+    background2x: galaxy2x,
+    artistIMG: Avatar13,
+  },
+  Edena: {
+    background1x: edena1x,
+    background2x: edena2x,
+    artistIMG: Avatar13,
+  },
+  Astro: {
+    background1x: astro1x,
+    background2x: astro2x,
+    artistIMG: Avatar13,
+  },
+  Cryptocity: {
+    background1x: cryptocity1x,
+    background2x: cryptocity2x,
+    artistIMG: Avatar13,
+  },
+  Dog_0524: {
+    background1x: dog0524_1x,
+    background2x: dog0524_2x,
+    artistIMG: Avatar13,
+  },
+  Spacetales: {
+    background1x: spacetales1x,
+    background2x: spacetales2x,
+    artistIMG: Avatar13,
+  },
+  Blossomgirl: {
+    background1x: cherry1x,
+    background2x: cherry2x,
+    artistIMG: Avatar13,
+  },
+  Robot_0987: {
+    background1x: robot1x_0987,
+    background2x: robot2x_0987,
+    artistIMG: Avatar13,
+  },
+  Iceape: {
+    background1x: ape1x,
+    background2x: ape2x,
+    artistIMG: Avatar13,
   },
 };
