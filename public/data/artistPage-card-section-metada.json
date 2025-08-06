@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "nftName": "Distant Galaxy",
+    "artistName": "Animakid",
+    "price": "3.50",
+    "bid": "0.75",
+    "imageKey": "Galaxy"
+  },
+  {
+    "id": "2",
+    "nftName": "Life On Edena",
+    "artistName": "Animakid",
+    "price": "2.25",
+    "bid": "0.50",
+    "imageKey": "Edena"
+  },
+  {
+    "id": "3",
+    "nftName": "AstroFiction",
+    "artistName": "Animakid",
+    "price": "4.15",
+    "bid": "0.92",
+    "imageKey": "Astro"
+  },
+  {
+    "id": "4",
+    "nftName": "CryptoCity",
+    "artistName": "Animakid",
+    "price": "3.94",
+    "bid": "0.52",
+    "imageKey": "Cryptocity"
+  },
+  {
+    "id": "5",
+    "nftName": "ColorfulDog 0524",
+    "artistName": "Animakid",
+    "price": "3.29",
+    "bid": "0.32",
+    "imageKey": "Dog_0524"
+  },
+  {
+    "id": "6",
+    "nftName": "Space Tales",
+    "artistName": "Animakid",
+    "price": "1.28",
+    "bid": "0.62",
+    "imageKey": "Spacetales"
+  },
+  {
+    "id": "7",
+    "nftName": "Cherry Blossom Girl 037",
+    "artistName": "Animakid",
+    "price": "4.33",
+    "bid": "0.81",
+    "imageKey": "Blossomgirl"
+  },
+  {
+    "id": "8",
+    "nftName": "Dancing Robots 0987",
+    "artistName": "Animakid",
+    "price": "2.78",
+    "bid": "0.52",
+    "imageKey": "Robot_0987"
+  },
+  {
+    "id": "9",
+    "nftName": "IceCream Ape ",
+    "artistName": "Animakid",
+    "price": "1.94",
+    "bid": "0.36",
+    "imageKey": "Iceape"
+  }
+]
