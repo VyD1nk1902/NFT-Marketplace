@@ -1,4 +1,5 @@
 import ArtistInfo from "@modules/ArtistPage/ArtistInfo";
+import CardSection from "@modules/ArtistPage/CardSection";
 import CoverImg from "@modules/ArtistPage/CoverImg";
 
 const ArtistPage = () => {
@@ -6,6 +7,7 @@ const ArtistPage = () => {
     <div>
       <CoverImg />
       <ArtistInfo />
+      <CardSection />
     </div>
   );
 };
