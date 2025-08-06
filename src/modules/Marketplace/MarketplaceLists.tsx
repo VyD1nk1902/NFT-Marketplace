@@ -171,7 +171,9 @@ const MarketplaceLists = () => {
                         className="w-full min-h-[296px] object-cover rounded-t-[20px]"
                       />
                       <div className="p-5 flex flex-col gap-2.5 bg-bg-primary rounded-b-[20px]">
-                        <h5 className="line-clamp-1">{item.nftName}</h5>
+                        <h5 title={item.nftName} className="line-clamp-1">
+                          {item.nftName}
+                        </h5>
                         <div className="flex gap-3 font-space-mono">
                           <span>
                             <img src={item.artistIMG} className="w-6 h-6" alt="" />{" "}
