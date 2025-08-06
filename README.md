@@ -88,8 +88,8 @@ import Button from "@components/Buttons"         // ✅
 - [x] Create Account Page
 - [x] Ranking Page
 - [x] Connect Wallet page
-- [ ] NFT Detail Page
-- [ ] Artist Page
+- [x] NFT Detail Page
+- [x] Artist Page
 - [x] Polish UI, animations & loading state (optional)
 - [x] Add real data & connect to backend (optional)
 
