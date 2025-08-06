@@ -14,7 +14,7 @@ const TabItem = <T extends string>({ title, tabBaseClass, count, onTabClick, tab
   return (
     <div
       className={clsx(tabBaseClass, {
-        "border-b border-b-white text-white font-[600]": isActive,
+        "border-b-4 border-b-caption-label text-white font-[600]": isActive,
         "border-none text-caption-label font-normal": !isActive,
       })}
     >
