@@ -133,7 +133,7 @@ const TopArtists = () => {
         setLoading(true);
         setError(null);
 
-        const response = await axios.get<ArtistMetaData[]>("/data/artists-metadata.json"); //mockoon(http://localhost:3001/artists-metadata)
+        const response = await axios.get<ArtistMetaData[]>("/data/homepage-artists-metadata.json"); //mockoon(http://localhost:3001/artists-metadata)
         const fetchedArtistMetaData = response.data;
 
         const combinedData: CombinedArtistMetaData[] = fetchedArtistMetaData.map((item) => ({

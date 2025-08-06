@@ -88,7 +88,7 @@ const DiscoveryMore = () => {
 
   useEffect(() => {
     const fetchDiscoveryData = async () => {
-      const response = await axios.get<DiscoveryMetaData[]>("/data/discovery-metadata.json"); //mockoon("http://localhost:3001/discovery-metadata")
+      const response = await axios.get<DiscoveryMetaData[]>("/data/homepage-discovery-metadata.json"); //mockoon("http://localhost:3001/discovery-metadata")
       const fetchedDiscoveryMetaData = response.data;
 
       const combinedData: CombinedDiscoveryMetaData[] = fetchedDiscoveryMetaData.map((item) => ({
