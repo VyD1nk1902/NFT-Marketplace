@@ -120,11 +120,11 @@ const Footer = () => {
                   autoComplete="email"
                   placeholder="Enter your email here..."
                   type="text"
-                  className=" bg-white w-[100%] pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
+                  className=" bg-white w-[100%] pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none"
                 />
               </div>
               <div className="w-[50%]">
-                <Buttons className="w-full" size="secondary" background="color">
+                <Buttons className="w-full" size="secondary" background="color" to={ROUTES.RICK_ROLL}>
                   Subscribe
                 </Buttons>
               </div>
@@ -140,11 +140,11 @@ const Footer = () => {
                   autoComplete="email"
                   placeholder="Enter your email here..."
                   type="text"
-                  className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none  "
+                  className=" bg-white pl-5 py-4 h-[60px] text-bg-primary rounded-[20px] border-none"
                 />
               </div>
               <div>
-                <Buttons className="w-[200px] " size="secondary" background="color">
+                <Buttons className="w-[200px] " size="secondary" background="color" to={ROUTES.RICK_ROLL}>
                   Subscribe
                 </Buttons>
               </div>
@@ -160,11 +160,11 @@ const Footer = () => {
                   autoComplete="email"
                   placeholder="Enter your email here..."
                   type="text"
-                  className=" bg-white w-full h-[46px] pl-5 py-4 text-bg-primary rounded-[20px] border-none  "
+                  className=" bg-white w-full h-[46px] pl-5 py-4 text-bg-primary rounded-[20px] border-none"
                 />
               </div>
               <div>
-                <Buttons className="w-full" size="tertiary" background="color">
+                <Buttons className="w-full" size="tertiary" background="color" to={ROUTES.RICK_ROLL}>
                   <Email className="fill-text w-5 h-5" /> Subscribe
                 </Buttons>
               </div>
@@ -180,11 +180,11 @@ const Footer = () => {
                   autoComplete="email"
                   placeholder="Enter your email here..."
                   type="text"
-                  className=" bg-white w-full h-[46px] pl-5 py-4 text-bg-primary rounded-[20px] border-none  "
+                  className=" bg-white w-full h-[46px] pl-5 py-4 text-bg-primary rounded-[20px] border-none"
                 />
               </div>
               <div>
-                <Buttons className="w-full" size="tertiary" background="color">
+                <Buttons className="w-full" size="tertiary" background="color" to={ROUTES.RICK_ROLL}>
                   <Email className="fill-text w-5 h-5" /> Subscribe
                 </Buttons>
               </div>

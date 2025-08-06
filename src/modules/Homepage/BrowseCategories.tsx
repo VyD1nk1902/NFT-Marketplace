@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 
 import clsx from "clsx";
 import { useResponsive } from "@hooks/useResponsive";
+import { ROUTES } from "@utils/constants/route";
 
 const BrowseCategories = () => {
   // Cards List render data
@@ -94,7 +95,7 @@ const BrowseCategories = () => {
           {categoryCardsData.map((item) => (
             <Link
               key={item.id}
-              to="/"
+              to={ROUTES.MARKETPLACE}
               className="xl:w-[240px] xl:h-[316px] lg:w-[200px] lg:h-[300px] sm:w-[150px] sm:h-[209px] rounded-[20px] bg-bg-secondary hover-scale"
             >
               <div className="relative overflow-hidden rounded-t-[20px]">
