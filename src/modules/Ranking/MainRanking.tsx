@@ -11,6 +11,8 @@ import { artistAvatarRanking } from "@assets/Export/ImgExport";
 import type { CombinedRankingMetaData, LocalRankingAvatar, RankingArtists } from "@myTypes/api";
 import axios from "axios";
 import { useRankingStore } from "@stores/useFetchingStore";
+import { Link } from "react-router-dom";
+import { ROUTES } from "@utils/constants/route";
 
 const RankingContent = () => {
   // Responsive
@@ -213,7 +215,7 @@ const RankingContent = () => {
               dataRanking.map((item) => {
                 if (Desktop) {
                   return (
-                    <div key={item.id} className={rowClass}>
+                    <Link key={item.id} className={rowClass} to={ROUTES.ARTIST_DETAILS}>
                       <div className={itemRankClass}>{item.rank}</div>
                       <div className="flex gap-5 items-center w-full">
                         <div className={avatarClass}>
@@ -228,12 +230,12 @@ const RankingContent = () => {
                       <p className="font-space-mono text-green">+{FormatBalance(item.change, 2)}%</p>
                       <p className="font-space-mono">{item.nftsSold}</p>
                       <p className="font-space-mono">{FormatBalance(item.volume, 2)} ETH</p>
-                    </div>
+                    </Link>
                   );
                 }
                 if (Tablet) {
                   return (
-                    <div key={item.id} className={rowClass}>
+                    <Link key={item.id} className={rowClass} to={ROUTES.ARTIST_DETAILS}>
                       <div className={itemRankClass}>{item.rank}</div>
                       <div className="flex gap-3 items-center">
                         <div className={avatarClass}>
@@ -247,12 +249,12 @@ const RankingContent = () => {
                       </div>
                       <p className="font-space-mono text-green">+{FormatBalance(item.change, 2)}%</p>
                       <p className="font-space-mono">{FormatBalance(item.volume, 2)} ETH</p>
-                    </div>
+                    </Link>
                   );
                 }
                 if (Mobile) {
                   return (
-                    <div key={item.id} className={rowClass}>
+                    <Link key={item.id} className={rowClass} to={ROUTES.ARTIST_DETAILS}>
                       <div className={itemRankClass}>{item.rank}</div>
                       <div className="flex gap-3 items-center">
                         <div className={avatarClass}>
@@ -265,12 +267,12 @@ const RankingContent = () => {
                         <p className={nameClass}>{item.name}</p>
                       </div>
                       <p className="font-space-mono text-[12px]">{FormatBalance(item.volume, 2)} ETH</p>
-                    </div>
+                    </Link>
                   );
                 }
                 if (MobileS) {
                   return (
-                    <div key={item.id} className={rowClass}>
+                    <Link key={item.id} className={rowClass} to={ROUTES.ARTIST_DETAILS}>
                       <div className={itemRankClass}>{item.rank}</div>
                       <div className="flex gap-3 items-center">
                         <div className={avatarClass}>
@@ -283,7 +285,7 @@ const RankingContent = () => {
                         <p className={nameClass}>{item.name}</p>
                       </div>
                       <p className="font-space-mono text-[12px]">{FormatBalance(item.volume, 2)} ETH</p>
-                    </div>
+                    </Link>
                   );
                 }
                 return null;
