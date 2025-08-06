@@ -44,7 +44,7 @@ const CardSection = () => {
 
   useEffect(() => {
     const fetchCardSectionData = async () => {
-      const response = await axios.get<ArtistCardSectionData[]>("/public/data/artistPage-card-section-metada.json");
+      const response = await axios.get<ArtistCardSectionData[]>("/data/artistPage-card-section-metada.json");
       const fetchedData = response.data;
 
       const combinedData: CombinedArtistSectionCardMetaData[] = fetchedData.map((item) => ({
